@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 171" role="img" aria-labelledby="title">
+  <title id="title">Youngone</title>
+  <defs>
+    <filter id="youngone-blue" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#123C62" result="color"/>
+      <feComposite in="color" in2="SourceAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="171" fill="#FFFFFF"/>
+  <image href="youngone-official.png" width="1600" height="171" filter="url(#youngone-blue)"/>
+</svg>

@@ -1,0 +1,19 @@
+.DS_Store
+**/.DS_Store
+
+# Internal reference and presentation material
+references/
+how_to_make_PT/
+SNU_FORMULA_BRAND.md
+SNU_FORMULA_WEB_UIUX_PLAN.md
+WEB_QA_CHECKLIST.md
+
+# Local hero experiments that are not part of the final website
+hero-concepts/
+assets/hero-concepts.css
+assets/hero-concepts.js
+assets/ASSET_MANIFEST.md
+assets/video/
+assets/img/hero-v2/*
+!assets/img/hero-v2/gwanak-ridge-campus-locked-v9-2x.png
+!assets/img/hero-v2/gwanak-ridge-campus-locked-v9-2x.webp

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 48" role="img" aria-labelledby="title">
+  <title id="title">SNU FORMULA</title>
+  <defs>
+    <filter id="navy" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#0F0F70" result="color"/>
+      <feComposite in="color" in2="SourceAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <image href="snu-formula-white.png" width="504" height="48" filter="url(#navy)"/>
+</svg>
