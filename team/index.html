@@ -70,18 +70,23 @@
         인원수를 바꾸면 배너의 .team-tab-count 숫자도 같이 고쳐주세요.
 
         ------------------------------------------------------------
-        구성원 카드에서 채울 곳은 네 군데입니다.
+        구성원을 추가할 때는 같은 팀의 카드 하나를 통째로 복사한 뒤 네 곳을
+        고치면 됩니다.
 
-          1) 사진 : <div class="roster-photo-empty"> 한 줄을 지우고, 바로 위
-                    주석 안의 <img> 한 줄을 그 자리에 붙여넣으세요. 파일은
-                    /assets/img/team/members/ 에 두고 파일명은 주석에 적힌
-                    이름 그대로 씁니다. 규격은 같은 폴더의 README.md 참고
-                    (3:4 증명사진, 600×800 이상, JPG).
+          1) 사진 : <img src="/assets/img/team/members/이름.jpg">
+                    파일은 /assets/img/team/members/ 에 두고, 파일명은
+                    romanized-이름.jpg 형식(예: kim-mingyu.jpg)을 씁니다.
+                    규격은 같은 폴더의 README.md 참고 (3:4, 900×1200, JPG).
+                    alt에는 "한글이름 (ROMANIZED NAME)"을 적습니다.
           2) 이름 : .roster-name
-          3) 학과 : .roster-major   예) 기계공학부 · 22학번 / Mechanical Engineering · Class of 22
-          4) 약력 : .roster-bio 의 <li> — 활동을 한 줄에 하나씩 문장으로.
-                    예) 2026 FSK 출전, 프론트 서스펜션 지오메트리 설계 담당
-                    줄 수는 늘리거나 줄여도 레이아웃이 유지됩니다.
+          3) 학과 : .roster-major
+          4) 약력 : .roster-bio 의 <li>. 지금은 고등학교만 넣었고, 고등학교가
+                    없는 구성원은 <ul class="roster-bio"> 블록을 통째로
+                    비워둡니다. 줄을 늘려도 레이아웃은 유지됩니다.
+
+        사진이 아직 없는 구성원은 <figure class="roster-photo"> 안의 <img>
+        대신 아래 한 줄을 넣으면 자리표시자가 나옵니다.
+          <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
 
         lang-ko / lang-en 두 span은 반드시 둘 다 채워주세요. 헤더의 KO/EN
         토글이 이 둘을 서로 바꿔 보여주는 구조라, 한쪽을 비우면 그 언어에서
@@ -131,8 +136,8 @@
               <span class="team-tab-index">02</span>
               <span class="team-tab-name">ENGINEERING</span>
               <span class="team-tab-count">
-                <span class="lang lang-ko">7명</span>
-                <span class="lang lang-en">7 MEMBERS</span>
+                <span class="lang lang-ko">8명</span>
+                <span class="lang lang-en">8 MEMBERS</span>
               </span>
             </button>
             <button
@@ -165,48 +170,39 @@
               tabindex="-1"
             >
               <div class="roster-grid">
-                <!-- manager 01 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/manager-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/kim-mingyu.jpg" alt="김민규 (KIM MINGYU)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
-                    <span class="roster-role">MANAGER</span>
+                    <span class="roster-role">PM</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">김민규</span>
+                      <span class="lang lang-en">KIM MINGYU</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 전기정보공학부 학사 · 재료공학부 석사</span>
+                      <span class="lang lang-en">BS Electrical &amp; Computer Engineering · MS Materials Science, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">한국과학영재학교</span><span class="lang lang-en">Korea Science Academy of KAIST</span></li>
                     </ul>
                   </div>
                 </article>
-                <!-- manager 02 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/manager-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/yoo-minwoo.jpg" alt="유민우 (YOO MINWOO)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
-                    <span class="roster-role">MANAGER</span>
+                    <span class="roster-role">PM</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">유민우</span>
+                      <span class="lang lang-en">YOO MINWOO</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
-                    <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                    </ul>
                   </div>
                 </article>
               </div>
@@ -223,157 +219,149 @@
               hidden
             >
               <div class="roster-grid">
-                <!-- engineering lead -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-lead.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/kim-minwoo.jpg" alt="김민우 (KIM MINWOO)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">LEAD</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">김민우</span>
+                      <span class="lang lang-en">KIM MINWOO</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">Scottish 국제고등학교</span><span class="lang lang-en">Scottish International High School</span></li>
                     </ul>
                   </div>
                 </article>
-                <!-- engineering chassis -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-chassis.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/kang-kyungwoon.jpg" alt="강경운 (KANG KYUNGWOON)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">CHASSIS</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">강경운</span>
+                      <span class="lang lang-en">KANG KYUNGWOON</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
-                    <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                    </ul>
                   </div>
                 </article>
-                <!-- engineering aerodynamics -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-aerodynamics.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/lee-gyuwon.jpg" alt="이규원 (LEE GYUWON)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">AERODYNAMICS</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">이규원</span>
+                      <span class="lang lang-en">LEE GYUWON</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 항공우주공학부</span>
+                      <span class="lang lang-en">Aerospace Engineering, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">세종과학예술고등학교</span><span class="lang lang-en">Sejong Science and Arts High School</span></li>
                     </ul>
                   </div>
                 </article>
-                <!-- engineering vehicle dynamics 01 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/lee-jaejun.jpg" alt="이재준 (LEE JAEJUN)" width="900" height="1200" loading="lazy">
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">AERODYNAMICS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이재준</span>
+                      <span class="lang lang-en">LEE JAEJUN</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">경기과학고등학교</span><span class="lang lang-en">Gyeonggi Science High School</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <img src="/assets/img/team/members/yoon-jonghwan.jpg" alt="윤종환 (YOON JONGHWAN)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">VEHICLE DYNAMICS</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">윤종환</span>
+                      <span class="lang lang-en">YOON JONGHWAN</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">경기과학고등학교</span><span class="lang lang-en">Gyeonggi Science High School</span></li>
                     </ul>
                   </div>
                 </article>
-                <!-- engineering vehicle dynamics 02 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/kim-dooeun.jpg" alt="김두은 (KIM DOOEUN)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">VEHICLE DYNAMICS</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">김두은</span>
+                      <span class="lang lang-en">KIM DOOEUN</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">세종과학고등학교</span><span class="lang lang-en">Sejong Science High School</span></li>
                     </ul>
                   </div>
                 </article>
-                <!-- engineering powertrain 01 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-powertrain-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/kim-injae.jpg" alt="김인재 (KIM INJAE)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">POWERTRAIN</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">김인재</span>
+                      <span class="lang lang-en">KIM INJAE</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 기계공학부</span>
+                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
-                    <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                    </ul>
                   </div>
                 </article>
-                <!-- engineering powertrain 02 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/engineering-powertrain-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/cho-yongwoo.jpg" alt="조용우 (CHO YONGWOO)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">POWERTRAIN</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">조용우</span>
+                      <span class="lang lang-en">CHO YONGWOO</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 식물생산과학부</span>
+                      <span class="lang lang-en">Plant Science, SNU</span>
                     </p>
                     <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">서울과학고등학교</span><span class="lang lang-en">Seoul Science High School</span></li>
                     </ul>
                   </div>
                 </article>
@@ -391,40 +379,25 @@
               hidden
             >
               <div class="roster-grid">
-                <!-- business 01 -->
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <!-- <img src="/assets/img/team/members/business-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    <img src="/assets/img/team/members/oh-songwoo.jpg" alt="오송우 (OH SONGWOO)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
-                    <span class="roster-role">BUSINESS</span>
+                    <span class="roster-role">LEAD</span>
                     <h3 class="roster-name">
-                      <span class="lang lang-ko">이름</span>
-                      <span class="lang lang-en">NAME</span>
+                      <span class="lang lang-ko">오송우</span>
+                      <span class="lang lang-en">OH SONGWOO</span>
                     </h3>
                     <p class="roster-major">
-                      <span class="lang lang-ko">학과 · 학번</span>
-                      <span class="lang lang-en">Department · Class of</span>
+                      <span class="lang lang-ko">서울대학교 철학과</span>
+                      <span class="lang lang-en">Philosophy, SNU</span>
                     </p>
-                    <ul class="roster-bio">
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                    </ul>
                   </div>
                 </article>
               </div>
             </article>
           </div>
-
-          <p class="roster-pending">
-            <span class="lang lang-ko">
-              구성원 이름과 사진, 약력은 확정되는 대로 업데이트됩니다.
-            </span>
-            <span class="lang lang-en">
-              Member names, portraits, and profiles will be updated once confirmed.
-            </span>
-          </p>
         </div>
       </section>
 
