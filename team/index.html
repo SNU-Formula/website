@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#05082D">
-    <meta name="description" content="SNU FORMULA team structure와 engineering departments">
+    <meta name="description" content="SNU FORMULA의 Manager, Engineering, Business 세 팀과 구성원">
     <script>
       try {
         document.documentElement.lang =
@@ -21,8 +21,8 @@
     data-page="team"
     data-title-ko="Team | SNU FORMULA"
     data-title-en="Team | SNU FORMULA"
-    data-description-ko="SNU FORMULA team structure와 engineering departments."
-    data-description-en="The team structure and engineering departments of SNU FORMULA."
+    data-description-ko="SNU FORMULA의 Manager, Engineering, Business 세 팀과 구성원."
+    data-description-en="The Manager, Engineering, and Business teams of SNU FORMULA, and the people in them."
   >
     <a class="skip-link" href="#main">
       <span class="lang lang-ko">본문으로 이동</span>
@@ -40,12 +40,14 @@
           <div class="page-hero-bottom">
             <p>
               <span class="lang lang-ko">
-                Mechanical, electrical, software, business의 네 전문 unit이
-                하나의 Vehicle을 만들기 위해 협력합니다.
+                Manager, Engineering, Business 세 팀이 한 대의 Vehicle을 향해
+                움직입니다. 각 팀이 실제로 무엇을 맡는지, 그리고 누가 그 일을
+                하는지 아래에서 확인할 수 있습니다.
               </span>
               <span class="lang lang-en">
-                Four specialist units across mechanical, electrical, software,
-                and business work together to build one vehicle.
+                Three teams — Manager, Engineering, and Business — move toward
+                one vehicle. Below you can see what each team actually owns and
+                who does the work.
               </span>
             </p>
             <span class="page-hero-code">SNUF / TEAM / 03</span>
@@ -53,197 +55,548 @@
         </div>
       </section>
 
-      <section class="section dark" aria-labelledby="org-title">
-        <div class="container">
-          <div class="section-head">
-            <div data-reveal>
-              <div class="eyebrow gold">TEAM ARCHITECTURE</div>
-              <h2 class="section-title" id="org-title">
-                <span class="lang lang-ko">전문성은 나누고,<br>목표는 공유합니다.</span>
-                <span class="lang lang-en">SPECIALIZED WORK.<br>SHARED TARGET.</span>
-              </h2>
-            </div>
-            <p data-reveal data-reveal-delay="1">
-              <span class="lang lang-ko">
-                각 unit은 고유한 전문성을 바탕으로 Vehicle의 design, build,
-                test와 competition 준비를 함께 수행합니다.
-              </span>
-              <span class="lang lang-en">
-                Each unit brings specialist knowledge to the design, build,
-                testing, and competition preparation of one vehicle.
-              </span>
-            </p>
-          </div>
-          <div class="org-visual" data-reveal aria-label="SNU FORMULA team organization">
-            <div class="org-brand">
-              <span class="snu-formula-wordmark pale" role="img" aria-label="SNU FORMULA">
-                <span class="wordmark-part wordmark-crest" aria-hidden="true"></span>
-                <span class="wordmark-part wordmark-snu" aria-hidden="true"></span>
-                <span class="wordmark-part wordmark-formula" aria-hidden="true"></span>
-              </span>
-              <p>
-                <span class="lang lang-ko">FOUR SPECIALIST UNITS · ONE VEHICLE TARGET</span>
-                <span class="lang lang-en">FOUR SPECIALIST UNITS · ONE VEHICLE TARGET</span>
-              </p>
-            </div>
-            <div class="org-team-grid">
-              <article class="org-node">
-                <span>01 / PHYSICAL</span>
-                <h3>VEHICLE<br>DYNAMICS</h3>
-                <small>GRIP · CHASSIS · AERO</small>
-              </article>
-              <article class="org-node">
-                <span>02 / ENERGY</span>
-                <h3>ELECTRICAL<br>&amp; TS</h3>
-                <small>ENERGY · POWER · SAFETY</small>
-              </article>
-              <article class="org-node">
-                <span>03 / CONTROL</span>
-                <h3>SOFTWARE<br>&amp; AS</h3>
-                <small>CONTROL · DATA · AUTONOMY</small>
-              </article>
-              <article class="org-node">
-                <span>04 / DELIVERY</span>
-                <h3>BUSINESS<br>&amp; OPERATIONS</h3>
-                <small>PARTNERS · RECORDS · DELIVERY</small>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!--
+        ============================================================
+        TEAM — 탭으로 전환되는 팀 소개 + 구성원 명단
+        ------------------------------------------------------------
+        탭 동작은 /assets/site.js 의 공용 핸들러가 처리합니다. 새 팀을
+        추가할 때는 세 곳을 함께 맞춰야 동작합니다.
 
-      <section class="section paper" aria-labelledby="departments-title">
+          1. 탭 버튼   : data-panel="키"  / id="tab-키"  / aria-controls="panel-키"
+          2. 패널      : data-panel-content="키" / id="panel-키" / aria-labelledby="tab-키"
+          3. 처음 열릴 팀에만 class="is-active"를 두고, 나머지 패널에는
+             hidden, 나머지 탭 버튼에는 tabindex="-1" aria-selected="false"
+
+        패널 안에는 data-reveal을 쓰지 마세요. 숨은 상태에서는 등장 애니메이션이
+        걸리지 않아 탭을 눌렀을 때 내용이 늦게 나타납니다.
+
+        ------------------------------------------------------------
+        구성원 카드에서 채울 곳은 네 군데입니다.
+
+          1) 사진 : <div class="roster-photo-empty"> 한 줄을 지우고, 바로 위
+                    주석 안의 <img> 한 줄을 그 자리에 붙여넣으세요. 파일은
+                    /assets/img/team/members/ 에 두고 파일명은 주석에 적힌
+                    이름 그대로 씁니다. 규격은 같은 폴더의 README.md 참고
+                    (3:4 증명사진, 600×800 이상, JPG).
+          2) 이름 : .roster-name
+          3) 학과 : .roster-major   예) 기계공학부 · 22학번 / Mechanical Engineering · Class of 22
+          4) 약력 : .roster-bio 의 <li> — 활동을 한 줄에 하나씩 문장으로.
+                    예) 2026 FSK 출전, 프론트 서스펜션 지오메트리 설계 담당
+                    줄 수는 늘리거나 줄여도 레이아웃이 유지됩니다.
+
+        lang-ko / lang-en 두 span은 반드시 둘 다 채워주세요. 헤더의 KO/EN
+        토글이 이 둘을 서로 바꿔 보여주는 구조라, 한쪽을 비우면 그 언어에서
+        해당 줄이 통째로 빈 칸이 됩니다.
+        ============================================================
+      -->
+      <section
+        class="section paper team-structure"
+        id="team-structure"
+        data-system-scope
+        aria-labelledby="structure-title"
+      >
         <div class="container">
           <div class="section-head">
             <div data-reveal>
-              <div class="eyebrow">DEPARTMENTS</div>
-              <h2 class="section-title" id="departments-title">
-                <span class="lang lang-ko">네 개의 unit.<br><span class="accent">하나의 lap.</span></span>
-                <span class="lang lang-en">FOUR UNITS.<br><span class="accent">ONE LAP.</span></span>
+              <div class="eyebrow">TEAM STRUCTURE</div>
+              <h2 class="section-title" id="structure-title">
+                <span class="lang lang-ko">세 개의 팀,<br><span class="accent">한 대의 차.</span></span>
+                <span class="lang lang-en">THREE TEAMS.<br><span class="accent">ONE CAR.</span></span>
               </h2>
             </div>
             <p data-reveal data-reveal-delay="1">
               <span class="lang lang-ko">
-                각 unit이 맡는 기술 분야와 실제 Vehicle에서 수행하는 role을 소개합니다.
+                팀 이름을 누르면 해당 팀이 맡는 일과 구성원이 함께 바뀝니다.
               </span>
               <span class="lang lang-en">
-                Explore each unit's technical field and its role in the vehicle.
+                Select a team to switch both its description and its members.
               </span>
             </p>
           </div>
-          <div class="department-grid">
-            <article class="department-card" data-reveal>
-              <figure class="department-media">
-                <img src="/assets/img/team/vehicle-dynamics-detail.png" alt="Suspension, brake, and chassis engineering detail">
-              </figure>
-              <div class="department-body">
-                <span class="dept-index">01 / PHYSICAL PERFORMANCE</span>
-                <h3>VEHICLE<br>DYNAMICS</h3>
-                <p>
-                  <span class="lang lang-ko">
-                    Tire가 낼 수 있는 grip을 chassis, suspension, aerodynamics,
-                    brake와 steering system으로 구현합니다.
-                  </span>
-                  <span class="lang lang-en">
-                    Turn tire potential into grip through chassis, suspension,
-                    aerodynamics, brakes, and steering.
-                  </span>
-                </p>
-                <ul><li>CHASSIS</li><li>SUSPENSION</li><li>AERO</li><li>BRAKES</li><li>VEHICLE MODEL</li></ul>
+
+          <div
+            class="team-switch"
+            data-system-tabs
+            data-reveal
+            role="tablist"
+            aria-label="SNU FORMULA teams"
+          >
+            <button
+              class="team-tab is-active"
+              type="button"
+              data-panel="manager"
+              id="tab-manager"
+              role="tab"
+              aria-controls="panel-manager"
+              aria-selected="true"
+            >
+              <span class="team-tab-index">01</span>
+              <span class="team-tab-name">MANAGER</span>
+              <span class="team-tab-count">
+                <span class="lang lang-ko">2명</span>
+                <span class="lang lang-en">2 MEMBERS</span>
+              </span>
+            </button>
+            <button
+              class="team-tab"
+              type="button"
+              data-panel="engineering"
+              id="tab-engineering"
+              role="tab"
+              aria-controls="panel-engineering"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span class="team-tab-index">02</span>
+              <span class="team-tab-name">ENGINEERING</span>
+              <span class="team-tab-count">
+                <span class="lang lang-ko">7명</span>
+                <span class="lang lang-en">7 MEMBERS</span>
+              </span>
+            </button>
+            <button
+              class="team-tab"
+              type="button"
+              data-panel="business"
+              id="tab-business"
+              role="tab"
+              aria-controls="panel-business"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span class="team-tab-index">03</span>
+              <span class="team-tab-name">BUSINESS</span>
+              <span class="team-tab-count">
+                <span class="lang lang-ko">1명</span>
+                <span class="lang lang-en">1 MEMBER</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="team-panels" data-reveal data-reveal-delay="1">
+            <!-- ============ MANAGER ============ -->
+            <article
+              class="team-panel is-active"
+              data-panel-content="manager"
+              id="panel-manager"
+              role="tabpanel"
+              aria-labelledby="tab-manager"
+              tabindex="-1"
+            >
+              <div class="team-panel-intro">
+                <figure class="team-panel-media">
+                  <img
+                    src="/assets/img/team/business-operations-detail.png"
+                    alt="일정표와 기록 노트, 도면과 무전기가 놓인 작업 책상"
+                    loading="lazy"
+                  >
+                </figure>
+                <div class="team-panel-copy">
+                  <span class="team-panel-index">01 / MANAGER</span>
+                  <h3>THE TEAM'S<br>CRITICAL PATH.</h3>
+                  <p>
+                    <span class="lang lang-ko">
+                      차량 한 대를 대회까지 끌고 가는 데 필요한 일정과 예산,
+                      그리고 대회 규정 대응을 총괄합니다. 각 파트에서 올라오는
+                      설계 변경과 지연을 하나의 우선순위로 정리해, 지금 무엇을
+                      먼저 확정해야 나머지가 움직이는지를 판단합니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Owns the schedule, the budget, and the rule compliance
+                      that carry one car all the way to competition. Design
+                      changes and delays from every part are consolidated into a
+                      single priority list, so the team knows which decision has
+                      to land first for the rest to move.
+                    </span>
+                  </p>
+                  <p>
+                    <span class="lang lang-ko">
+                      대회 제출 서류와 안전 검차 준비가 기한 안에 끝나도록
+                      관리하고, 시즌이 끝나면 그 해에 내린 판단과 그 결과를
+                      다음 팀이 읽을 수 있는 형태로 남깁니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Keeps document submissions and scrutineering preparation
+                      inside their deadlines, and at the end of a season leaves
+                      that year's decisions — and how they turned out — in a
+                      form the next team can actually read.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="team-panel-roster">
+                <div class="team-panel-roster-head">
+                  <span class="roster-label">ROSTER</span>
+                  <p>
+                    <span class="lang lang-ko">MANAGER · 2명</span>
+                    <span class="lang lang-en">MANAGER · 2 MEMBERS</span>
+                  </p>
+                </div>
+                <div class="roster-grid">
+                  <!-- manager 01 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/manager-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">MANAGER</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- manager 02 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/manager-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">MANAGER</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
               </div>
             </article>
-            <article class="department-card" data-reveal data-reveal-delay="1">
-              <figure class="department-media">
-                <img src="/assets/img/team/electrical-ts-detail.png" alt="Accumulator, busbar, inverter, and safety engineering detail">
-              </figure>
-              <div class="department-body">
-                <span class="dept-index">02 / ENERGY &amp; SAFETY</span>
-                <h3>ELECTRICAL<br>&amp; TS</h3>
-                <p>
-                  <span class="lang lang-ko">
-                    Accumulator부터 inverter와 motor까지 energy path를 설계하고,
-                    Tractive System safety를 검증합니다.
-                  </span>
-                  <span class="lang lang-en">
-                    Engineer the energy path from accumulator to inverter and motor,
-                    and validate Tractive System safety.
-                  </span>
-                </p>
-                <ul><li>TSAC</li><li>INVERTER</li><li>MOTOR</li><li>LV SYSTEM</li><li>SAFETY</li></ul>
+
+            <!-- ============ ENGINEERING ============ -->
+            <article
+              class="team-panel"
+              data-panel-content="engineering"
+              id="panel-engineering"
+              role="tabpanel"
+              aria-labelledby="tab-engineering"
+              tabindex="-1"
+              hidden
+            >
+              <div class="team-panel-intro">
+                <figure class="team-panel-media">
+                  <img
+                    src="/assets/img/team/vehicle-dynamics-detail.png"
+                    alt="프론트 서스펜션과 업라이트, 브레이크 어셈블리"
+                    loading="lazy"
+                  >
+                </figure>
+                <div class="team-panel-copy">
+                  <span class="team-panel-index">02 / ENGINEERING</span>
+                  <h3>FROM TARGET<br>TO LAP TIME.</h3>
+                  <p>
+                    <span class="lang lang-ko">
+                      차량을 직접 설계하고, 만들고, 시험합니다. Chassis는 구조와
+                      강성을, Aerodynamics는 다운포스와 항력을, Vehicle Dynamics는
+                      서스펜션 지오메트리와 타이어 거동을, Powertrain은 구동계와
+                      에너지 전달을 맡습니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Designs, builds, and tests the car itself. Chassis owns
+                      structure and stiffness, aerodynamics owns downforce and
+                      drag, vehicle dynamics owns suspension geometry and tire
+                      behaviour, and powertrain owns the drivetrain and how
+                      energy reaches the wheels.
+                    </span>
+                  </p>
+                  <p>
+                    <span class="lang lang-ko">
+                      각 분야는 먼저 숫자로 된 목표를 세우고, 해석과 주행 데이터로
+                      그 숫자가 맞았는지 확인합니다. 틀렸다면 어디서 틀렸는지까지
+                      남겨 다음 차량의 출발점으로 씁니다. Lead는 이 목표들이 서로
+                      충돌하지 않도록 조정합니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Each area sets a numeric target first, then checks that
+                      number against analysis and track data. When it does not
+                      hold, the reason is recorded and becomes the starting point
+                      for the next car. The lead keeps those targets from
+                      contradicting one another.
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="team-panel-roster">
+                <div class="team-panel-roster-head">
+                  <span class="roster-label">ROSTER</span>
+                  <p>
+                    <span class="lang lang-ko">ENGINEERING · 7명</span>
+                    <span class="lang lang-en">ENGINEERING · 7 MEMBERS</span>
+                  </p>
+                </div>
+                <div class="roster-grid">
+                  <!-- engineering lead -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-lead.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">LEAD</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering chassis -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-chassis.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">CHASSIS</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering aerodynamics -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-aerodynamics.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">AERODYNAMICS</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering vehicle dynamics 01 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">VEHICLE DYNAMICS</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering vehicle dynamics 02 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">VEHICLE DYNAMICS</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering powertrain 01 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-powertrain-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">POWERTRAIN</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- engineering powertrain 02 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/engineering-powertrain-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">POWERTRAIN</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
               </div>
             </article>
-            <article class="department-card" data-reveal>
-              <figure class="department-media">
-                <img src="/assets/img/team/software-as-detail.png" alt="Sensors, control unit, and telemetry engineering detail">
-              </figure>
-              <div class="department-body">
-                <span class="dept-index">03 / INTELLIGENCE</span>
-                <h3>SOFTWARE<br>&amp; AS</h3>
-                <p>
-                  <span class="lang lang-ko">
-                    Sensor, control, telemetry를 연결하고 Autonomous System으로
-                    확장 가능한 vehicle intelligence를 만듭니다.
-                  </span>
-                  <span class="lang lang-en">
-                    Connect sensors, controls, and telemetry into vehicle intelligence
-                    that can expand toward Autonomous Systems.
-                  </span>
-                </p>
-                <ul><li>CONTROL</li><li>EMBEDDED</li><li>TELEMETRY</li><li>DATA</li><li>AS</li></ul>
+
+            <!-- ============ BUSINESS ============ -->
+            <article
+              class="team-panel"
+              data-panel-content="business"
+              id="panel-business"
+              role="tabpanel"
+              aria-labelledby="tab-business"
+              tabindex="-1"
+              hidden
+            >
+              <div class="team-panel-intro">
+                <figure class="team-panel-media">
+                  <img
+                    src="/assets/img/campus/campus-main-gate-road.jpg"
+                    alt="서울대학교 관악캠퍼스 정문과 진입로"
+                    loading="lazy"
+                  >
+                </figure>
+                <div class="team-panel-copy">
+                  <span class="team-panel-index">03 / BUSINESS</span>
+                  <h3>WHAT KEEPS<br>THE CAR FUNDED.</h3>
+                  <p>
+                    <span class="lang lang-ko">
+                      팀이 계속 굴러가게 만드는 쪽을 맡습니다. 파트너사와 후원
+                      조건을 협의하고, 집행 내역과 정산을 관리하며, 팀이 쓴 돈이
+                      어디로 갔는지 언제든 설명할 수 있는 상태를 유지합니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Keeps the team running. Negotiates sponsorship terms with
+                      partner companies, manages spending and settlement, and
+                      keeps the team able to explain where its money went at any
+                      point in the season.
+                    </span>
+                  </p>
+                  <p>
+                    <span class="lang lang-ko">
+                      대회의 Business Plan Presentation을 준비하고, 팀의 활동을
+                      팀 바깥으로 전달하는 기록과 홍보를 담당합니다. 엔지니어링이
+                      만든 결과를 다른 언어로 옮기는 자리입니다.
+                    </span>
+                    <span class="lang lang-en">
+                      Prepares the competition Business Plan Presentation and
+                      owns the records and communications that reach people
+                      outside the team — translating engineering results into a
+                      language the rest of the world reads.
+                    </span>
+                  </p>
+                </div>
               </div>
-            </article>
-            <article class="department-card" data-reveal data-reveal-delay="1">
-              <figure class="department-media">
-                <img src="/assets/img/team/business-operations-detail.png" alt="Project planning, partner, and operations detail">
-              </figure>
-              <div class="department-body">
-                <span class="dept-index">04 / TEAM DELIVERY</span>
-                <h3>BUSINESS<br>&amp; OPERATIONS</h3>
-                <p>
-                  <span class="lang lang-ko">
-                    Partner relationship, competition deliverable, knowledge record와
-                    project rhythm을 하나의 실행 체계로 운영합니다.
-                  </span>
-                  <span class="lang lang-en">
-                    Operate partner relationships, competition deliverables,
-                    knowledge records, and project rhythm as one delivery system.
-                  </span>
-                </p>
-                <ul><li>PARTNERS</li><li>BUSINESS</li><li>OPERATIONS</li><li>MEDIA</li><li>RECORDS</li></ul>
+
+              <div class="team-panel-roster">
+                <div class="team-panel-roster-head">
+                  <span class="roster-label">ROSTER</span>
+                  <p>
+                    <span class="lang lang-ko">BUSINESS · 1명</span>
+                    <span class="lang lang-en">BUSINESS · 1 MEMBER</span>
+                  </p>
+                </div>
+                <div class="roster-grid">
+                  <!-- business 01 -->
+                  <article class="roster-card">
+                    <figure class="roster-photo">
+                      <!-- <img src="/assets/img/team/members/business-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                    </figure>
+                    <div class="roster-card-body">
+                      <span class="roster-role">BUSINESS</span>
+                      <h4 class="roster-name">
+                        <span class="lang lang-ko">이름</span>
+                        <span class="lang lang-en">NAME</span>
+                      </h4>
+                      <p class="roster-major">
+                        <span class="lang lang-ko">학과 · 학번</span>
+                        <span class="lang lang-en">Department · Class of</span>
+                      </p>
+                      <ul class="roster-bio">
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      </ul>
+                    </div>
+                  </article>
+                </div>
               </div>
             </article>
           </div>
-          <div class="team-portrait-roster" id="team-portraits" data-reveal aria-label="Team member portrait placeholders">
-            <div class="team-portrait-heading">
-              <span>TEAM PORTRAITS</span>
-              <p>
-                <span class="lang lang-ko">팀원 사진 업데이트 예정</span>
-                <span class="lang lang-en">TEAM MEMBER PHOTOS COMING SOON</span>
-              </p>
-            </div>
-            <div class="team-portrait-grid">
-              <figure class="team-portrait-slot">
-                <div class="team-portrait-placeholder" role="img" aria-label="Team member photo slot 1">
-                  <span>01 / PORTRAIT</span>
-                </div>
-              </figure>
-              <figure class="team-portrait-slot">
-                <div class="team-portrait-placeholder" role="img" aria-label="Team member photo slot 2">
-                  <span>02 / PORTRAIT</span>
-                </div>
-              </figure>
-              <figure class="team-portrait-slot">
-                <div class="team-portrait-placeholder" role="img" aria-label="Team member photo slot 3">
-                  <span>03 / PORTRAIT</span>
-                </div>
-              </figure>
-              <figure class="team-portrait-slot">
-                <div class="team-portrait-placeholder" role="img" aria-label="Team member photo slot 4">
-                  <span>04 / PORTRAIT</span>
-                </div>
-              </figure>
-            </div>
-          </div>
+
+          <p class="roster-pending">
+            <span class="lang lang-ko">
+              구성원 이름과 사진, 약력은 확정되는 대로 업데이트됩니다.
+            </span>
+            <span class="lang lang-en">
+              Member names, portraits, and profiles will be updated once confirmed.
+            </span>
+          </p>
         </div>
       </section>
 
