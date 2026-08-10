@@ -108,36 +108,18 @@ svg {
   max-width: 100%;
 }
 
+/* One mask cut straight from the official lockup, so crest-to-SNU and
+   SNU-to-FORMULA spacing is whatever the artwork says rather than something
+   reassembled from three separate pieces. Aspect ratio is the artwork's own
+   ink bounding box (7930 x 622). */
 .snu-formula-wordmark {
   --wordmark-color: var(--white);
-  display: grid;
-  width: 100%;
-  aspect-ratio: 504 / 48;
-  grid-template-columns: 9.5% 28.4% 52.6%;
-  column-gap: 4.75%;
-  align-items: stretch;
-}
-
-.wordmark-part {
   display: block;
-  min-width: 0;
-  height: 100%;
+  width: 100%;
+  aspect-ratio: 7930 / 622;
   background: var(--wordmark-color);
-}
-
-.wordmark-crest {
-  -webkit-mask: url("/assets/logos/snu-crest-vector.svg") center / contain no-repeat;
-  mask: url("/assets/logos/snu-crest-vector.svg") center / contain no-repeat;
-}
-
-.wordmark-snu {
-  -webkit-mask: url("/assets/logos/snu-word-vector.svg") center / contain no-repeat;
-  mask: url("/assets/logos/snu-word-vector.svg") center / contain no-repeat;
-}
-
-.wordmark-formula {
-  -webkit-mask: url("/assets/logos/formula-word-vector.svg") center / contain no-repeat;
-  mask: url("/assets/logos/formula-word-vector.svg") center / contain no-repeat;
+  -webkit-mask: url("/assets/logos/snu-formula-lockup.png") left center / contain no-repeat;
+  mask: url("/assets/logos/snu-formula-lockup.png") left center / contain no-repeat;
 }
 
 .snu-formula-wordmark.pale {
@@ -1163,49 +1145,40 @@ body.intro-active {
   }
 }
 
-.cta-split {
+/* Plain "where to next" row at the foot of a page: destination and an arrow,
+   nothing else. */
+.page-jump {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--deep);
 }
 
-.cta-panel {
-  position: relative;
-  min-height: 380px;
-  padding: clamp(42px, 5vw, 78px);
+.page-jump a {
   display: flex;
-  flex-direction: column;
+  padding: clamp(30px, 3.4vw, 52px) var(--gutter);
+  align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-brand);
+  font-size: clamp(15px, 1.6vw, 24px);
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.page-jump a + a {
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.page-jump a:hover {
   color: var(--white);
   background: var(--navy);
 }
 
-.cta-panel:last-child {
-  background: var(--blue);
-}
-
-.cta-panel::after {
-  position: absolute;
-  right: -110px;
-  bottom: -150px;
-  width: 380px;
-  height: 380px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  content: "";
-}
-
-.cta-panel h2 {
-  position: relative;
-  z-index: 1;
-  max-width: 650px;
-  font-size: clamp(38px, 4.5vw, 72px);
-  line-height: 1.02;
-}
-
-.cta-panel .text-link {
-  position: relative;
-  z-index: 1;
+.page-jump a span[aria-hidden] {
+  color: var(--gold);
 }
 
 .competition-showcase {
@@ -1785,11 +1758,11 @@ body.intro-active {
 
 .partner-tier-label {
   display: block;
-  margin-bottom: 14px;
-  color: var(--gold);
+  margin-bottom: clamp(16px, 1.6vw, 24px);
+  color: var(--navy);
   font-family: var(--font-brand);
-  font-size: clamp(9px, 0.72vw, 11px);
-  line-height: 1.5;
+  font-size: clamp(22px, 2.6vw, 40px);
+  line-height: 1.2;
 }
 
 .partner-matrix {
@@ -2384,17 +2357,15 @@ body.intro-active {
     border-bottom: 0;
   }
 
-  .cta-split {
+  .page-jump {
     grid-template-columns: 1fr;
   }
 
-  .cta-panel {
-    min-height: 320px;
+  .page-jump a + a {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-left: 0;
   }
 
-  .score-layout,
-  .role-finder,
-  .identity-layout,
   .join-status-card {
     grid-template-columns: 1fr;
   }

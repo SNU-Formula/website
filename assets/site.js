@@ -3,12 +3,8 @@ const root = "/";
 const bilingual = (ko, en, className = "") =>
   `<span class="lang lang-ko ${className}">${ko}</span><span class="lang lang-en ${className}">${en}</span>`;
 
-const snuFormulaWordmark = (tone = "") => `
-  <span class="snu-formula-wordmark ${tone}" role="img" aria-label="SNU FORMULA">
-    <span class="wordmark-part wordmark-crest" aria-hidden="true"></span>
-    <span class="wordmark-part wordmark-snu" aria-hidden="true"></span>
-    <span class="wordmark-part wordmark-formula" aria-hidden="true"></span>
-  </span>`;
+const snuFormulaWordmark = (tone = "") =>
+  `<span class="snu-formula-wordmark ${tone}" role="img" aria-label="SNU FORMULA"></span>`;
 
 const headerMarkup = `
   <header class="site-header" data-site-header>
@@ -19,7 +15,7 @@ const headerMarkup = `
       <a href="${root}" data-nav="home">${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/" data-nav="about">${bilingual("ABOUT", "ABOUT")}</a>
       <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
-      <a href="${root}team/" data-nav="team">${bilingual("TEAM", "TEAM")}</a>
+      <a href="${root}team/" data-nav="team">${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/" data-nav="partners">${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}join/" data-nav="join">${bilingual("JOIN", "JOIN")}</a>
     </nav>
@@ -40,7 +36,7 @@ const headerMarkup = `
       <a href="${root}"><span>01</span>${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/"><span>02</span>${bilingual("ABOUT", "ABOUT")}</a>
       <a href="${root}vehicle/"><span>03</span>${bilingual("VEHICLE", "VEHICLE")}</a>
-      <a href="${root}team/"><span>04</span>${bilingual("TEAM", "TEAM")}</a>
+      <a href="${root}team/"><span>04</span>${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/"><span>05</span>${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}join/"><span>06</span>${bilingual("JOIN", "JOIN")}</a>
     </nav>
@@ -70,7 +66,7 @@ const footerMarkup = `
         <span class="footer-label">EXPLORE</span>
         <a href="${root}about/">About</a>
         <a href="${root}vehicle/">Vehicle</a>
-        <a href="${root}team/">Team</a>
+        <a href="${root}team/">Members</a>
       </div>
       <div>
         <span class="footer-label">CONNECT</span>
@@ -90,20 +86,30 @@ const footerMarkup = `
   </footer>
 `;
 
-// Opening logo animation. Plays once per browser session so moving between
-// pages does not replay it, and never plays for reduced-motion users.
+// Opening logo animation. It plays on the first view of a session and on every
+// reload, but not when moving between pages inside the site — clicking through
+// the nav should not sit through the logo each time. Reduced-motion visitors
+// never see it.
 const INTRO_KEY = "snu-formula-intro-played";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function introAlreadyPlayed() {
+function isReload() {
+  const entry = performance.getEntriesByType("navigation")[0];
+  if (entry) return entry.type === "reload";
+  // Safari < 15 and other stragglers still only expose the legacy API.
+  return performance.navigation && performance.navigation.type === 1;
+}
+
+function shouldPlayIntro() {
+  if (isReload()) return true;
   try {
-    return sessionStorage.getItem(INTRO_KEY) === "1";
+    return sessionStorage.getItem(INTRO_KEY) !== "1";
   } catch (error) {
-    return true;
+    return false;
   }
 }
 
-if (!prefersReducedMotion && !introAlreadyPlayed()) {
+if (!prefersReducedMotion && shouldPlayIntro()) {
   document.body.insertAdjacentHTML(
     "afterbegin",
     `<div class="intro-veil" data-intro aria-hidden="true">
