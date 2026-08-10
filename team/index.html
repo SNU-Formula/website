@@ -41,13 +41,11 @@
             <p>
               <span class="lang lang-ko">
                 Manager, Engineering, Business 세 팀이 한 대의 Vehicle을 향해
-                움직입니다. 각 팀이 실제로 무엇을 맡는지, 그리고 누가 그 일을
-                하는지 아래에서 확인할 수 있습니다.
+                움직입니다.
               </span>
               <span class="lang lang-en">
                 Three teams — Manager, Engineering, and Business — move toward
-                one vehicle. Below you can see what each team actually owns and
-                who does the work.
+                one vehicle.
               </span>
             </p>
             <span class="page-hero-code">SNUF / TEAM / 03</span>
@@ -57,18 +55,20 @@
 
       <!--
         ============================================================
-        TEAM — 탭으로 전환되는 팀 소개 + 구성원 명단
+        TEAM — 팀 배너를 누르면 그 팀의 구성원이 나옵니다.
         ------------------------------------------------------------
-        탭 동작은 /assets/site.js 의 공용 핸들러가 처리합니다. 새 팀을
-        추가할 때는 세 곳을 함께 맞춰야 동작합니다.
+        전환 동작은 /assets/site.js 의 공용 탭 핸들러가 처리합니다. 팀을
+        추가하거나 이름을 바꿀 때는 아래 세 가지를 함께 맞춰야 동작합니다.
 
-          1. 탭 버튼   : data-panel="키"  / id="tab-키"  / aria-controls="panel-키"
+          1. 배너 버튼 : data-panel="키" / id="tab-키" / aria-controls="panel-키"
           2. 패널      : data-panel-content="키" / id="panel-키" / aria-labelledby="tab-키"
-          3. 처음 열릴 팀에만 class="is-active"를 두고, 나머지 패널에는
-             hidden, 나머지 탭 버튼에는 tabindex="-1" aria-selected="false"
+          3. 처음 열릴 팀에만 class="is-active", 나머지 패널에는 hidden,
+             나머지 버튼에는 tabindex="-1" aria-selected="false"
 
         패널 안에는 data-reveal을 쓰지 마세요. 숨은 상태에서는 등장 애니메이션이
         걸리지 않아 탭을 눌렀을 때 내용이 늦게 나타납니다.
+
+        인원수를 바꾸면 배너의 .team-tab-count 숫자도 같이 고쳐주세요.
 
         ------------------------------------------------------------
         구성원 카드에서 채울 곳은 네 군데입니다.
@@ -96,7 +96,7 @@
         aria-labelledby="structure-title"
       >
         <div class="container">
-          <div class="section-head">
+          <div class="section-head compact">
             <div data-reveal>
               <div class="eyebrow">TEAM STRUCTURE</div>
               <h2 class="section-title" id="structure-title">
@@ -104,14 +104,6 @@
                 <span class="lang lang-en">THREE TEAMS.<br><span class="accent">ONE CAR.</span></span>
               </h2>
             </div>
-            <p data-reveal data-reveal-delay="1">
-              <span class="lang lang-ko">
-                팀 이름을 누르면 해당 팀이 맡는 일과 구성원이 함께 바뀝니다.
-              </span>
-              <span class="lang lang-en">
-                Select a team to switch both its description and its members.
-              </span>
-            </p>
           </div>
 
           <div
@@ -183,102 +175,51 @@
               aria-labelledby="tab-manager"
               tabindex="-1"
             >
-              <div class="team-panel-intro">
-                <figure class="team-panel-media">
-                  <img
-                    src="/assets/img/team/business-operations-detail.png"
-                    alt="일정표와 기록 노트, 도면과 무전기가 놓인 작업 책상"
-                    loading="lazy"
-                  >
-                </figure>
-                <div class="team-panel-copy">
-                  <span class="team-panel-index">01 / MANAGER</span>
-                  <h3>THE TEAM'S<br>CRITICAL PATH.</h3>
-                  <p>
-                    <span class="lang lang-ko">
-                      차량 한 대를 대회까지 끌고 가는 데 필요한 일정과 예산,
-                      그리고 대회 규정 대응을 총괄합니다. 각 파트에서 올라오는
-                      설계 변경과 지연을 하나의 우선순위로 정리해, 지금 무엇을
-                      먼저 확정해야 나머지가 움직이는지를 판단합니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Owns the schedule, the budget, and the rule compliance
-                      that carry one car all the way to competition. Design
-                      changes and delays from every part are consolidated into a
-                      single priority list, so the team knows which decision has
-                      to land first for the rest to move.
-                    </span>
-                  </p>
-                  <p>
-                    <span class="lang lang-ko">
-                      대회 제출 서류와 안전 검차 준비가 기한 안에 끝나도록
-                      관리하고, 시즌이 끝나면 그 해에 내린 판단과 그 결과를
-                      다음 팀이 읽을 수 있는 형태로 남깁니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Keeps document submissions and scrutineering preparation
-                      inside their deadlines, and at the end of a season leaves
-                      that year's decisions — and how they turned out — in a
-                      form the next team can actually read.
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="team-panel-roster">
-                <div class="team-panel-roster-head">
-                  <span class="roster-label">ROSTER</span>
-                  <p>
-                    <span class="lang lang-ko">MANAGER · 2명</span>
-                    <span class="lang lang-en">MANAGER · 2 MEMBERS</span>
-                  </p>
-                </div>
-                <div class="roster-grid">
-                  <!-- manager 01 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/manager-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">MANAGER</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- manager 02 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/manager-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">MANAGER</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
+              <div class="roster-grid">
+                <!-- manager 01 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/manager-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">MANAGER</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- manager 02 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/manager-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">MANAGER</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
               </div>
             </article>
 
@@ -292,214 +233,161 @@
               tabindex="-1"
               hidden
             >
-              <div class="team-panel-intro">
-                <figure class="team-panel-media">
-                  <img
-                    src="/assets/img/team/vehicle-dynamics-detail.png"
-                    alt="프론트 서스펜션과 업라이트, 브레이크 어셈블리"
-                    loading="lazy"
-                  >
-                </figure>
-                <div class="team-panel-copy">
-                  <span class="team-panel-index">02 / ENGINEERING</span>
-                  <h3>FROM TARGET<br>TO LAP TIME.</h3>
-                  <p>
-                    <span class="lang lang-ko">
-                      차량을 직접 설계하고, 만들고, 시험합니다. Chassis는 구조와
-                      강성을, Aerodynamics는 다운포스와 항력을, Vehicle Dynamics는
-                      서스펜션 지오메트리와 타이어 거동을, Powertrain은 구동계와
-                      에너지 전달을 맡습니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Designs, builds, and tests the car itself. Chassis owns
-                      structure and stiffness, aerodynamics owns downforce and
-                      drag, vehicle dynamics owns suspension geometry and tire
-                      behaviour, and powertrain owns the drivetrain and how
-                      energy reaches the wheels.
-                    </span>
-                  </p>
-                  <p>
-                    <span class="lang lang-ko">
-                      각 분야는 먼저 숫자로 된 목표를 세우고, 해석과 주행 데이터로
-                      그 숫자가 맞았는지 확인합니다. 틀렸다면 어디서 틀렸는지까지
-                      남겨 다음 차량의 출발점으로 씁니다. Lead는 이 목표들이 서로
-                      충돌하지 않도록 조정합니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Each area sets a numeric target first, then checks that
-                      number against analysis and track data. When it does not
-                      hold, the reason is recorded and becomes the starting point
-                      for the next car. The lead keeps those targets from
-                      contradicting one another.
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="team-panel-roster">
-                <div class="team-panel-roster-head">
-                  <span class="roster-label">ROSTER</span>
-                  <p>
-                    <span class="lang lang-ko">ENGINEERING · 7명</span>
-                    <span class="lang lang-en">ENGINEERING · 7 MEMBERS</span>
-                  </p>
-                </div>
-                <div class="roster-grid">
-                  <!-- engineering lead -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-lead.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">LEAD</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering chassis -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-chassis.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">CHASSIS</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering aerodynamics -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-aerodynamics.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">AERODYNAMICS</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering vehicle dynamics 01 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">VEHICLE DYNAMICS</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering vehicle dynamics 02 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">VEHICLE DYNAMICS</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering powertrain 01 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-powertrain-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">POWERTRAIN</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                  <!-- engineering powertrain 02 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/engineering-powertrain-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">POWERTRAIN</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
+              <div class="roster-grid">
+                <!-- engineering lead -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-lead.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">LEAD</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering chassis -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-chassis.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">CHASSIS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering aerodynamics -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-aerodynamics.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">AERODYNAMICS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering vehicle dynamics 01 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">VEHICLE DYNAMICS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering vehicle dynamics 02 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-vehicle-dynamics-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">VEHICLE DYNAMICS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering powertrain 01 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-powertrain-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">POWERTRAIN</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
+                <!-- engineering powertrain 02 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/engineering-powertrain-02.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">POWERTRAIN</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
               </div>
             </article>
 
@@ -513,78 +401,29 @@
               tabindex="-1"
               hidden
             >
-              <div class="team-panel-intro">
-                <figure class="team-panel-media">
-                  <img
-                    src="/assets/img/campus/campus-main-gate-road.jpg"
-                    alt="서울대학교 관악캠퍼스 정문과 진입로"
-                    loading="lazy"
-                  >
-                </figure>
-                <div class="team-panel-copy">
-                  <span class="team-panel-index">03 / BUSINESS</span>
-                  <h3>WHAT KEEPS<br>THE CAR FUNDED.</h3>
-                  <p>
-                    <span class="lang lang-ko">
-                      팀이 계속 굴러가게 만드는 쪽을 맡습니다. 파트너사와 후원
-                      조건을 협의하고, 집행 내역과 정산을 관리하며, 팀이 쓴 돈이
-                      어디로 갔는지 언제든 설명할 수 있는 상태를 유지합니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Keeps the team running. Negotiates sponsorship terms with
-                      partner companies, manages spending and settlement, and
-                      keeps the team able to explain where its money went at any
-                      point in the season.
-                    </span>
-                  </p>
-                  <p>
-                    <span class="lang lang-ko">
-                      대회의 Business Plan Presentation을 준비하고, 팀의 활동을
-                      팀 바깥으로 전달하는 기록과 홍보를 담당합니다. 엔지니어링이
-                      만든 결과를 다른 언어로 옮기는 자리입니다.
-                    </span>
-                    <span class="lang lang-en">
-                      Prepares the competition Business Plan Presentation and
-                      owns the records and communications that reach people
-                      outside the team — translating engineering results into a
-                      language the rest of the world reads.
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="team-panel-roster">
-                <div class="team-panel-roster-head">
-                  <span class="roster-label">ROSTER</span>
-                  <p>
-                    <span class="lang lang-ko">BUSINESS · 1명</span>
-                    <span class="lang lang-en">BUSINESS · 1 MEMBER</span>
-                  </p>
-                </div>
-                <div class="roster-grid">
-                  <!-- business 01 -->
-                  <article class="roster-card">
-                    <figure class="roster-photo">
-                      <!-- <img src="/assets/img/team/members/business-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
-                      <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
-                    </figure>
-                    <div class="roster-card-body">
-                      <span class="roster-role">BUSINESS</span>
-                      <h4 class="roster-name">
-                        <span class="lang lang-ko">이름</span>
-                        <span class="lang lang-en">NAME</span>
-                      </h4>
-                      <p class="roster-major">
-                        <span class="lang lang-ko">학과 · 학번</span>
-                        <span class="lang lang-en">Department · Class of</span>
-                      </p>
-                      <ul class="roster-bio">
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                        <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
-                      </ul>
-                    </div>
-                  </article>
-                </div>
+              <div class="roster-grid">
+                <!-- business 01 -->
+                <article class="roster-card">
+                  <figure class="roster-photo">
+                    <!-- <img src="/assets/img/team/members/business-01.jpg" alt="이름 프로필 사진" width="600" height="800" loading="lazy"> -->
+                    <div class="roster-photo-empty" role="img" aria-label="Portrait pending"><span>PHOTO</span></div>
+                  </figure>
+                  <div class="roster-card-body">
+                    <span class="roster-role">BUSINESS</span>
+                    <h3 class="roster-name">
+                      <span class="lang lang-ko">이름</span>
+                      <span class="lang lang-en">NAME</span>
+                    </h3>
+                    <p class="roster-major">
+                      <span class="lang lang-ko">학과 · 학번</span>
+                      <span class="lang lang-en">Department · Class of</span>
+                    </p>
+                    <ul class="roster-bio">
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                      <li><span class="lang lang-ko">활동 사항</span><span class="lang lang-en">Activity</span></li>
+                    </ul>
+                  </div>
+                </article>
               </div>
             </article>
           </div>

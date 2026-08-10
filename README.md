@@ -17,9 +17,9 @@ Then open [http://localhost:4173](http://localhost:4173).
 - `/` — Home, moving partner band, covered vehicle preview, Road to 2028
 - `/about/` — Team identity and Formula SAE / Formula Student / FSG context
 - `/vehicle/` — Covered vehicle preview, public technical targets, validation path
-- `/team/` — Organization and department structure
+- `/team/` — Manager / Engineering / Business teams, switchable roster per team
 - `/partners/` — Partner network and partnership model
-- `/join/` — Four team areas, recruiting status, FAQ, contact
+- `/join/` — Three teams, recruiting status, FAQ, contact
 There is intentionally no Updates page. Join and Contact share one page.
 
 ## Content and asset rules
