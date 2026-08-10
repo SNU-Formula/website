@@ -1631,46 +1631,12 @@ body.intro-active {
 }
 
 .roster-major {
-  margin: 8px 0 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(12px, 0.95vw, 14px);
-}
-
-.roster-bio {
-  display: flex;
-  margin-top: 14px;
+  margin: 14px 0 0;
   padding-top: 14px;
-  flex-direction: column;
-  gap: 6px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.66);
   font-size: clamp(12px, 0.92vw, 14px);
-  line-height: 1.5;
-}
-
-.roster-bio li {
-  position: relative;
-  padding-left: 12px;
-}
-
-.roster-bio li::before {
-  position: absolute;
-  top: 0.68em;
-  left: 0;
-  width: 5px;
-  height: 1px;
-  background: var(--gold);
-  content: "";
-}
-
-.roster-pending {
-  margin: clamp(32px, 3.5vw, 52px) 0 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-family: var(--font-brand);
-  font-size: clamp(9px, 0.72vw, 11px);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .partner-hero-network {
