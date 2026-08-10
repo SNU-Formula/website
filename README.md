@@ -14,13 +14,22 @@ Then open [http://localhost:4173](http://localhost:4173).
 
 ## Pages
 
-- `/` — Home, moving partner band, covered vehicle preview, Road to 2028
-- `/about/` — Team identity and Formula SAE / Formula Student / FSG context
-- `/vehicle/` — Covered vehicle preview, public technical targets, validation path
+- `/` — Hero, moving partner band, covered vehicle teaser
+- `/about/` — Formula SAE / Formula Student and the FSG 2028 target
+- `/vehicle/` — Covered vehicle teaser
 - `/team/` — Manager / Engineering / Business teams, switchable roster per team
-- `/partners/` — Partner network and partnership model
-- `/join/` — Three teams, recruiting status, FAQ, contact
-There is intentionally no Updates page. Join and Contact share one page.
+- `/partners/` — Partner tiers and institutional partners
+- `/join/` — Recruitment status
+
+Pages are deliberately short: one idea each, nothing that is not confirmed.
+There is intentionally no Updates page.
+
+## Opening animation
+
+The SNU FORMULA wordmark plays over a full-screen veil on the first page view
+of a browser session (`sessionStorage`), then never again until a new session.
+It is injected by `assets/site.js`, so visitors without JavaScript and visitors
+with `prefers-reduced-motion: reduce` never see it.
 
 ## Content and asset rules
 

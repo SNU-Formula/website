@@ -17,7 +17,6 @@ const headerMarkup = `
     </a>
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="${root}" data-nav="home">${bilingual("HOME", "HOME")}</a>
-      <a href="${root}#road-to-2028">${bilingual("ROAD TO 2028", "ROAD TO 2028")}</a>
       <a href="${root}about/" data-nav="about">${bilingual("ABOUT", "ABOUT")}</a>
       <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}team/" data-nav="team">${bilingual("TEAM", "TEAM")}</a>
@@ -30,7 +29,6 @@ const headerMarkup = `
         <span aria-hidden="true"></span>
         <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="header-contact" href="${root}join/#contact">${bilingual("CONTACT", "CONTACT")}</a>
       <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-button data-aria-ko="메뉴 열기" data-aria-en="Open menu">
         <span></span><span></span>
       </button>
@@ -40,12 +38,11 @@ const headerMarkup = `
     <div class="mobile-menu-grid" aria-hidden="true"></div>
     <nav aria-label="Mobile navigation">
       <a href="${root}"><span>01</span>${bilingual("HOME", "HOME")}</a>
-      <a href="${root}#road-to-2028"><span>02</span>${bilingual("ROAD TO 2028", "ROAD TO 2028")}</a>
-      <a href="${root}about/"><span>03</span>${bilingual("ABOUT", "ABOUT")}</a>
-      <a href="${root}vehicle/"><span>04</span>${bilingual("VEHICLE", "VEHICLE")}</a>
-      <a href="${root}team/"><span>05</span>${bilingual("TEAM", "TEAM")}</a>
-      <a href="${root}partners/"><span>06</span>${bilingual("PARTNERS", "PARTNERS")}</a>
-      <a href="${root}join/"><span>07</span>${bilingual("JOIN & CONTACT", "JOIN & CONTACT")}</a>
+      <a href="${root}about/"><span>02</span>${bilingual("ABOUT", "ABOUT")}</a>
+      <a href="${root}vehicle/"><span>03</span>${bilingual("VEHICLE", "VEHICLE")}</a>
+      <a href="${root}team/"><span>04</span>${bilingual("TEAM", "TEAM")}</a>
+      <a href="${root}partners/"><span>05</span>${bilingual("PARTNERS", "PARTNERS")}</a>
+      <a href="${root}join/"><span>06</span>${bilingual("JOIN", "JOIN")}</a>
     </nav>
     <div class="mobile-menu-foot">
       <p>SAFETY · DATA · RECORDS · CONTINUITY</p>
@@ -79,7 +76,6 @@ const footerMarkup = `
         <span class="footer-label">CONNECT</span>
         <a href="${root}partners/">Partners</a>
         <a href="${root}join/">Join</a>
-        <a href="${root}join/#contact">Contact</a>
       </div>
       <div class="footer-principles">
         <span class="footer-label">TEAM PRINCIPLES</span>
@@ -93,6 +89,28 @@ const footerMarkup = `
     </div>
   </footer>
 `;
+
+// Opening logo animation. Plays once per browser session so moving between
+// pages does not replay it, and never plays for reduced-motion users.
+const INTRO_KEY = "snu-formula-intro-played";
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function introAlreadyPlayed() {
+  try {
+    return sessionStorage.getItem(INTRO_KEY) === "1";
+  } catch (error) {
+    return true;
+  }
+}
+
+if (!prefersReducedMotion && !introAlreadyPlayed()) {
+  document.body.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="intro-veil" data-intro aria-hidden="true">
+       <div class="intro-mark">${snuFormulaWordmark()}</div>
+     </div>`
+  );
+}
 
 document.body.insertAdjacentHTML("afterbegin", headerMarkup);
 document.body.insertAdjacentHTML("beforeend", footerMarkup);
@@ -242,64 +260,6 @@ document.querySelectorAll("[data-system-tabs]").forEach((group) => {
   });
 });
 
-document.querySelectorAll("[data-accordion-button]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".accordion-item");
-    const open = item.classList.toggle("is-open");
-    button.setAttribute("aria-expanded", String(open));
-    item.querySelector(".accordion-panel").hidden = !open;
-  });
-});
-
-document.querySelectorAll("[data-roadmap]").forEach((roadmap) => {
-  const buttons = [...roadmap.querySelectorAll("[data-roadmap-year]")];
-  const details = [...roadmap.querySelectorAll("[data-roadmap-detail]")];
-  const progressByYear = { 2026: 0.08, 2027: 0.5, 2028: 1 };
-
-  function activateRoadmap(year, focusDetail = false) {
-    buttons.forEach((button) => {
-      const active = button.dataset.roadmapYear === year;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-    details.forEach((detail) => {
-      const active = detail.dataset.roadmapDetail === year;
-      detail.classList.toggle("is-active", active);
-      detail.hidden = !active;
-      if (active && focusDetail) detail.focus({ preventScroll: true });
-    });
-    roadmap.style.setProperty("--road-progress", progressByYear[year] || 0.08);
-  }
-
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => activateRoadmap(button.dataset.roadmapYear));
-    button.addEventListener("keydown", (event) => {
-      if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
-      event.preventDefault();
-      const direction = ["ArrowRight", "ArrowDown"].includes(event.key) ? 1 : -1;
-      const nextIndex = (index + direction + buttons.length) % buttons.length;
-      buttons[nextIndex].focus();
-      activateRoadmap(buttons[nextIndex].dataset.roadmapYear);
-    });
-  });
-});
-
-const heroCover = document.querySelector("[data-hero-cover]");
-if (heroCover && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const hero = heroCover.closest(".hero") || heroCover.parentElement;
-  hero.addEventListener("pointermove", (event) => {
-    const bounds = hero.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-    heroCover.style.setProperty("--parallax-x", `${x * 12}px`);
-    heroCover.style.setProperty("--parallax-y", `${y * 8}px`);
-  });
-  hero.addEventListener("pointerleave", () => {
-    heroCover.style.setProperty("--parallax-x", "0px");
-    heroCover.style.setProperty("--parallax-y", "0px");
-  });
-}
-
 document.querySelectorAll("a[href]").forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetUrl = new URL(link.href, window.location.href);
@@ -317,3 +277,28 @@ document.querySelectorAll("a[href]").forEach((link) => {
 });
 
 window.addEventListener("pageshow", () => body.classList.add("page-ready"));
+
+const introVeil = document.querySelector("[data-intro]");
+if (introVeil) {
+  try {
+    sessionStorage.setItem(INTRO_KEY, "1");
+  } catch (error) {
+    // Private browsing can refuse writes; the intro simply plays again.
+  }
+  body.classList.add("intro-active");
+
+  let introFinished = false;
+  function finishIntro() {
+    if (introFinished) return;
+    introFinished = true;
+    introVeil.remove();
+    body.classList.remove("intro-active");
+  }
+
+  window.setTimeout(() => {
+    introVeil.classList.add("is-leaving");
+    introVeil.addEventListener("transitionend", finishIntro, { once: true });
+    // Never leave the page scroll-locked if the transition does not fire.
+    window.setTimeout(finishIntro, 1200);
+  }, 1450);
+}
