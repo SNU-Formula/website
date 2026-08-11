@@ -703,8 +703,8 @@ body.intro-active {
   content: "";
 }
 
-/* The opening frame is the car's own front corner, drifting in slowly, with
-   light trails and a headlight sweep running over it. */
+/* The opening frame is the car itself on a wet night straight, drifting in
+   slowly, with a headlight sweep running over it. */
 .hero-visual {
   position: absolute;
   z-index: -1;
@@ -712,23 +712,28 @@ body.intro-active {
   overflow: hidden;
 }
 
-.hero-rig {
+.hero-visual picture {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-shot {
   width: 100%;
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: 62% 52%;
-  filter: saturate(0.9) contrast(1.12) brightness(0.62);
-  transform: scale(1.06);
-  animation: hero-push 18s cubic-bezier(0.4, 0, 0.3, 1) infinite alternate;
+  object-position: 58% 60%;
+  filter: saturate(1.04) contrast(1.06) brightness(0.88);
+  transform: scale(1.02);
+  animation: hero-push 20s cubic-bezier(0.4, 0, 0.3, 1) infinite alternate;
 }
 
 @keyframes hero-push {
   from {
-    transform: scale(1.06) translate3d(0, 0, 0);
+    transform: scale(1.02) translate3d(0, 0, 0);
   }
   to {
-    transform: scale(1.16) translate3d(-1.5%, -0.6%, 0);
+    transform: scale(1.11) translate3d(-1.8%, -0.8%, 0);
   }
 }
 
@@ -736,8 +741,8 @@ body.intro-active {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(2, 3, 22, 0.97) 0%, rgba(2, 3, 22, 0.9) 30%, rgba(2, 3, 22, 0.45) 62%, rgba(2, 3, 22, 0.62) 100%),
-    linear-gradient(rgba(2, 3, 22, 0.55), transparent 34%, rgba(2, 3, 22, 0.72));
+    linear-gradient(90deg, rgba(2, 3, 22, 0.92) 0%, rgba(2, 3, 22, 0.68) 34%, rgba(2, 3, 22, 0.18) 62%, rgba(2, 3, 22, 0.34) 100%),
+    linear-gradient(rgba(2, 3, 22, 0.62), transparent 38%, rgba(2, 3, 22, 0.66));
   content: "";
 }
 
@@ -1649,7 +1654,7 @@ body.intro-active {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-sweep,
-  .hero-rig {
+  .hero-shot {
     animation: none;
   }
 
@@ -2611,7 +2616,7 @@ body.intro-active {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-sweep,
-  .hero-rig {
+  .hero-shot {
     animation: none;
   }
 
