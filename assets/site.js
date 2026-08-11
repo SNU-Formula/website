@@ -297,15 +297,57 @@ const rosterPanels = [...document.querySelectorAll("[data-roster]")].map((panel)
   let openCard = null;
   let returnBefore = null;
 
+  // Move the card between grid and detail, then play it back from where it
+  // used to be so it appears to travel rather than jump.
+  function glide(card, move) {
+    if (prefersReducedMotion) {
+      move();
+      return;
+    }
+    const from = card.getBoundingClientRect();
+    move();
+    const to = card.getBoundingClientRect();
+    const dx = from.left - to.left;
+    const dy = from.top - to.top;
+    if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+
+    // Put the card back where it came from with transitions off, force the
+    // browser to commit that as the starting style, then release it. Without
+    // the forced reflow both styles land in one recalculation and nothing
+    // animates.
+    card.style.transition = "none";
+    card.style.transform = `translate(${dx}px, ${dy}px)`;
+    void card.offsetWidth;
+    card.style.transition = "";
+    card.classList.add("is-moving");
+    card.style.transform = "";
+    card.addEventListener(
+      "transitionend",
+      (event) => {
+        if (event.propertyName !== "transform") return;
+        card.classList.remove("is-moving");
+      },
+      { once: true }
+    );
+  }
+
+  function stagger(container, step, offset) {
+    [...container.children].forEach((child, index) => {
+      child.style.animationDelay = `${offset + index * step}s`;
+    });
+  }
+
   function close(moveFocus) {
     if (!openCard) return;
     const card = openCard;
     openCard = null;
-    grid.insertBefore(card, returnBefore);
+    glide(card, () => {
+      grid.insertBefore(card, returnBefore);
+      detail.hidden = true;
+      grid.hidden = false;
+    });
     card.classList.remove("is-open");
     card.querySelector(".roster-card-toggle").setAttribute("aria-expanded", "false");
-    detail.hidden = true;
-    grid.hidden = false;
     education.replaceChildren();
     activity.replaceChildren();
     if (moveFocus) card.querySelector(".roster-card-toggle").focus({ preventScroll: true });
@@ -335,11 +377,19 @@ const rosterPanels = [...document.querySelectorAll("[data-roster]")].map((panel)
       activity.classList.add("is-pending");
     }
 
-    slot.replaceChildren(card);
     card.classList.add("is-open");
     card.querySelector(".roster-card-toggle").setAttribute("aria-expanded", "true");
-    grid.hidden = true;
-    detail.hidden = false;
+    glide(card, () => {
+      slot.replaceChildren(card);
+      grid.hidden = true;
+      detail.hidden = false;
+    });
+
+    // Blocks first, then the lines inside them, each a beat later.
+    stagger(detail.querySelector(".roster-detail-body"), 0.12, 0.18);
+    stagger(education, 0.08, 0.3);
+    stagger(activity, 0.08, 0.45);
+
     openCard = card;
     backButton.focus({ preventScroll: true });
   }

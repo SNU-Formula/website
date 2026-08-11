@@ -81,10 +81,10 @@
                     규격은 같은 폴더의 README.md 참고 (3:4, 900×1200, JPG).
                     alt에는 "한글이름 (ROMANIZED NAME)"을 적습니다.
           2) 이름 : .roster-name
-          3) 학력 : .roster-major 한 줄에 몰아서 적습니다. 고등학교가 있으면
-                    "고등학교 · 대학교 학과" 순서로, 없으면 대학교만 적습니다.
-                    카드를 눌렀을 때 뜨는 '학력' 항목은 이 줄을 그대로 옮겨
-                    보여주므로 따로 적을 필요가 없습니다.
+          3) 학력 : <ul class="roster-major"> 안에 <li> 한 줄씩. 고등학교 →
+                    학사 → 석사 순서로 오래된 것부터 적습니다. 고등학교가
+                    없으면 그 줄만 빼면 됩니다. 카드를 눌렀을 때 뜨는 '학력'
+                    항목은 이 <li>들을 그대로 옮겨 쓰므로 두 번 적지 않습니다.
           4) 활동 이력 : 카드 안 <template class="roster-activity"> 에 <li>로
                     한 줄씩 적습니다. 비워 두면 "추후 업데이트됩니다"가 뜹니다.
                     aria-label / data-aria-ko / data-aria-en 의 이름도 함께
@@ -187,10 +187,11 @@
                       <span class="lang lang-ko">김민규</span>
                       <span class="lang lang-en">KIM MINKYU</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">한국과학영재학교 · 서울대학교 전기정보공학부 학사, 재료공학부 석사</span>
-                      <span class="lang lang-en">Korea Science Academy of KAIST · BS Electrical &amp; Computer Engineering, MS Materials Science, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">한국과학영재학교</span><span class="lang lang-en">Korea Science Academy of KAIST</span></li>
+                      <li><span class="lang lang-ko">서울대학교 전기정보공학부 학사</span><span class="lang lang-en">BS Electrical &amp; Computer Engineering, SNU</span></li>
+                      <li><span class="lang lang-ko">서울대학교 재료공학부 석사</span><span class="lang lang-en">MS Materials Science and Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -212,10 +213,9 @@
                       <span class="lang lang-ko">유민우</span>
                       <span class="lang lang-en">YOU MINWOO</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -252,7 +252,7 @@
                         <span class="lang lang-ko">학력</span>
                         <span class="lang lang-en">EDUCATION</span>
                       </h4>
-                      <div class="roster-detail-edu"></div>
+                      <ul class="roster-detail-edu"></ul>
                     </section>
                     <section class="roster-detail-block">
                       <h4>
@@ -288,10 +288,10 @@
                       <span class="lang lang-ko">김민우</span>
                       <span class="lang lang-en">KIM MINWOO</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">Scottish High International School · 서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Scottish High International School · Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">Scottish High International School</span><span class="lang lang-en">Scottish High International School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -313,10 +313,9 @@
                       <span class="lang lang-ko">강경운</span>
                       <span class="lang lang-en">KANG KYUNGWOON</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -338,10 +337,10 @@
                       <span class="lang lang-ko">이규원</span>
                       <span class="lang lang-en">LEE GYUWON</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">세종과학예술고등학교 · 서울대학교 항공우주공학부</span>
-                      <span class="lang lang-en">Sejong Science and Arts High School · Aerospace Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">세종과학예술고등학교</span><span class="lang lang-en">Sejong Science and Arts High School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 항공우주공학부</span><span class="lang lang-en">Aerospace Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -363,10 +362,10 @@
                       <span class="lang lang-ko">이재준</span>
                       <span class="lang lang-en">LEE JAEJUN</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">경기과학고등학교 · 서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Gyeonggi Science High School · Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">경기과학고등학교</span><span class="lang lang-en">Gyeonggi Science High School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -388,10 +387,10 @@
                       <span class="lang lang-ko">윤종환</span>
                       <span class="lang lang-en">YUN JONGHWAN</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">경기과학고등학교 · 서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Gyeonggi Science High School · Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">경기과학고등학교</span><span class="lang lang-en">Gyeonggi Science High School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -413,10 +412,10 @@
                       <span class="lang lang-ko">김두은</span>
                       <span class="lang lang-en">KIM DOOEUN</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">세종과학고등학교 · 서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Sejong Science High School · Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">세종과학고등학교</span><span class="lang lang-en">Sejong Science High School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -438,10 +437,9 @@
                       <span class="lang lang-ko">김인재</span>
                       <span class="lang lang-en">KIM INJAE</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">서울대학교 기계공학부</span>
-                      <span class="lang lang-en">Mechanical Engineering, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">서울대학교 기계공학부</span><span class="lang lang-en">Mechanical Engineering, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -463,10 +461,10 @@
                       <span class="lang lang-ko">조용우</span>
                       <span class="lang lang-en">CHO YONGWOO</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">서울과학고등학교 · 서울대학교 식물생산과학부</span>
-                      <span class="lang lang-en">Seoul Science High School · Plant Science, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">서울과학고등학교</span><span class="lang lang-en">Seoul Science High School</span></li>
+                      <li><span class="lang lang-ko">서울대학교 식물생산과학부</span><span class="lang lang-en">Plant Science, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -499,7 +497,7 @@
                         <span class="lang lang-ko">학력</span>
                         <span class="lang lang-en">EDUCATION</span>
                       </h4>
-                      <div class="roster-detail-edu"></div>
+                      <ul class="roster-detail-edu"></ul>
                     </section>
                     <section class="roster-detail-block">
                       <h4>
@@ -535,10 +533,9 @@
                       <span class="lang lang-ko">오송우</span>
                       <span class="lang lang-en">OH SONGWOO</span>
                     </h3>
-                    <p class="roster-major">
-                      <span class="lang lang-ko">서울대학교 철학과</span>
-                      <span class="lang lang-en">Philosophy, SNU</span>
-                    </p>
+                    <ul class="roster-major">
+                      <li><span class="lang lang-ko">서울대학교 철학과</span><span class="lang lang-en">Philosophy, SNU</span></li>
+                    </ul>
                   </div>
                   <button
                     class="roster-card-toggle"
@@ -571,7 +568,7 @@
                         <span class="lang lang-ko">학력</span>
                         <span class="lang lang-en">EDUCATION</span>
                       </h4>
-                      <div class="roster-detail-edu"></div>
+                      <ul class="roster-detail-edu"></ul>
                     </section>
                     <section class="roster-detail-block">
                       <h4>
