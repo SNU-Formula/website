@@ -21,13 +21,13 @@
 `romanized-이름.jpg` 형식입니다. 현재 등록된 파일:
 
 ```
-kim-mingyu.jpg        김민규      Manager / PM
-yoo-minwoo.jpg        유민우      Manager / PM
+kim-minkyu.jpg        김민규      Manager / PM
+you-minwoo.jpg        유민우      Manager / PM
 kim-minwoo.jpg        김민우      Engineering / Lead
 kang-kyungwoon.jpg    강경운      Engineering / Chassis
 lee-gyuwon.jpg        이규원      Engineering / Aerodynamics
 lee-jaejun.jpg        이재준      Engineering / Aerodynamics
-yoon-jonghwan.jpg     윤종환      Engineering / Vehicle Dynamics
+yun-jonghwan.jpg      윤종환      Engineering / Vehicle Dynamics
 kim-dooeun.jpg        김두은      Engineering / Vehicle Dynamics
 kim-injae.jpg         김인재      Engineering / Powertrain
 cho-yongwoo.jpg       조용우      Engineering / Powertrain
