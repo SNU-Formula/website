@@ -14,7 +14,7 @@
       }
     </script>
     <link rel="icon" href="/assets/logos/snu-formula-blue.png">
-    <link rel="preload" as="image" href="/assets/img/hero/night-run.webp" type="image/webp">
+    <link rel="preload" as="image" href="/assets/img/hero/scene-1-track.webp" type="image/webp">
     <link rel="stylesheet" href="/assets/styles.css">
     <title>SNU FORMULA</title>
   </head>
@@ -33,12 +33,20 @@
     <main id="main" class="site-main">
       <section class="hero" id="top" aria-labelledby="home-title">
         <div class="hero-grid" aria-hidden="true"></div>
-        <!-- The car on a wet night pit straight, pushing in slowly, with a light
-             sweeping across it the way a passing headlight would. -->
+        <!-- Three scenes. Each holds for one pass of the light sweep and hands
+             over as the light crosses the frame; see the hero block in site.js. -->
         <div class="hero-visual" aria-hidden="true">
-          <picture>
-            <source srcset="/assets/img/hero/night-run.webp" type="image/webp">
-            <img class="hero-shot" src="/assets/img/hero/night-run.jpg" alt="">
+          <picture class="hero-shot is-active">
+            <source srcset="/assets/img/hero/scene-1-track.webp" type="image/webp">
+            <img src="/assets/img/hero/scene-1-track.jpg" alt="">
+          </picture>
+          <picture class="hero-shot">
+            <source srcset="/assets/img/hero/scene-2-campus.webp" type="image/webp">
+            <img src="/assets/img/hero/scene-2-campus.jpg" alt="">
+          </picture>
+          <picture class="hero-shot">
+            <source srcset="/assets/img/hero/scene-3-night.webp" type="image/webp">
+            <img src="/assets/img/hero/scene-3-night.jpg" alt="">
           </picture>
         </div>
         <div class="hero-sweep" aria-hidden="true"></div>

@@ -703,8 +703,9 @@ body.intro-active {
   content: "";
 }
 
-/* The opening frame is the car itself on a wet night straight, drifting in
-   slowly, with a headlight sweep running over it. */
+/* The opening frame cycles three scenes, each drifting in slowly. The handover
+   is timed to the light sweep in site.js, so the picture changes underneath the
+   light rather than at some unrelated moment. */
 .hero-visual {
   position: absolute;
   z-index: -1;
@@ -712,28 +713,41 @@ body.intro-active {
   overflow: hidden;
 }
 
-.hero-visual picture {
+.hero-shot {
   position: absolute;
   inset: 0;
+  opacity: 0;
+  transition: opacity 1.3s var(--ease);
 }
 
-.hero-shot {
+.hero-shot.is-active {
+  opacity: 1;
+}
+
+.hero-shot img {
   width: 100%;
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 60%;
-  filter: saturate(1.04) contrast(1.06) brightness(0.88);
-  transform: scale(1.02);
-  animation: hero-push 20s cubic-bezier(0.4, 0, 0.3, 1) infinite alternate;
+  filter: saturate(1.04) contrast(1.06) brightness(0.9);
+  transform: scale(1.03);
+}
+
+.hero-shot:nth-child(1) img { object-position: 58% 64%; }
+.hero-shot:nth-child(2) img { object-position: 62% 52%; }
+.hero-shot:nth-child(3) img { object-position: 58% 58%; }
+
+/* Only the scene on screen drifts; the others sit still until their turn. */
+.hero-shot.is-active img {
+  animation: hero-push 10s cubic-bezier(0.4, 0, 0.3, 1) both;
 }
 
 @keyframes hero-push {
   from {
-    transform: scale(1.02) translate3d(0, 0, 0);
+    transform: scale(1.03) translate3d(0, 0, 0);
   }
   to {
-    transform: scale(1.11) translate3d(-1.8%, -0.8%, 0);
+    transform: scale(1.1) translate3d(-1.4%, -0.7%, 0);
   }
 }
 
@@ -1654,8 +1668,12 @@ body.intro-active {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-sweep,
-  .hero-shot {
+  .hero-shot img {
     animation: none;
+  }
+
+  .hero-shot {
+    transition: none;
   }
 
   .hero-sweep {
@@ -2616,8 +2634,12 @@ body.intro-active {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-sweep,
-  .hero-shot {
+  .hero-shot img {
     animation: none;
+  }
+
+  .hero-shot {
+    transition: none;
   }
 
   .hero-sweep {

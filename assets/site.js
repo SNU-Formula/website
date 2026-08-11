@@ -416,6 +416,32 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeAllRosterDetails();
 });
 
+// Home hero: hand over to the next scene while the light is crossing the frame,
+// so the change is hidden inside the sweep instead of reading as a slideshow.
+const heroShots = [...document.querySelectorAll(".hero-shot")];
+const heroSweep = document.querySelector(".hero-sweep");
+if (heroShots.length > 1 && heroSweep && !prefersReducedMotion) {
+  let current = 0;
+  let pending = 0;
+
+  function nextScene() {
+    heroShots[current].classList.remove("is-active");
+    current = (current + 1) % heroShots.length;
+    heroShots[current].classList.add("is-active");
+  }
+
+  // The sweep starts at the left edge, so roughly halfway through its run is
+  // when it is over the middle of the frame.
+  function scheduleHandover() {
+    window.clearTimeout(pending);
+    const cycle = parseFloat(getComputedStyle(heroSweep).animationDuration) * 1000;
+    pending = window.setTimeout(nextScene, cycle * 0.46);
+  }
+
+  heroSweep.addEventListener("animationiteration", scheduleHandover);
+  scheduleHandover();
+}
+
 window.addEventListener("pageshow", () => body.classList.add("page-ready"));
 
 const introVeil = document.querySelector("[data-intro]");
