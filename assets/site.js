@@ -282,6 +282,90 @@ document.querySelectorAll("a[href]").forEach((link) => {
   });
 });
 
+// Roster: clicking a member moves that card out of the grid and into a detail
+// layout beside it. The card itself is reused rather than duplicated, so there
+// is only ever one copy of a member's markup.
+const rosterPanels = [...document.querySelectorAll("[data-roster]")].map((panel) => {
+  const grid = panel.querySelector(".roster-grid");
+  const detail = panel.querySelector(".roster-detail");
+  if (!grid || !detail) return null;
+
+  const slot = detail.querySelector(".roster-detail-card");
+  const education = detail.querySelector(".roster-detail-edu");
+  const activity = detail.querySelector(".roster-detail-activity");
+  const backButton = detail.querySelector(".roster-detail-close");
+  let openCard = null;
+  let returnBefore = null;
+
+  function close(moveFocus) {
+    if (!openCard) return;
+    const card = openCard;
+    openCard = null;
+    grid.insertBefore(card, returnBefore);
+    card.classList.remove("is-open");
+    card.querySelector(".roster-card-toggle").setAttribute("aria-expanded", "false");
+    detail.hidden = true;
+    grid.hidden = false;
+    education.replaceChildren();
+    activity.replaceChildren();
+    if (moveFocus) card.querySelector(".roster-card-toggle").focus({ preventScroll: true });
+  }
+
+  function open(card) {
+    if (openCard === card) {
+      close(true);
+      return;
+    }
+    close(false);
+    returnBefore = card.nextElementSibling;
+
+    const major = card.querySelector(".roster-major");
+    education.replaceChildren();
+    if (major) education.append(...[...major.cloneNode(true).childNodes]);
+
+    const template = card.querySelector(".roster-activity");
+    activity.replaceChildren();
+    if (template && template.content.children.length) {
+      activity.appendChild(template.content.cloneNode(true));
+      activity.classList.remove("is-pending");
+    } else {
+      const pending = document.createElement("li");
+      pending.innerHTML = bilingual("추후 업데이트됩니다", "To be updated");
+      activity.appendChild(pending);
+      activity.classList.add("is-pending");
+    }
+
+    slot.replaceChildren(card);
+    card.classList.add("is-open");
+    card.querySelector(".roster-card-toggle").setAttribute("aria-expanded", "true");
+    grid.hidden = true;
+    detail.hidden = false;
+    openCard = card;
+    backButton.focus({ preventScroll: true });
+  }
+
+  grid.querySelectorAll(".roster-card").forEach((card) => {
+    card
+      .querySelector(".roster-card-toggle")
+      .addEventListener("click", () => open(card));
+  });
+  backButton.addEventListener("click", () => close(true));
+
+  return { close };
+}).filter(Boolean);
+
+function closeAllRosterDetails() {
+  rosterPanels.forEach((panel) => panel.close(false));
+}
+
+// Switching team, or pressing Escape, returns to the grid.
+document.querySelectorAll(".team-tab").forEach((tab) => {
+  tab.addEventListener("click", closeAllRosterDetails);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeAllRosterDetails();
+});
+
 window.addEventListener("pageshow", () => body.classList.add("page-ready"));
 
 const introVeil = document.querySelector("[data-intro]");

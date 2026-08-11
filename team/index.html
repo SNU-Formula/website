@@ -35,7 +35,7 @@
         <div class="container">
           <div class="eyebrow light">THE TEAM BEHIND THE SYSTEM</div>
           <h1 class="page-hero-title technical" id="team-title">
-            THE BEST<br><span class="line">ENGINEERS AT SNU.</span>
+            THE BEST<br><span class="line">ENGINEERS.</span>
           </h1>
           <div class="page-hero-bottom">
             <p>
@@ -83,6 +83,12 @@
           2) 이름 : .roster-name
           3) 학력 : .roster-major 한 줄에 몰아서 적습니다. 고등학교가 있으면
                     "고등학교 · 대학교 학과" 순서로, 없으면 대학교만 적습니다.
+                    카드를 눌렀을 때 뜨는 '학력' 항목은 이 줄을 그대로 옮겨
+                    보여주므로 따로 적을 필요가 없습니다.
+          4) 활동 이력 : 카드 안 <template class="roster-activity"> 에 <li>로
+                    한 줄씩 적습니다. 비워 두면 "추후 업데이트됩니다"가 뜹니다.
+                    aria-label / data-aria-ko / data-aria-en 의 이름도 함께
+                    바꿔주세요. 화면 낭독기가 읽는 값입니다.
 
         사진이 아직 없는 구성원은 <figure class="roster-photo"> 안의 <img>
         대신 아래 한 줄을 넣으면 자리표시자가 나옵니다.
@@ -163,6 +169,7 @@
             <!-- ============ MANAGER ============ -->
             <article
               class="team-panel is-active"
+              data-roster
               data-panel-content="manager"
               id="panel-manager"
               role="tabpanel"
@@ -185,6 +192,15 @@
                       <span class="lang lang-en">Korea Science Academy of KAIST · BS Electrical &amp; Computer Engineering, MS Materials Science, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="김민규 세부 정보 보기"
+                    data-aria-ko="김민규 세부 정보 보기"
+                    data-aria-en="View KIM MINKYU details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -201,13 +217,59 @@
                       <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="유민우 세부 정보 보기"
+                    data-aria-ko="유민우 세부 정보 보기"
+                    data-aria-en="View YOU MINWOO details"
+                  ></button>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 Engineering Manager &amp; Mechanical Team &amp; Driver (2024.06~2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 Engineering Manager &amp; Mechanical Team &amp; Driver (2024.06~2025.09)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 Alumni (2025.09~)</span><span class="lang lang-en">SNU SOLAR EV 2027 Alumni (2025.09~)</span></li>
+                    <li><span class="lang lang-ko">SNU TFC&amp;BME Intern (2026.07~)</span><span class="lang lang-en">SNU TFC&amp;BME Intern (2026.07~)</span></li>
+                  </template>
                 </article>
+              </div>
+              <div class="roster-detail" hidden>
+                <button
+                  class="roster-detail-close"
+                  type="button"
+                  aria-label="목록으로 돌아가기"
+                  data-aria-ko="목록으로 돌아가기"
+                  data-aria-en="Back to the list"
+                >
+                  <span aria-hidden="true">←</span>
+                  <span class="lang lang-ko">목록으로</span>
+                  <span class="lang lang-en">BACK</span>
+                </button>
+                <div class="roster-detail-layout">
+                  <div class="roster-detail-card"></div>
+                  <div class="roster-detail-body">
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">학력</span>
+                        <span class="lang lang-en">EDUCATION</span>
+                      </h4>
+                      <div class="roster-detail-edu"></div>
+                    </section>
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">활동 이력</span>
+                        <span class="lang lang-en">ACTIVITY</span>
+                      </h4>
+                      <ul class="roster-detail-activity"></ul>
+                    </section>
+                  </div>
+                </div>
               </div>
             </article>
 
             <!-- ============ ENGINEERING ============ -->
             <article
               class="team-panel"
+              data-roster
               data-panel-content="engineering"
               id="panel-engineering"
               role="tabpanel"
@@ -231,6 +293,15 @@
                       <span class="lang lang-en">Scottish High International School · Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="김민우 세부 정보 보기"
+                    data-aria-ko="김민우 세부 정보 보기"
+                    data-aria-en="View KIM MINWOO details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -247,6 +318,15 @@
                       <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="강경운 세부 정보 보기"
+                    data-aria-ko="강경운 세부 정보 보기"
+                    data-aria-en="View KANG KYUNGWOON details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -263,6 +343,15 @@
                       <span class="lang lang-en">Sejong Science and Arts High School · Aerospace Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="이규원 세부 정보 보기"
+                    data-aria-ko="이규원 세부 정보 보기"
+                    data-aria-en="View LEE GYUWON details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -279,6 +368,15 @@
                       <span class="lang lang-en">Gyeonggi Science High School · Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="이재준 세부 정보 보기"
+                    data-aria-ko="이재준 세부 정보 보기"
+                    data-aria-en="View LEE JAEJUN details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -295,6 +393,15 @@
                       <span class="lang lang-en">Gyeonggi Science High School · Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="윤종환 세부 정보 보기"
+                    data-aria-ko="윤종환 세부 정보 보기"
+                    data-aria-en="View YUN JONGHWAN details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -311,6 +418,15 @@
                       <span class="lang lang-en">Sejong Science High School · Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="김두은 세부 정보 보기"
+                    data-aria-ko="김두은 세부 정보 보기"
+                    data-aria-en="View KIM DOOEUN details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -327,6 +443,15 @@
                       <span class="lang lang-en">Mechanical Engineering, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="김인재 세부 정보 보기"
+                    data-aria-ko="김인재 세부 정보 보기"
+                    data-aria-en="View KIM INJAE details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -343,13 +468,55 @@
                       <span class="lang lang-en">Seoul Science High School · Plant Science, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="조용우 세부 정보 보기"
+                    data-aria-ko="조용우 세부 정보 보기"
+                    data-aria-en="View CHO YONGWOO details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
+              </div>
+              <div class="roster-detail" hidden>
+                <button
+                  class="roster-detail-close"
+                  type="button"
+                  aria-label="목록으로 돌아가기"
+                  data-aria-ko="목록으로 돌아가기"
+                  data-aria-en="Back to the list"
+                >
+                  <span aria-hidden="true">←</span>
+                  <span class="lang lang-ko">목록으로</span>
+                  <span class="lang lang-en">BACK</span>
+                </button>
+                <div class="roster-detail-layout">
+                  <div class="roster-detail-card"></div>
+                  <div class="roster-detail-body">
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">학력</span>
+                        <span class="lang lang-en">EDUCATION</span>
+                      </h4>
+                      <div class="roster-detail-edu"></div>
+                    </section>
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">활동 이력</span>
+                        <span class="lang lang-en">ACTIVITY</span>
+                      </h4>
+                      <ul class="roster-detail-activity"></ul>
+                    </section>
+                  </div>
+                </div>
               </div>
             </article>
 
             <!-- ============ BUSINESS ============ -->
             <article
               class="team-panel"
+              data-roster
               data-panel-content="business"
               id="panel-business"
               role="tabpanel"
@@ -373,7 +540,48 @@
                       <span class="lang lang-en">Philosophy, SNU</span>
                     </p>
                   </div>
+                  <button
+                    class="roster-card-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-label="오송우 세부 정보 보기"
+                    data-aria-ko="오송우 세부 정보 보기"
+                    data-aria-en="View OH SONGWOO details"
+                  ></button>
+                  <template class="roster-activity"></template>
                 </article>
+              </div>
+              <div class="roster-detail" hidden>
+                <button
+                  class="roster-detail-close"
+                  type="button"
+                  aria-label="목록으로 돌아가기"
+                  data-aria-ko="목록으로 돌아가기"
+                  data-aria-en="Back to the list"
+                >
+                  <span aria-hidden="true">←</span>
+                  <span class="lang lang-ko">목록으로</span>
+                  <span class="lang lang-en">BACK</span>
+                </button>
+                <div class="roster-detail-layout">
+                  <div class="roster-detail-card"></div>
+                  <div class="roster-detail-body">
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">학력</span>
+                        <span class="lang lang-en">EDUCATION</span>
+                      </h4>
+                      <div class="roster-detail-edu"></div>
+                    </section>
+                    <section class="roster-detail-block">
+                      <h4>
+                        <span class="lang lang-ko">활동 이력</span>
+                        <span class="lang lang-en">ACTIVITY</span>
+                      </h4>
+                      <ul class="roster-detail-activity"></ul>
+                    </section>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
