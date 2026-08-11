@@ -697,9 +697,88 @@ body.intro-active {
   z-index: -2;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(5, 8, 45, 0.97) 0%, rgba(5, 8, 45, 0.82) 42%, rgba(5, 8, 45, 0.08) 78%),
-    radial-gradient(circle at 73% 40%, rgba(23, 56, 212, 0.22), transparent 44%);
+    linear-gradient(90deg, rgba(2, 3, 22, 0.96) 0%, rgba(2, 3, 22, 0.72) 40%, rgba(2, 3, 22, 0.3) 72%, rgba(2, 3, 22, 0.5) 100%),
+    radial-gradient(circle at 70% 62%, rgba(23, 56, 212, 0.3), transparent 52%),
+    #02031a;
   content: "";
+}
+
+/* The opening frame is the car's own front corner, drifting in slowly, with
+   light trails and a headlight sweep running over it. */
+.hero-visual {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-rig {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 52%;
+  filter: saturate(0.9) contrast(1.12) brightness(0.62);
+  transform: scale(1.06);
+  animation: hero-push 18s cubic-bezier(0.4, 0, 0.3, 1) infinite alternate;
+}
+
+@keyframes hero-push {
+  from {
+    transform: scale(1.06) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.16) translate3d(-1.5%, -0.6%, 0);
+  }
+}
+
+.hero-visual::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(2, 3, 22, 0.97) 0%, rgba(2, 3, 22, 0.9) 30%, rgba(2, 3, 22, 0.45) 62%, rgba(2, 3, 22, 0.62) 100%),
+    linear-gradient(rgba(2, 3, 22, 0.55), transparent 34%, rgba(2, 3, 22, 0.72));
+  content: "";
+}
+
+/* One light crossing the frame, the way a headlight sweeps past. Screen blend
+   so it lifts the hardware instead of sitting on top of it as a grey veil. */
+.hero-sweep {
+  position: absolute;
+  z-index: 1;
+  top: -10%;
+  bottom: -10%;
+  left: -40%;
+  width: 42%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(120, 158, 255, 0.16) 26%,
+    rgba(198, 216, 255, 0.5) 50%,
+    rgba(120, 158, 255, 0.16) 74%,
+    transparent
+  );
+  filter: blur(34px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: hero-sweep 7.5s cubic-bezier(0.42, 0, 0.32, 1) infinite;
+}
+
+@keyframes hero-sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(0) skewX(-8deg);
+  }
+  14% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(330%) skewX(-8deg);
+  }
 }
 
 .hero-grid {
@@ -713,27 +792,6 @@ body.intro-active {
     linear-gradient(90deg, rgba(90, 113, 255, 0.15) 1px, transparent 1px);
   background-size: 92px 92px;
   mask-image: linear-gradient(to right, transparent 8%, black 62%, transparent);
-}
-
-.hero-beam {
-  position: absolute;
-  z-index: 1;
-  top: 10%;
-  bottom: 12%;
-  left: 60%;
-  width: 1px;
-  background: linear-gradient(transparent, rgba(132, 155, 255, 0.8), transparent);
-  box-shadow: 0 0 22px rgba(60, 91, 255, 0.7);
-  animation: beamTravel 7s ease-in-out infinite alternate;
-}
-
-@keyframes beamTravel {
-  from {
-    transform: translateX(-90px);
-  }
-  to {
-    transform: translateX(130px);
-  }
 }
 
 .hero-inner {
@@ -777,55 +835,6 @@ body.intro-active {
   margin-top: 28px;
   color: rgba(255, 255, 255, 0.68);
   font-size: clamp(16px, 1.25vw, 20px);
-}
-
-.hero-visual {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.hero-visual picture {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-campus-pan {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  object-fit: cover;
-  object-position: 12% center;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0) scale(1.045);
-  transform-origin: center;
-  will-change: object-position, transform;
-  animation: homeCampusPan 14s cubic-bezier(0.45, 0, 0.25, 1) infinite alternate;
-}
-
-@keyframes homeCampusPan {
-  from {
-    object-position: 12% center;
-    transform: translate3d(0, 0, 0) scale(1.045);
-  }
-
-  to {
-    object-position: 88% center;
-    transform: translate3d(0, -0.15%, 0) scale(1.045);
-  }
-}
-.hero-visual::after {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(3, 5, 35, 0.68) 0%, rgba(3, 5, 35, 0.34) 48%, rgba(3, 5, 35, 0.16) 78%, transparent 100%),
-    rgba(23, 56, 212, 0.4);
-  content: "";
 }
 
 .hero-index {
@@ -1639,6 +1648,15 @@ body.intro-active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-sweep,
+  .hero-rig {
+    animation: none;
+  }
+
+  .hero-sweep {
+    opacity: 0;
+  }
+
   .roster-detail,
   .roster-detail-block,
   .roster-detail-edu li,
@@ -2374,15 +2392,6 @@ body.intro-active {
     align-items: flex-end;
   }
 
-  .hero-visual {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-visual::after {
-    background:
-      linear-gradient(0deg, rgba(3, 5, 35, 0.76) 0%, rgba(3, 5, 35, 0.22) 62%, rgba(3, 5, 35, 0.08) 100%),
-      rgba(23, 56, 212, 0.4);
-  }
 
   .hero-title {
     font-size: clamp(49px, 15vw, 76px);
@@ -2601,6 +2610,15 @@ body.intro-active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-sweep,
+  .hero-rig {
+    animation: none;
+  }
+
+  .hero-sweep {
+    opacity: 0;
+  }
+
   *,
   *::before,
   *::after {
