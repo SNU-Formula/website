@@ -1904,12 +1904,7 @@ body.intro-active {
 }
 
 .tier-principal .partner-card {
-  min-height: 300px;
-}
-
-.tier-principal .logo-box img {
-  max-width: 320px;
-  max-height: 84px;
+  min-height: 260px;
 }
 
 .partner-card {
@@ -1950,6 +1945,18 @@ body.intro-active {
   max-width: 220px;
   max-height: 56px;
   object-fit: contain;
+}
+
+/* The principal card runs the full width, so the mark is sized to fill it
+   rather than float in the middle of it. Declared after the rule above,
+   which has the same specificity and would otherwise win. */
+.tier-principal .partner-card .logo-box {
+  min-height: 128px;
+}
+
+.tier-principal .partner-card .logo-box img {
+  max-width: min(58%, 700px);
+  max-height: 120px;
 }
 
 .partner-card#youngone .youngone-wordmark {
