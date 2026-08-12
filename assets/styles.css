@@ -137,8 +137,8 @@ svg {
 .youngone-wordmark {
   display: block;
   width: 130px;
-  aspect-ratio: 1600 / 171;
-  background: #123c62;
+  aspect-ratio: 1600 / 159;
+  background: #1d2a50;
   -webkit-mask: url("/assets/sponsors/youngone-official.png") center / contain no-repeat;
   mask: url("/assets/sponsors/youngone-official.png") center / contain no-repeat;
 }
@@ -978,8 +978,9 @@ body.intro-active {
   object-fit: contain;
 }
 
-.partner-logo.mando img {
-  max-width: 145px;
+.partner-logo.yongsan img {
+  max-width: 150px;
+  max-height: 40px;
 }
 
 .home-intro {
