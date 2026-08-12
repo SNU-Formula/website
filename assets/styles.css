@@ -793,6 +793,8 @@ body.intro-active {
   inset: 0;
 }
 
+/* The picture and the viewport are both 1.6:1, so there is no width to pan
+   across; it drifts in instead. */
 .hero-campus-pan {
   position: absolute;
   inset: 0;
@@ -800,31 +802,28 @@ body.intro-active {
   max-width: none;
   height: 100%;
   object-fit: cover;
-  object-position: 12% center;
+  object-position: 56% 62%;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0) scale(1.045);
-  transform-origin: center;
-  will-change: object-position, transform;
-  animation: homeCampusPan 14s cubic-bezier(0.45, 0, 0.25, 1) infinite alternate;
+  transform-origin: 58% 60%;
+  will-change: transform;
+  animation: homeGateDrift 22s cubic-bezier(0.4, 0, 0.3, 1) infinite alternate;
 }
 
-@keyframes homeCampusPan {
+@keyframes homeGateDrift {
   from {
-    object-position: 12% center;
-    transform: translate3d(0, 0, 0) scale(1.045);
+    transform: scale(1.04);
   }
-
   to {
-    object-position: 88% center;
-    transform: translate3d(0, -0.15%, 0) scale(1.045);
+    transform: scale(1.13);
   }
 }
 .hero-visual::after {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(3, 5, 35, 0.68) 0%, rgba(3, 5, 35, 0.34) 48%, rgba(3, 5, 35, 0.16) 78%, transparent 100%),
-    rgba(23, 56, 212, 0.4);
+    linear-gradient(90deg, rgba(3, 5, 35, 0.93) 0%, rgba(3, 5, 35, 0.74) 38%, rgba(3, 5, 35, 0.4) 68%, rgba(3, 5, 35, 0.3) 100%),
+    linear-gradient(rgba(3, 5, 35, 0.5), transparent 40%, rgba(3, 5, 35, 0.55)),
+    rgba(23, 56, 212, 0.26);
   content: "";
 }
 
@@ -1655,6 +1654,10 @@ body.intro-active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-campus-pan {
+    animation: none;
+  }
+
   .roster-detail,
   .roster-detail-block,
   .roster-detail-edu li,
@@ -2404,8 +2407,8 @@ body.intro-active {
   }
   .hero-visual::after {
     background:
-      linear-gradient(0deg, rgba(3, 5, 35, 0.76) 0%, rgba(3, 5, 35, 0.22) 62%, rgba(3, 5, 35, 0.08) 100%),
-      rgba(23, 56, 212, 0.4);
+      linear-gradient(0deg, rgba(3, 5, 35, 0.9) 0%, rgba(3, 5, 35, 0.55) 55%, rgba(3, 5, 35, 0.4) 100%),
+      rgba(23, 56, 212, 0.26);
   }
 
   .hero-title {
