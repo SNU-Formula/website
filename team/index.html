@@ -86,7 +86,12 @@
                     없으면 그 줄만 빼면 됩니다. 카드를 눌렀을 때 뜨는 '학력'
                     항목은 이 <li>들을 그대로 옮겨 쓰므로 두 번 적지 않습니다.
           4) 활동 이력 : 카드 안 <template class="roster-activity"> 에 <li>로
-                    한 줄씩 적습니다. 비워 두면 "추후 업데이트됩니다"가 뜹니다.
+                    한 줄씩, 오래된 것부터 적습니다. 양식은 전원 동일하게
+                        소속 또는 제목 — 역할이나 내용 (2024.06–2025.09)
+                    이고, 진행 중이면 끝을 비웁니다 (2025.09–). 연도만 아는
+                    항목은 (2019) 처럼 적습니다.
+                    7줄이 넘으면 site.js가 자동으로 2단으로 나눕니다.
+                    비워 두면 "추후 업데이트됩니다"가 뜹니다.
                     aria-label / data-aria-ko / data-aria-en 의 이름도 함께
                     바꿔주세요. 화면 낭독기가 읽는 값입니다.
 
@@ -201,7 +206,22 @@
                     data-aria-ko="김민규 세부 정보 보기"
                     data-aria-en="View KIM MINKYU details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">Korea Aerospace University R&amp;E — Hybrid jet-engine drone, presented at the KSPE Fall Conference (2019)</span><span class="lang lang-en">Korea Aerospace University R&amp;E — Hybrid jet-engine drone, presented at the KSPE Fall Conference (2019)</span></li>
+                    <li><span class="lang lang-ko">27th Satellite Design Contest, Japan — Junior Grand Prix and Special Award (2019)</span><span class="lang lang-en">27th Satellite Design Contest, Japan — Junior Grand Prix and Special Award (2019)</span></li>
+                    <li><span class="lang lang-ko">Odyssey of the Mind Korea — National Champion, Ministry of Trade, Industry and Energy (2019)</span><span class="lang lang-en">Odyssey of the Mind Korea — National Champion, Ministry of Trade, Industry and Energy (2019)</span></li>
+                    <li><span class="lang lang-ko">Imperial College London Summer School — Engineering &amp; Science (2019)</span><span class="lang lang-en">Imperial College London Summer School — Engineering &amp; Science (2019)</span></li>
+                    <li><span class="lang lang-ko">KAIST USRG Lab — Flying Car Project, personal air mobility platform (2020)</span><span class="lang lang-en">KAIST USRG Lab — Flying Car Project, personal air mobility platform (2020)</span></li>
+                    <li><span class="lang lang-ko">Presidential Science Scholarship — Korea Student Aid Foundation (2021)</span><span class="lang lang-en">Presidential Science Scholarship — Korea Student Aid Foundation (2021)</span></li>
+                    <li><span class="lang lang-ko">SNU RunToYou — President, student formula and EV development (2021–2024)</span><span class="lang lang-en">SNU RunToYou — President, student formula and EV development (2021–2024)</span></li>
+                    <li><span class="lang lang-ko">Samsung Electronics System LSI — STIP Intern, on-device object detection and quantization (2022)</span><span class="lang lang-en">Samsung Electronics System LSI — STIP Intern, on-device object detection and quantization (2022)</span></li>
+                    <li><span class="lang lang-ko">SNAAC — Program Team, startup acceleration and student venture capital (2023–2024)</span><span class="lang lang-en">SNAAC — Program Team, startup acceleration and student venture capital (2023–2024)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV — Project Manager, 2025 Bridgestone World Solar Challenge and the 2027 programme (2024–)</span><span class="lang lang-en">SNU SOLAR EV — Project Manager, 2025 Bridgestone World Solar Challenge and the 2027 programme (2024–)</span></li>
+                    <li><span class="lang lang-ko">Gwanak Analog — Engineering Intern, solar-car MPPT and ECU systems (2024–2025)</span><span class="lang lang-en">Gwanak Analog — Engineering Intern, solar-car MPPT and ECU systems (2024–2025)</span></li>
+                    <li><span class="lang lang-ko">Hyundai Motor Europe Technical Center — Research Intern, BEV energy efficiency and power electronics (2026)</span><span class="lang lang-en">Hyundai Motor Europe Technical Center — Research Intern, BEV energy efficiency and power electronics (2026)</span></li>
+                    <li><span class="lang lang-ko">MOTOMIND — Co-founder, firmware for in-house motor drivers and humanoid motor control (2026–)</span><span class="lang lang-en">MOTOMIND — Co-founder, firmware for in-house motor drivers and humanoid motor control (2026–)</span></li>
+                    <li><span class="lang lang-ko">SNU MOBILITY Renovatio — Project Manager, solar car, formula and robotics projects (2026–)</span><span class="lang lang-en">SNU MOBILITY Renovatio — Project Manager, solar car, formula and robotics projects (2026–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -226,9 +246,9 @@
                     data-aria-en="View YOU MINWOO details"
                   ></button>
                   <template class="roster-activity">
-                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 Engineering Manager &amp; Mechanical Team &amp; Driver (2024.06~2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 Engineering Manager &amp; Mechanical Team &amp; Driver (2024.06~2025.09)</span></li>
-                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 Alumni (2025.09~)</span><span class="lang lang-en">SNU SOLAR EV 2027 Alumni (2025.09~)</span></li>
-                    <li><span class="lang lang-ko">SNU TFC&amp;BME Intern (2026.07~)</span><span class="lang lang-en">SNU TFC&amp;BME Intern (2026.07~)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 — Engineering Manager, Mechanical Team and Driver (2024.06–2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 — Engineering Manager, Mechanical Team and Driver (2024.06–2025.09)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 — Alumni (2025.09–)</span><span class="lang lang-en">SNU SOLAR EV 2027 — Alumni (2025.09–)</span></li>
+                    <li><span class="lang lang-ko">SNU TFC &amp; BME — Intern (2026.07–)</span><span class="lang lang-en">SNU TFC &amp; BME — Intern (2026.07–)</span></li>
                   </template>
                 </article>
               </div>
@@ -301,7 +321,12 @@
                     data-aria-ko="김민우 세부 정보 보기"
                     data-aria-en="View KIM MINWOO details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">F1 in Schools India — National Champion (2018.06–2019.12)</span><span class="lang lang-en">F1 in Schools India — National Champion (2018.06–2019.12)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 — Mechanical Lead (2024.06–2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 — Mechanical Lead (2024.06–2025.09)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 — Alumni (2025.09–)</span><span class="lang lang-en">SNU SOLAR EV 2027 — Alumni (2025.09–)</span></li>
+                    <li><span class="lang lang-ko">SNU Automotive Laboratory — Undergraduate Researcher (2026.08–)</span><span class="lang lang-en">SNU Automotive Laboratory — Undergraduate Researcher (2026.08–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -325,7 +350,12 @@
                     data-aria-ko="강경운 세부 정보 보기"
                     data-aria-en="View KANG KYUNGWOON details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">SNU RunToYou — Mechanical Team (2022.03–)</span><span class="lang lang-en">SNU RunToYou — Mechanical Team (2022.03–)</span></li>
+                    <li><span class="lang lang-ko">BWSC Project Team 2023 — Mechanical Team (2023.06–2023.11)</span><span class="lang lang-en">BWSC Project Team 2023 — Mechanical Team (2023.06–2023.11)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 — Mechanical Team Supporter (2024.05–2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 — Mechanical Team Supporter (2024.05–2025.09)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 — Mechanical Team (2025.09–)</span><span class="lang lang-en">SNU SOLAR EV 2027 — Mechanical Team (2025.09–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -350,7 +380,15 @@
                     data-aria-ko="이규원 세부 정보 보기"
                     data-aria-en="View LEE GYUWON details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">APCP Solid Propellant Rocket Project — Team Leader (2023)</span><span class="lang lang-en">APCP Solid Propellant Rocket Project — Team Leader (2023)</span></li>
+                    <li><span class="lang lang-ko">KAIST FDCL — Short-term Intern, reusable rocket trajectory design (2023.07)</span><span class="lang lang-en">KAIST FDCL — Short-term Intern, reusable rocket trajectory design (2023.07)</span></li>
+                    <li><span class="lang lang-ko">SNU HANARO Rocket Team — Propulsion and Aerodynamics (2025)</span><span class="lang lang-en">SNU HANARO Rocket Team — Propulsion and Aerodynamics (2025)</span></li>
+                    <li><span class="lang lang-ko">SNU Department of Aerospace Engineering (2025–)</span><span class="lang lang-en">SNU Department of Aerospace Engineering (2025–)</span></li>
+                    <li><span class="lang lang-ko">SNU Study Project — Buckling stability and CFD analysis of a vacuum balloon (2026.04–2026.06)</span><span class="lang lang-en">SNU Study Project — Buckling stability and CFD analysis of a vacuum balloon (2026.04–2026.06)</span></li>
+                    <li><span class="lang lang-ko">SNU College of Business Administration (2026–)</span><span class="lang lang-en">SNU College of Business Administration (2026–)</span></li>
+                    <li><span class="lang lang-ko">SNU Management of Technology (2026–)</span><span class="lang lang-en">SNU Management of Technology (2026–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -375,7 +413,12 @@
                     data-aria-ko="이재준 세부 정보 보기"
                     data-aria-en="View LEE JAEJUN details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">SNU RunToYou — Mechanical Team (2020.04–2021.12)</span><span class="lang lang-en">SNU RunToYou — Mechanical Team (2020.04–2021.12)</span></li>
+                    <li><span class="lang lang-ko">Energy &amp; Environmental Flow Laboratory — Research Intern (2023.11–2024.12)</span><span class="lang lang-en">Energy &amp; Environmental Flow Laboratory — Research Intern (2023.11–2024.12)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2025 — Mechanical Team Supporter (2024.12–2025.09)</span><span class="lang lang-en">SNU SOLAR EV 2025 — Mechanical Team Supporter (2024.12–2025.09)</span></li>
+                    <li><span class="lang lang-ko">AI Driven Simulation and Design Lab — Research Intern (2025.03–2025.12)</span><span class="lang lang-en">AI Driven Simulation and Design Lab — Research Intern (2025.03–2025.12)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -400,7 +443,12 @@
                     data-aria-ko="윤종환 세부 정보 보기"
                     data-aria-en="View YUN JONGHWAN details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">Outstanding Research Award — Deputy Prime Minister and Minister of Education (2019)</span><span class="lang lang-en">Outstanding Research Award — Deputy Prime Minister and Minister of Education (2019)</span></li>
+                    <li><span class="lang lang-ko">Copper-coated carbon fibre — Properties study (2019–2020)</span><span class="lang lang-en">Copper-coated carbon fibre — Properties study (2019–2020)</span></li>
+                    <li><span class="lang lang-ko">Company management and operations (2022–2024)</span><span class="lang lang-en">Company management and operations (2022–2024)</span></li>
+                    <li><span class="lang lang-ko">SNU Bio Robotics Lab — Undergraduate Researcher (2026.03–)</span><span class="lang lang-en">SNU Bio Robotics Lab — Undergraduate Researcher (2026.03–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -425,7 +473,11 @@
                     data-aria-ko="김두은 세부 정보 보기"
                     data-aria-en="View KIM DOOEUN details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">Rear-mounted automotive attachments — Air flow and resistance study (2023.03–2023.10)</span><span class="lang lang-en">Rear-mounted automotive attachments — Air flow and resistance study (2023.03–2023.10)</span></li>
+                    <li><span class="lang lang-ko">Disaster relief robots — Drive mechanism stability study (2023.03–2024.01)</span><span class="lang lang-en">Disaster relief robots — Drive mechanism stability study (2023.03–2024.01)</span></li>
+                    <li><span class="lang lang-ko">Seoul Science Exhibition — Excellence Award (2024)</span><span class="lang lang-en">Seoul Science Exhibition — Excellence Award (2024)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -449,7 +501,12 @@
                     data-aria-ko="김인재 세부 정보 보기"
                     data-aria-en="View KIM INJAE details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">SNU RunToYou — Mechanical Team (2022.03–)</span><span class="lang lang-en">SNU RunToYou — Mechanical Team (2022.03–)</span></li>
+                    <li><span class="lang lang-ko">BWSC Project Team 2023 — Mechanical Team (2023.06–2023.11)</span><span class="lang lang-en">BWSC Project Team 2023 — Mechanical Team (2023.06–2023.11)</span></li>
+                    <li><span class="lang lang-ko">Bynarical — Researcher and PCB Designer (2025.09–2026.02)</span><span class="lang lang-en">Bynarical — Researcher and PCB Designer (2025.09–2026.02)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV 2027 — Electrical Lead (2025.11–)</span><span class="lang lang-en">SNU SOLAR EV 2027 — Electrical Lead (2025.11–)</span></li>
+                  </template>
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
@@ -474,7 +531,16 @@
                     data-aria-ko="조용우 세부 정보 보기"
                     data-aria-en="View CHO YONGWOO details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">Hanwha Science Challenge — Grand Prize (2023)</span><span class="lang lang-en">Hanwha Science Challenge — Grand Prize (2023)</span></li>
+                    <li><span class="lang lang-ko">Cycloidal propeller mechanism optimisation (2023–2024)</span><span class="lang lang-en">Cycloidal propeller mechanism optimisation (2023–2024)</span></li>
+                    <li><span class="lang lang-ko">Samsung HumanTech Paper Award — Silver Prize (2024)</span><span class="lang lang-en">Samsung HumanTech Paper Award — Silver Prize (2024)</span></li>
+                    <li><span class="lang lang-ko">IEEE Access — Co-author, 3D-printed lightweight metamaterial absorber (2025)</span><span class="lang lang-en">IEEE Access — Co-author, 3D-printed lightweight metamaterial absorber (2025)</span></li>
+                    <li><span class="lang lang-ko">Peoples League — Hardware Engineering Intern (2025.01–2025.02)</span><span class="lang lang-en">Peoples League — Hardware Engineering Intern (2025.01–2025.02)</span></li>
+                    <li><span class="lang lang-ko">EXSCI — R Software Developer (2025.06–2025.09)</span><span class="lang lang-en">EXSCI — R Software Developer (2025.06–2025.09)</span></li>
+                    <li><span class="lang lang-ko">Metafarmers — Hardware Engineering Intern (2025.09–2025.12)</span><span class="lang lang-en">Metafarmers — Hardware Engineering Intern (2025.09–2025.12)</span></li>
+                    <li><span class="lang lang-ko">SNU SOLAR EV — Hardware and Systems Engineer (2025.11–)</span><span class="lang lang-en">SNU SOLAR EV — Hardware and Systems Engineer (2025.11–)</span></li>
+                  </template>
                 </article>
               </div>
               <div class="roster-detail" hidden>
@@ -545,7 +611,13 @@
                     data-aria-ko="오송우 세부 정보 보기"
                     data-aria-en="View OH SONGWOO details"
                   ></button>
-                  <template class="roster-activity"></template>
+                  <template class="roster-activity">
+                    <li><span class="lang lang-ko">SNU RunToYou — Corporate Partnership Manager (2023.03–2024.02)</span><span class="lang lang-en">SNU RunToYou — Corporate Partnership Manager (2023.03–2024.02)</span></li>
+                    <li><span class="lang lang-ko">SNAAC — Program Team Lead (2023.09–2024.08)</span><span class="lang lang-en">SNAAC — Program Team Lead (2023.09–2024.08)</span></li>
+                    <li><span class="lang lang-ko">SNU Tech Holdings — Investment Team Research Assistant Intern (2024.01–2024.05)</span><span class="lang lang-en">SNU Tech Holdings — Investment Team Research Assistant Intern (2024.01–2024.05)</span></li>
+                    <li><span class="lang lang-ko">Murex Partners — VC Investment Team Research Assistant Intern (2024.07–2024.12)</span><span class="lang lang-en">Murex Partners — VC Investment Team Research Assistant Intern (2024.07–2024.12)</span></li>
+                    <li><span class="lang lang-ko">SNU University-Industry Liaison Center for Engineers — Team Manager (2025.02–)</span><span class="lang lang-en">SNU University-Industry Liaison Center for Engineers — Team Manager (2025.02–)</span></li>
+                  </template>
                 </article>
               </div>
               <div class="roster-detail" hidden>

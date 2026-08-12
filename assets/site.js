@@ -331,9 +331,13 @@ const rosterPanels = [...document.querySelectorAll("[data-roster]")].map((panel)
     );
   }
 
-  function stagger(container, step, offset) {
-    [...container.children].forEach((child, index) => {
-      child.style.animationDelay = `${offset + index * step}s`;
+  // Cap the total run so a fourteen-line history does not take two seconds to
+  // finish arriving; the last line lands at most maxSpan after the first.
+  function stagger(container, step, offset, maxSpan = 0.7) {
+    const items = [...container.children];
+    const gap = items.length > 1 ? Math.min(step, maxSpan / (items.length - 1)) : step;
+    items.forEach((child, index) => {
+      child.style.animationDelay = `${offset + index * gap}s`;
     });
   }
 
@@ -370,11 +374,14 @@ const rosterPanels = [...document.querySelectorAll("[data-roster]")].map((panel)
     if (template && template.content.children.length) {
       activity.appendChild(template.content.cloneNode(true));
       activity.classList.remove("is-pending");
+      // A long history reads better in two columns than as one tall run.
+      activity.classList.toggle("is-long", template.content.children.length > 6);
     } else {
       const pending = document.createElement("li");
       pending.innerHTML = bilingual("추후 업데이트됩니다", "To be updated");
       activity.appendChild(pending);
       activity.classList.add("is-pending");
+      activity.classList.remove("is-long");
     }
 
     card.classList.add("is-open");

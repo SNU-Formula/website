@@ -1565,8 +1565,8 @@ body.intro-active {
 
 .roster-detail-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 330px) minmax(0, 1fr);
-  gap: clamp(28px, 4.5vw, 80px);
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 68px);
   align-items: start;
 }
 
@@ -1592,6 +1592,22 @@ body.intro-active {
   color: var(--graphite);
   font-size: clamp(15px, 1.15vw, 18px);
   line-height: 1.6;
+}
+
+/* Anyone with more than a handful of entries gets two columns rather than one
+   very long run down the page. site.js sets the class from the item count. */
+.roster-detail-activity.is-long {
+  column-count: 2;
+  column-gap: clamp(30px, 3.2vw, 60px);
+  font-size: clamp(14px, 1vw, 16px);
+}
+
+.roster-detail-activity.is-long li {
+  break-inside: avoid;
+}
+
+.roster-detail-activity.is-long li:first-child {
+  margin-top: 0;
 }
 
 .roster-detail-activity.is-pending {
@@ -1728,10 +1744,18 @@ body.intro-active {
 /* One marker shape everywhere a list appears in the roster, so the education
    list on the card and the detail lists read as the same thing. */
 .roster-major,
-.roster-detail-edu,
-.roster-detail-activity {
+.roster-detail-edu {
   display: flex;
   flex-direction: column;
+}
+
+/* Block, not flex, so a long history can fall into two columns. */
+.roster-detail-activity {
+  display: block;
+}
+
+.roster-detail-activity li + li {
+  margin-top: 12px;
 }
 
 .roster-major li,
@@ -2549,6 +2573,10 @@ body.intro-active {
   .roster-detail-layout {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .roster-detail-activity.is-long {
+    column-count: 1;
   }
 
   .roster-grid {
