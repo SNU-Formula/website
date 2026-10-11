@@ -31,10 +31,11 @@ confirmed before public deployment. Article bodies are not reproduced.
 
 ## Sponsorship tiers
 
-The four public tiers are 대표 후원사 / Main Sponsor, 주요 후원사 / Premium
-Sponsors, 후원사 / Sponsors, and 협력자 / Supporters. Hyundai is the sole Main
-Sponsor. AJIN Industrial, Kolon, Yongsan, and Youngone are Premium Sponsors,
-as specified by the user. Amounts and content benefits are internal only.
+The four tier names are Main Sponsor, Premium Sponsor, Sponsor, and Supporter
+in both website languages. Hyundai is the sole Main Sponsor. AJIN Industrial,
+Kolon, Yongsan, and Youngone are in the Premium Sponsor tier, as specified by
+the user. The public website displays names only; contribution criteria and
+detailed benefits are provided separately in the sponsor distribution guides.
 
 ## Recruitment
 
