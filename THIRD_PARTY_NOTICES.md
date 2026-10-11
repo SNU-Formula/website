@@ -11,14 +11,14 @@
 
 ## Press links
 
-The `/news/` page links to original articles published by NEWSIS (2026-06-21),
-ZDNet Korea (2026-09-22), and The Chosun Ilbo (2025-08-14). The homepage uses
-the first two links as a preview. Card titles and introductions are original
-site copy. Photographs appearing in those articles are included in the local
-draft at the user's request. Source URLs, credits, and the unconfirmed rights
-status are recorded in [assets/img/news/SOURCES.md](assets/img/news/SOURCES.md).
-Public deployment requires confirmation of the appropriate permission.
-Article bodies and embedded articles are not reproduced.
+The News page and homepage news cards are temporarily removed as of
+2026-10-12. Article photographs are excluded from this deployment pending
+permission. The archived draft links to NEWSIS (2026-06-21), ZDNet Korea
+(2026-09-22), and The Chosun Ilbo (2025-08-14). Original source notes and
+credits are retained in Git commit `38804e5` and an ignored local archive.
+Card titles and introductions are original site copy. Article bodies and
+embedded articles are not reproduced. Appropriate image permissions must
+be confirmed before restoring the photographs to a public deployment.
 
 Coverage of SNU industry collaboration and SNU Solar is identified separately
 from SNU FORMULA coverage. Inclusion of an article does not identify its

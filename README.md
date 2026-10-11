@@ -19,15 +19,17 @@ Then open [http://localhost:4173](http://localhost:4173).
 - `/vehicle/` — Covered vehicle teaser
 - `/team/` — Manager / Engineering / Business teams, switchable roster per team
 - `/partners/` — Partner tiers and institutional partners
-- `/news/` — Selected press coverage, linked directly to publisher articles
 - `/join/` — Recruitment status
 
 Pages are deliberately short: one idea each, nothing that is not confirmed.
-The News page distinguishes coverage of SNU FORMULA from SNU industry
-collaboration and SNU Solar. Titles and short introductions are written for
-this site. Article photographs are included in the local draft; rights and
-credits are recorded in `assets/img/news/SOURCES.md`. Permission must be
-confirmed before public deployment. Article bodies are not reproduced.
+News is temporarily removed for the initial public deployment as of
+2026-10-12. The homepage cards, desktop/mobile navigation and footer links
+are removed; `/news/` and its article photographs are not shipped. The
+original page, images and source notes are preserved in Git commit
+`38804e5` and in the ignored local folder `references/news-paused/20261012`.
+News styles remain available for restoration after image permissions are
+confirmed. Card copy distinguishes SNU FORMULA coverage from SNU industry
+collaboration and SNU Solar; article bodies are not reproduced.
 
 ## Sponsorship tiers
 

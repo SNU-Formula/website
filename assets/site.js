@@ -17,7 +17,6 @@ const headerMarkup = `
       <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}team/" data-nav="team">${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/" data-nav="partners">${bilingual("PARTNERS", "PARTNERS")}</a>
-      <a href="${root}news/" data-nav="news">${bilingual("NEWS", "NEWS")}</a>
       <a href="${root}join/" data-nav="join">${bilingual("JOIN", "JOIN")}</a>
     </nav>
     <div class="header-actions">
@@ -39,8 +38,7 @@ const headerMarkup = `
       <a href="${root}vehicle/"><span>03</span>${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}team/"><span>04</span>${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/"><span>05</span>${bilingual("PARTNERS", "PARTNERS")}</a>
-      <a href="${root}news/"><span>06</span>${bilingual("NEWS", "NEWS")}</a>
-      <a href="${root}join/"><span>07</span>${bilingual("JOIN", "JOIN")}</a>
+      <a href="${root}join/"><span>06</span>${bilingual("JOIN", "JOIN")}</a>
     </nav>
     <div class="mobile-menu-foot">
       <p>SAFETY · DATA · RECORDS · CONTINUITY</p>
@@ -69,7 +67,6 @@ const footerMarkup = `
         <a href="${root}about/">About</a>
         <a href="${root}vehicle/">Vehicle</a>
         <a href="${root}team/">Members</a>
-        <a href="${root}news/">${bilingual("NEWS", "NEWS")}</a>
       </div>
       <div>
         <span class="footer-label">CONNECT</span>
