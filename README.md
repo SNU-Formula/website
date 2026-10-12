@@ -41,7 +41,7 @@ detailed benefits are provided separately in the sponsor distribution guides.
 
 ## Recruitment
 
-The 2026 recruitment is open through 2026-10-18. Notices will be shared on
+The 2026 recruitment is open through 2026-10-21. Notices will be shared on
 the official Instagram and Everytime. No application form or link is added;
 the existing Instagram and email contacts remain the contact channels.
 
@@ -62,7 +62,7 @@ with `prefers-reduced-motion: reduce` never see it.
   revised from the user's CAD silhouette with a blunt nose and both wings.
   It represents an unreleased concept rather than a verified finished vehicle.
 - Unverified roster and vehicle decisions remain pending. Recruitment status
-  and its 2026-10-18 deadline were confirmed by the user.
+  and its 2026-10-21 deadline were confirmed by the user.
 - Partner marks use the logo files supplied with the SNU FORMULA references.
 
 ## Typography
