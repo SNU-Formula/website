@@ -116,7 +116,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포츠 팀이고, Renov
 - 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
 - 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS: `20261012-12`. 공용 JS·모집 모듈: `20261012-9`. Recruiting CSS: `20261012-10`.
+공용 CSS: `20261012-12`. 공용 JS: `20261012-9`. 모집 모듈·설정: `20261012-13`. Recruiting CSS: `20261012-10`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
@@ -143,6 +143,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포츠 팀이고, Renov
 - 뉴시스 기사 사진은 홈·News에서 하단 로고가 보이지 않도록 표시 영역을 크롭. 원본 사진과 기사·사진 출처 표시는 보존.
 - 모집 안내의 현재 상태를 강조. 한국 시간 마감일이 끝나면 자동 종료, 수동 중단 및 미래 시작일 설정 지원. 홈 배너와 같은 설정 사용.
 - 센터 공고 자리 마련. assets/recruiting-config.mjs의 announcementUrl을 채우면 공고 보기 링크로 전환.
+- 센터 공고 연결: 사용자가 제공한 `http://www.snu-nteam.kr/sub/sub04_01.php?boardid=notice&mode=view&idx=57&sk=&sw=&offset=&category=&goPage=` 적용. 공고 보기 버튼으로 표시.
 - 모집 기간과 링크 관련 6개 테스트 통과.
 - 7개 페이지의 한글·영문을 1280px·390px에서 확인했고, 종료 상태와 공고 링크 전환을 390px·320px에서 추가 확인. 글자 넘침·이미지 누락 없음.
 

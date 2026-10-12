@@ -1,4 +1,4 @@
-import { recruitingConfig } from "./recruiting-config.mjs?v=20261012-9";
+import { recruitingConfig } from "./recruiting-config.mjs?v=20261012-13";
 
 export function getRecruitmentState(config, now = Date.now()) {
   if (!config.acceptingApplications) return "closed";

@@ -4,6 +4,6 @@ export const recruitingConfig = {
   opensAt: null,
   // Exclusive end time: applications close at the end of October 30 (KST).
   closesAt: "2026-10-31T00:00:00+09:00",
-  // Paste the Center's full http(s) announcement URL here when published.
-  announcementUrl: "",
+  // Published Center recruitment announcement.
+  announcementUrl: "http://www.snu-nteam.kr/sub/sub04_01.php?boardid=notice&mode=view&idx=57&sk=&sw=&offset=&category=&goPage=",
 };
