@@ -73,7 +73,7 @@ Michroma와 Pretendard 모두 SIL Open Font License 1.1입니다. 웹 임베딩,
 
 ## 소속과 Advisor
 
-SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포트 팀이고, Renovatio의
+SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포츠 팀이고, Renovatio의
 단장은 곽승엽 교수입니다. 이 관계는 사용자의 최종 지시에 따라 반영했습니다.
 
 센터 명칭: **서울대학교 산학협력 공학인재 지원센터**.
@@ -116,7 +116,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포트 팀이고, Renov
 - 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
 - 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS: `20261012-11`. 공용 JS·모집 모듈: `20261012-9`. Recruiting CSS: `20261012-10`.
+공용 CSS: `20261012-12`. 공용 JS·모집 모듈: `20261012-9`. Recruiting CSS: `20261012-10`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
@@ -131,7 +131,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포트 팀이고, Renov
 - 홈·News 기사 제목의 동일 크기, 사진 아래 제목, 페라리 사진 전체 표시 및 뉴시스 사진 하단 크롭 확인.
 - HTML 태그·중복 ID·로컬 경로·CSS 자산 검사 통과.
 - JavaScript 구문 검사와 Git 충돌·공백 검사 통과.
-- 현재 범위는 로컬 수정본과 미리보기이며 원격 push·배포는 수행하지 않음.
+- 최종 확정본 배포 대상: GitHub `SNU-Formula/website`의 `main`, Vercel `https://snuformula.vercel.app`.
 
 ## 사진·문구·모집 안내 후속 수정
 
@@ -167,9 +167,11 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포트 팀이고, Renov
 
 두 페이지의 기존 소속·단장 설명을 다음 두 문단으로 교체했습니다. 별표는 Renovatio 설명의 표시입니다. 영문도 같은 내용으로 변경했습니다.
 
-> SNU FORMULA는 *SNU Mobility Renovatio의 산하 모터스포트 팀입니다.
+> SNU FORMULA는 *SNU Mobility Renovatio의 산하 모터스포츠 팀입니다.
 
-> *SNU Mobility Renovatio는 서울대학교 산학협력공학인재지원센터(센터장: 재료공학부 곽승엽 교수)가 주관하는 실전형 모터 스포츠 모빌리티 인재 양성 프로젝트입니다.
+> *SNU Mobility Renovatio는 서울대학교 산학협력공학인재지원센터(센터장: 재료공학부 곽승엽 교수)가 주관하는 실전형 모터스포츠 모빌리티 인재 양성 프로젝트입니다.
 
-사용자가 제공한 사진의 첫 문단만 사용하고, 실전형과 모빌리티 사이에 요청한 모터 스포츠를 추가했습니다.
+사용자가 제공한 사진의 첫 문단만 사용하고, 실전형과 모빌리티 사이에 요청한 모터스포츠를 추가했습니다.
 두 페이지의 한글·영문을 1280px·390px·320px에서 확인했고, 문단 글자 넘침이 없었습니다.
+
+별표로 시작하는 Renovatio 설명은 주석 문단으로 표시합니다. 데스크톱 16px, 모바일 14px, 보조 색상 적용. 앞의 팀 소개는 기존 본문 크기 유지.

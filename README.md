@@ -72,3 +72,8 @@ Recruiting의 주소는 `/recruiting/`이며 기존 `/join/`은 새 주소로 �
 
 첫 방문과 명시적 새로고침에 팀 로고가 재생됩니다. 같은 세션의 페이지 이동에서는
 반복하지 않으며 `prefers-reduced-motion: reduce`에서는 생략합니다.
+
+## 배포
+
+운영 주소: <https://snuformula.vercel.app>. GitHub `SNU-Formula/website`의 `main`에 연결된
+Vercel Production 배포를 사용합니다. `main` 푸시 후 해당 커밋의 배포 성공 상태와 실제 운영 화면을 확인합니다.
