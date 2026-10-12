@@ -19,17 +19,17 @@ Then open [http://localhost:4173](http://localhost:4173).
 - `/vehicle/` — Covered vehicle teaser
 - `/team/` — Manager / Engineering / Business teams, switchable roster per team
 - `/partners/` — Partner tiers and institutional partners
+- `/news/` — Selected press coverage, linked directly to publisher articles
 - `/join/` — Recruitment status
 
 Pages are deliberately short: one idea each, nothing that is not confirmed.
-News is temporarily removed for the initial public deployment as of
-2026-10-12. The homepage cards, desktop/mobile navigation and footer links
-are removed; `/news/` and its article photographs are not shipped. The
-original page, images and source notes are preserved in Git commit
-`38804e5` and in the ignored local folder `references/news-paused/20261012`.
-News styles remain available for restoration after image permissions are
-confirmed. Card copy distinguishes SNU FORMULA coverage from SNU industry
-collaboration and SNU Solar; article bodies are not reproduced.
+News was restored for public deployment on 2026-10-12 after the user
+confirmed that permission had been obtained from all featured publishers.
+The page includes ZDNet Korea, NEWSIS, and The Chosun Ilbo, with the Ferrari
+story first. Homepage cards, desktop/mobile navigation, and footer links
+are restored. Credits are recorded in `assets/img/news/SOURCES.md`.
+Card copy distinguishes SNU FORMULA coverage from SNU industry collaboration
+and SNU Solar; article bodies are not reproduced.
 
 ## Sponsorship tiers
 
