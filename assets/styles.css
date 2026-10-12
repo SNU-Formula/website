@@ -1665,6 +1665,16 @@ body.intro-active {
   filter: saturate(0.82) contrast(1.05);
 }
 
+/* Preserve the original face; use the edited image only for the shirt edge. */
+.roster-photo .roster-photo-repair {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  clip-path: inset(85% 0 0);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 85%, #000 91%);
+  mask-image: linear-gradient(to bottom, transparent 85%, #000 91%);
+}
+
 .roster-photo-empty {
   position: relative;
   display: flex;
@@ -2223,7 +2233,7 @@ body.intro-active {
   max-width: var(--content);
   margin: 0 auto;
   padding: 32px 0 40px;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 60px;
 }
 
@@ -2250,19 +2260,8 @@ body.intro-active {
   color: var(--white);
 }
 
-.footer-principles {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-
-.footer-principles .footer-label {
-  grid-column: 1 / -1;
-}
-
-.footer-principles p {
-  font-family: var(--font-site);
-  font-size: clamp(12px, 1.2vw, 17px);
-  font-weight: 400;
-}
+.footer-links > div:first-child { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.footer-links .footer-label { grid-column: 1 / -1; }
 
 .footer-bottom {
   position: relative;
@@ -2368,6 +2367,7 @@ body.intro-active {
 
 .news-card-media {
   aspect-ratio: 3 / 2;
+  overflow: hidden;
   background: #e4e7eb;
 }
 
@@ -2376,6 +2376,11 @@ body.intro-active {
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.news-card-image.news-photo-trimmed {
+  transform: scale(1.24);
+  transform-origin: 50% 0;
 }
 
 .news-card-body {
@@ -2916,13 +2921,10 @@ html[lang="ko"] .join-status-card h2 {
   }
 
   .footer-links {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px 30px;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
-
-  .footer-principles {
-    grid-column: 1 / -1;
-  }
+  .footer-links > div:first-child { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
   .footer-bottom {
     flex-wrap: wrap;

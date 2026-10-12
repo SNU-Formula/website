@@ -104,13 +104,13 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 - 후원 등급: Main Sponsor / **Platinum Sponsor**. AJIN Industrial, KOLON, YONGSAN, YOUNGONE이 Platinum Sponsor입니다.
 - 코오롱: [공식 영문 사이트](https://www.kolon.com/en/main)의 [영문 CI SVG](https://www.kolon.com/common/en/images/logo-kolon-color.svg)로 전체 위치 교체. 원본 SVG 크기에 의존하지 않고 표시 영역에 맞춰 확대합니다.
 - 기관 카드: 로고와 설명을 가로로 배치하고 내용에 따라 카드 높이를 정해 Renovatio 밑의 빈 공간 제거. 후원사 이름 18px, 후원 설명 14px, 연락처 18px로 확대.
-- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 사진 전체 표시, 사진 아래 제목. 제목 26–36px, 페이지 소개·기사 설명·클릭 안내 문장 삭제.
+- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 페라리 사진 전체 표시, 뉴시스 하단 크롭, 사진 아래 제목. 제목 26–36px, 페이지 소개·기사 설명·클릭 안내 문장 삭제.
 - Recruiting: 김민우님의 `e99632c3bcfcd25ae0e488a0342e85a43766a3fa`를 원격 `main`에서 가져와 합쳤습니다. 팀원 체계와 14개 모집 분야를 유지하고, 사용자 후속 지시에 따라 설명을 한글·영문 명사형 bullet로 바꿨습니다. 서체·캐시 키도 맞췄습니다.
 - Recruiting 배치: 데스크톱에서 팀원 체계 3열, 모집 분야 2열, 설명 20px. 모바일은 1열로 전환하며 글씨 크기를 유지. 고정된 큰 빈 영역 제거.
 - 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
 - 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-7`.
+공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-8`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
@@ -122,7 +122,20 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 - 발견한 About·Members·Vehicle 제목 넘침과 Recruiting 영문 메뉴 넘침 수정.
 - 기관 카드의 가로 배치와 불필요한 하단 여백 제거 확인.
 - About의 두 문장과 공통 푸터 표어가 1280px·1760px 한글 화면에서 한 줄씩 표시됨을 확인.
-- 홈·News 기사 제목의 동일 크기, 사진 아래 제목 및 사진 전체 표시 확인.
+- 홈·News 기사 제목의 동일 크기, 사진 아래 제목, 페라리 사진 전체 표시 및 뉴시스 사진 하단 크롭 확인.
 - HTML 태그·중복 ID·로컬 경로·CSS 자산 검사 통과.
 - JavaScript 구문 검사와 Git 충돌·공백 검사 통과.
 - 현재 범위는 로컬 수정본과 미리보기이며 원격 push·배포는 수행하지 않음.
+
+## 사진·문구·모집 안내 후속 수정
+
+- 유민우·이재준·김인재·조용우 사진의 하단 옷 영역 수정. 얼굴은 원본으로 표시하며, 편집 PNG만 하단에 마스크 적용. [사진 편집 기록](member-shirt-repairs-20261012.md).
+- 7개 페이지 및 팀원 상세 이력의 한글·영문 교정. [교정 기록](copy-proofreading-20261012.md).
+- 공통 하단과 모바일 메뉴의 Team Principles 제거.
+- 홈 버튼: About → Members → Vehicle.
+- Partners의 센터 로고는 사용자가 제공한 실제 센터 PNG로 교체.
+- 뉴시스 기사 사진은 홈·News에서 하단 로고가 보이지 않도록 표시 영역을 크롭. 원본 사진과 기사·사진 출처 표시는 보존.
+- 모집 안내의 현재 상태를 강조. 한국 시간 마감일이 끝나면 자동 종료, 수동 중단 및 미래 시작일 설정 지원. 홈 배너와 같은 설정 사용.
+- 센터 공고 자리 마련. assets/recruiting-config.mjs의 announcementUrl을 채우면 공고 보기 링크로 전환.
+- 모집 기간과 링크 관련 6개 테스트 통과.
+- 7개 페이지의 한글·영문을 1280px·390px에서 확인했고, 종료 상태와 공고 링크 전환을 390px·320px에서 추가 확인. 글자 넘침·이미지 누락 없음.

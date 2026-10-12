@@ -19,7 +19,9 @@ publishers. This status relies on the user's confirmation.
 
 The Ferrari photograph is credited to Ferrari Korea; the Genesis Le Mans photograph
 is credited to Hyundai Motor Group. Details are in `assets/img/news/SOURCES.md`.
-Photographs are shown without cropping. Article bodies are not reproduced;
+The Ferrari photograph is shown without cropping. The NEWSIS photograph is
+cropped in the website's display area at the user's request; its original file
+is retained and the publisher and photo credits remain visible. Article bodies are not reproduced;
 card text is original site copy. The Ferrari story does not itself establish
 a direct Ferrari sponsorship of SNU FORMULA.
 
@@ -28,8 +30,8 @@ Its old asset and source notes are retained for reference.
 
 ## Fonts
 
-The website uses Michroma Regular for Latin glyphs and Pretendard Variable for Korean
-glyphs. Both are licensed under SIL Open Font License 1.1. Montserrat files are
+The website uses Michroma Regular for large Latin display text and Pretendard Variable
+for Korean glyphs and small Latin text. Both are licensed under SIL Open Font License 1.1. Montserrat files are
 retained but are no longer selected by CSS. Full notices and licenses accompany them:
 
 - `assets/fonts/Michroma-LICENSE.txt`
@@ -44,9 +46,17 @@ supporting organizations. The English KOLON mark is sourced from
 [official color SVG](https://www.kolon.com/common/en/images/logo-kolon-color.svg).
 Other marks were supplied with the team's reference materials.
 
+`assets/logos/snu-industry-liaison-center.png` is the Center mark supplied by the
+user on 2026-10-12. It replaces the general College of Engineering mark in Partners.
+
 ## Edited member portrait
 
 `assets/img/team/members/kang-kyungwoon-teamwear.png` is an AI edit of the user-supplied
 portrait made with the built-in image_gen tool to match the blue team polo and white
 background. It is not a record of a team-uniform photo shoot. The prompt and record
 are in `docs/kang-kyungwoon-portrait-20261012.md`.
+
+The four `*-shirt-repair.png` images are AI edits used only for the lower shirt
+areas of the original portraits. Their upper areas, including faces, are masked
+out in the website so the original photographs provide the visible faces.
+Prompts and asset paths are recorded in `docs/member-shirt-repairs-20261012.md`.

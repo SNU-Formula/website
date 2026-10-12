@@ -43,7 +43,6 @@ const headerMarkup = `
       <a href="${root}join/"><span>07</span>${bilingual("RECRUITING", "RECRUITING")}</a>
     </nav>
     <div class="mobile-menu-foot">
-      <p>SAFETY · DATA · RECORDS · CONTINUITY</p>
       <p>SEOUL NATIONAL UNIVERSITY</p>
     </div>
   </div>
@@ -77,10 +76,6 @@ const footerMarkup = `
       <div>
         <span class="footer-label">CONNECT</span>
         <a href="https://www.instagram.com/snu_formula_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-      </div>
-      <div class="footer-principles">
-        <span class="footer-label">TEAM PRINCIPLES</span>
-        <p>SAFETY</p><p>DATA</p><p>RECORDS</p><p>CONTINUITY</p>
       </div>
     </div>
     <div class="footer-bottom">

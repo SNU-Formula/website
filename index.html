@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#05082D">
-    <meta name="description" content="SNU FORMULA — 서울대학교 Formula Student Team">
+    <meta name="description" content="SNU FORMULA — 서울대학교 포뮬러 학생 팀">
     <script>
       try {
         document.documentElement.lang =
@@ -15,15 +15,15 @@
     </script>
     <link rel="icon" href="/assets/logos/snu-formula-blue.png">
     <link rel="preload" as="image" href="/assets/img/hero/snu-gate.webp" type="image/webp">
-    <link rel="stylesheet" href="/assets/styles.css?v=20261012-7">
+    <link rel="stylesheet" href="/assets/styles.css?v=20261012-8">
     <title>SNU FORMULA</title>
   </head>
   <body
     data-page="home"
     data-title-ko="SNU FORMULA | Design. Build. Race."
     data-title-en="SNU FORMULA | Design. Build. Race."
-    data-description-ko="FSG 2028을 향해 EV race car를 개발하는 서울대학교 Formula Student Team."
-    data-description-en="Seoul National University's Formula Student team developing an EV race car toward FSG 2028."
+    data-description-ko="FSG 2028 참가를 목표로 첫 전기 경주차를 설계·제작하는 서울대학교 학생 팀."
+    data-description-en="Seoul National University's Formula Student team developing its first electric race car with the goal of competing at FSG 2028."
   >
     <a class="skip-link" href="#main">
       <span class="lang lang-ko">본문으로 이동</span>
@@ -52,19 +52,13 @@
               <span class="lang lang-en">DESIGN.<br>BUILD.<br><span class="outline">RACE.</span></span>
             </h1>
             <p class="hero-subtitle">
-              <span class="lang lang-ko">
-                SNU FORMULA는 FSG 2028을 향해 첫 EV race car를
-                설계하고 제작하는 학생 Formula Student Team입니다.
-              </span>
-              <span class="lang lang-en">
-                SNU FORMULA is a student Formula Student team designing and
-                building its first EV race car toward FSG 2028.
-              </span>
+              <span class="lang lang-ko">SNU FORMULA는 FSG 2028 참가를 목표로 첫 전기 경주차를 설계·제작하는 서울대학교 학생 팀입니다.</span>
+              <span class="lang lang-en">SNU FORMULA is Seoul National University’s Formula Student team, designing and building its first electric race car with the goal of competing at FSG 2028.</span>
             </p>
             <div class="button-row">
               <a class="button light" href="/about/">ABOUT</a>
-              <a class="button outline" href="/vehicle/">VEHICLE</a>
               <a class="button outline" href="/team/">MEMBERS</a>
+              <a class="button outline" href="/vehicle/">VEHICLE</a>
             </div>
           </div>
         </div>
@@ -75,11 +69,11 @@
         </div>
       </section>
 
-      <a class="home-recruitment" href="/join/">
+      <a class="home-recruitment" href="/join/" data-recruitment-root data-recruitment-state="open">
         <div class="container">
-          <span class="recruitment-badge">OPEN</span>
-          <strong><span class="lang lang-ko">2026 신규 팀원 모집</span><span class="lang lang-en">2026 RECRUITMENT</span></strong>
-          <time datetime="2026-10-21">~2026.10.21</time>
+          <span class="recruitment-badge" data-recruitment-badge>OPEN</span>
+          <strong data-recruitment-banner-title><span class="lang lang-ko">신규 팀원 모집 중</span><span class="lang lang-en">Recruitment open</span></strong>
+          <time datetime="2026-10-21" data-recruitment-banner-deadline>~2026.10.21</time>
           <span class="home-recruitment-link"><span class="lang lang-ko">모집 안내</span><span class="lang lang-en">DETAILS</span> <span aria-hidden="true">↗</span></span>
         </div>
       </a>
@@ -129,7 +123,7 @@
               </div>
             </a>
             <a class="news-card" href="https://www.newsis.com/view/NISX20260621_0003677238" target="_blank" rel="noopener noreferrer" data-reveal data-reveal-delay="1">
-              <div class="news-card-media"><img class="news-card-image" src="/assets/img/news/newsis-formula-20260621.jpg" alt="르망 24시간 경주에 참가한 제네시스 GMR-001 차량의 기사 사진" width="720" height="479" loading="lazy" decoding="async"></div>
+              <div class="news-card-media"><img class="news-card-image news-photo-trimmed" src="/assets/img/news/newsis-formula-20260621.jpg" alt="르망 24시간 경주에 참가한 제네시스 GMR-001 차량의 기사 사진" width="720" height="479" loading="lazy" decoding="async"></div>
               <div class="news-card-body">
                 <div class="news-meta"><span><span class="lang lang-ko">SNU FORMULA</span><span class="lang lang-en">SNU FORMULA</span></span><time datetime="2026-06-21">2026.06.21</time></div>
                 <h3><span class="lang lang-ko">서울대생,<br>포뮬러팀 창단 추진</span><span class="lang lang-en">SNU students prepare to<br>launch a Formula team</span></h3>
@@ -164,6 +158,7 @@
       </section>
     </main>
 
-    <script src="/assets/site.js?v=20261012-7" defer></script>
+    <script src="/assets/site.js?v=20261012-8" defer></script>
+    <script type="module" src="/assets/recruiting.mjs?v=20261012-8"></script>
   </body>
 </html>
