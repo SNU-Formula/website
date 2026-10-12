@@ -33,8 +33,8 @@
   --radius-md: 16px;
   --radius-lg: 28px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-site: Michroma, "Pretendard Variable", sans-serif;
-  --font-brand: var(--font-site);
+  --font-site: "Pretendard Variable", sans-serif;
+  --font-brand: Michroma, "Pretendard Variable", sans-serif;
 }
 
 *,
@@ -133,6 +133,13 @@ h2,
 h3,
 h4 {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-brand);
 }
 
 ul {
@@ -257,8 +264,8 @@ body.intro-active {
   height: 100%;
   align-items: center;
   color: rgba(255, 255, 255, 0.74);
-  font-family: var(--font-brand);
-  font-size: 9px;
+  font-family: var(--font-site);
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -297,7 +304,7 @@ body.intro-active {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
 }
 
 .language-switch span {
@@ -385,13 +392,14 @@ body.intro-active {
   grid-template-columns: 44px 1fr;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
   font-size: clamp(28px, 8vw, 48px);
   font-weight: 700;
 }
 
 .mobile-menu nav a > span:first-child {
   color: var(--gold);
+  font-family: var(--font-site);
   font-size: 10px;
 }
 
@@ -482,7 +490,7 @@ body.intro-active {
   align-items: center;
   gap: 12px;
   color: var(--blue);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(13px, 1vw, 15px);
   font-weight: 400;
   line-height: 1.5;
@@ -544,7 +552,7 @@ body.intro-active {
 .mini-label,
 .source-note {
   color: var(--blue);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: 10px;
   font-weight: 400;
 }
@@ -556,7 +564,7 @@ body.intro-active {
 }
 
 .technical {
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
 }
 
 .button-row {
@@ -810,7 +818,7 @@ body.intro-active {
 }
 
 .hero-index strong {
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: 10px;
   font-weight: 400;
 }
@@ -1039,7 +1047,7 @@ body.intro-active {
   right: 28px;
   bottom: 24px;
   color: rgba(255, 255, 255, 0.7);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(8px, 0.62vw, 10px);
 }
 
@@ -1051,7 +1059,7 @@ body.intro-active {
   align-items: center;
   color: rgba(255, 255, 255, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: 7px;
   font-weight: 400;
 }
@@ -1180,7 +1188,7 @@ body.intro-active {
 .competition-visual-copy span,
 .competition-visual-copy small,
 .competition-visual figcaption {
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(9px, 0.72vw, 11px);
   font-weight: 400;
 }
@@ -1192,7 +1200,7 @@ body.intro-active {
 .competition-visual-copy strong {
   display: block;
   margin-top: 24px;
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
   font-size: clamp(62px, 7vw, 112px);
   line-height: 0.82;
 }
@@ -1236,7 +1244,7 @@ body.intro-active {
 .competition-target > span,
 .competition-gate > span {
   color: var(--gold);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(10px, 0.72vw, 12px);
   font-weight: 400;
 }
@@ -1253,7 +1261,7 @@ body.intro-active {
 .competition-target strong {
   display: block;
   margin-top: 34px;
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
   font-size: clamp(58px, 7vw, 104px);
   line-height: 0.82;
 }
@@ -1381,7 +1389,7 @@ body.intro-active {
   color: var(--muted);
   border: 0;
   background: transparent;
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   text-align: left;
   cursor: pointer;
   transition:
@@ -1431,6 +1439,7 @@ body.intro-active {
 }
 
 .team-tab-name {
+  font-family: var(--font-brand);
   font-size: clamp(16px, 1.65vw, 26px);
   line-height: 1.15;
 }
@@ -1521,7 +1530,7 @@ body.intro-active {
   color: var(--navy);
   border: 1px solid var(--line);
   background: transparent;
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(9px, 0.72vw, 11px);
   cursor: pointer;
   transition:
@@ -1551,7 +1560,7 @@ body.intro-active {
   padding-bottom: 14px;
   color: var(--navy);
   border-bottom: 1px solid var(--line);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(11px, 0.95vw, 14px);
   font-weight: 400;
 }
@@ -1690,7 +1699,7 @@ body.intro-active {
   position: relative;
   z-index: 1;
   color: var(--gold);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(8px, 0.64vw, 10px);
 }
 
@@ -1703,14 +1712,14 @@ body.intro-active {
 
 .roster-role {
   color: var(--gold);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(8px, 0.62vw, 10px);
   line-height: 1.4;
 }
 
 .roster-name {
   margin-top: 12px;
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(15px, 1.2vw, 19px);
   font-weight: 400;
   line-height: 1.3;
@@ -1947,7 +1956,7 @@ body.intro-active {
 
 .partner-meta strong {
   color: var(--navy);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: 18px;
   line-height: 1.45;
   overflow-wrap: anywhere;
@@ -2105,7 +2114,7 @@ body.intro-active {
 
 .join-status-card h2 {
   margin-top: 38px;
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
   font-size: clamp(37px, 5vw, 78px);
   line-height: 0.98;
 }
@@ -2124,7 +2133,7 @@ body.intro-active {
 .to-be-continued {
   margin: 0;
   color: var(--gold);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(13px, 1.3vw, 20px);
   line-height: 1.4;
 }
@@ -2159,7 +2168,7 @@ body.intro-active {
   min-width: 92px;
   flex: none;
   color: var(--gold);
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(8px, 0.66vw, 10px);
 }
 
@@ -2250,7 +2259,7 @@ body.intro-active {
 }
 
 .footer-principles p {
-  font-family: var(--font-brand);
+  font-family: var(--font-site);
   font-size: clamp(12px, 1.2vw, 17px);
   font-weight: 400;
 }
@@ -2295,7 +2304,7 @@ body.intro-active {
 }
 
 .partnership-level-list li > span {
-  font: 10px/1.5 var(--font-brand);
+  font: 10px/1.5 var(--font-site);
   color: var(--blue);
 }
 
@@ -2496,7 +2505,7 @@ body.intro-active {
 }
 
 html[lang="ko"] .join-status-card h2 {
-  font-family: var(--font-site);
+  font-family: var(--font-brand);
 }
 
 .join-status-card p {
@@ -2513,7 +2522,7 @@ html[lang="ko"] .join-status-card h2 {
   display: block;
   margin-top: 14px;
   color: var(--gold);
-  font: 600 clamp(25px, 3.2vw, 48px)/1.25 var(--font-site);
+  font: 600 clamp(25px, 3.2vw, 48px)/1.25 var(--font-brand);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.04em;
   white-space: nowrap;
@@ -2984,12 +2993,44 @@ html[lang="ko"] .join-status-card h2 {
 .partner-contact-links a > span:first-child { grid-column: 1 / -1; font-size: 13px; color: var(--blue); }
 .partner-contact-links strong { font-size: 18px; color: var(--navy); overflow-wrap: anywhere; }
 .partner-contact-links a:focus-visible { outline: 3px solid var(--blue); outline-offset: 6px; }
-html[lang="en"] .advisor-card li { font-size: 20px; }
+/* Keep the existing display face above 20px; smaller copy uses Pretendard. */
+.section-head p,
+.page-hero-bottom p,
+.project-context p,
+.about-affiliation p,
+.advisor-card li,
+.footer-top p { font-family: var(--font-brand); }
+html[lang="en"] .advisor-card li { font-family: var(--font-site); font-size: 20px; }
 html[lang="en"] .advisor-card h3 { font-size: clamp(24px, 2vw, 30px); }
 
 @media (min-width: 761px) and (max-width: 1100px) {
   .footer-top { grid-template-columns: 1fr auto; gap: 20px; }
   .footer-top p { grid-column: 1 / -1; grid-row: 2; }
+}
+
+@media (min-width: 761px) {
+  .about-affiliation-grid { padding-right: 36px; }
+}
+
+@media (max-width: 1250px) {
+  .page-jump a { font-family: var(--font-site); }
+  .page-hero-bottom p { font-family: var(--font-site); }
+}
+
+@media (max-width: 1333px) {
+  .section-head p { font-family: var(--font-site); }
+}
+
+@media (max-width: 1200px) {
+  .about-affiliation p { font-family: var(--font-site); }
+}
+
+@media (max-width: 1212px) {
+  .team-tab-name { font-family: var(--font-site); }
+}
+
+@media (max-width: 1000px) {
+  .competition-gate h3 { font-family: var(--font-site); }
 }
 
 @media (min-width: 1101px) and (max-width: 1500px) {
@@ -2998,15 +3039,15 @@ html[lang="en"] .advisor-card h3 { font-size: clamp(24px, 2vw, 30px); }
 }
 
 @media (max-width: 1100px) {
-  .team-tab-name { font-size: 16px; }
+  .team-tab-name { font-family: var(--font-site); font-size: 16px; }
   .desktop-nav { gap: 16px; }
   .advisor-grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 1101px) and (max-width: 1450px) {
-  .about-affiliation-grid { width: calc(100% - 40px); grid-template-columns: minmax(0, 1fr) 260px; gap: 20px; }
+  .about-affiliation-grid { width: calc(100% - 40px); grid-template-columns: minmax(0, 1fr) 220px; gap: 20px; }
   .about-affiliation p { font-size: 22px; }
-  .about-affiliation-logo img { width: 260px; }
+  .about-affiliation-logo img { width: 220px; }
 }
 
 @media (min-width: 761px) and (max-width: 1200px) {

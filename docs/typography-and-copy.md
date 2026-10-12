@@ -6,20 +6,24 @@
 
 | 구분 | 서체 | 적용 |
 | --- | --- | --- |
-| 영문·라틴 문자 | Michroma Regular | 제목, 본문, 메뉴, 탭, 버튼, 숫자, 메타 정보 |
+| 큰 영문 제목·표어 | Michroma Regular | 큰 제목과 브랜드 표어 |
+| 20px 이하 본문·UI | Pretendard Variable | 영문·한글 본문, 메뉴, 버튼, 작은 탭 이름, 숫자, 메타 정보, 모집 설명의 CFD 등 약어 |
 | 한글 | Pretendard Variable | 모든 한글 글자 |
 | 공식 로고 | 원래 이미지 자산 | 로고를 글자로 다시 조립하지 않음 |
 
-영문 기준은 사용자가 지목한 `FORMULA STUDENT · FSG 2028 PROGRAM`입니다.
-기존 CSS에서 이 문구는 Michroma를 사용하고 있었으므로 해당 서체로 통일했습니다.
-문구도 그대로 유지합니다. Recruiting의 별도 CSS에도 동일 서체를 적용합니다.
+큰 영문 제목의 기준은 사용자가 처음 지목한 `FORMULA STUDENT · FSG 2028 PROGRAM`의
+기존 서체인 Michroma입니다. 후속 요청에 따라 20px 이하의 본문과 UI 글씨는 Pretendard로
+변경했습니다. 모집 설명의 영문 약어도 한글과 동일한 Pretendard로 표시합니다.
+20px보다 큰 기존 제목·소개 문구는 Michroma를 유지합니다.
+`FORMULA STUDENT · FSG 2028 PROGRAM` 문구 자체는 유지하며, 이 작은 보조 문구의
+서체도 현재 기준에 맞춰 Pretendard를 적용합니다.
 
 ```css
---font-site: Michroma, "Pretendard Variable", sans-serif;
---font-brand: var(--font-site);
+--font-site: "Pretendard Variable", sans-serif;
+--font-brand: Michroma, "Pretendard Variable", sans-serif;
 ```
 
-Michroma에 없는 한글 글리프는 Pretendard Variable로 표시됩니다.
+큰 제목에서 Michroma에 없는 한글 글리프는 Pretendard Variable로 표시됩니다.
 Michroma는 Regular 400 한 가지 굵기이며 `font-synthesis: none`으로 가짜 굵기를
 만들지 않습니다. 한글은 Pretendard Variable의 실제 굵기를 사용합니다.
 Montserrat 적용은 제거했고 기존 파일은 보관합니다.
@@ -94,24 +98,26 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 
 - 메뉴: Home → About → Members → Partners → Vehicle → News → Recruiting.
 - Home: 흰 로고, DESIGN. BUILD. RACE. 표어, News를 Vehicle보다 위에 배치.
-- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. 두 문장을 별도 문단으로 나누고, 데스크톱에서는 각 문장이 한 줄이 되도록 설명 폭을 확대하고 로고를 오른쪽에 배치. 설명 글씨는 1280px 화면에서 22px, 1760px 화면에서 24px. Competition Structure 문장 삭제.
+- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. 두 문장을 별도 문단으로 나누고, 데스크톱에서는 각 문장이 한 줄이 되도록 설명 폭을 확대. 로고는 오른쪽에서 36px 왼쪽으로 이동. 설명 글씨는 1280px 화면에서 22px, 1760px 화면에서 24px. 곽승엽 교수님은 산학협력 공학인재 지원센터장으로 소개. Competition Structure 문장 삭제.
 - Members: 소개 교체, Advisor 탭 추가, 사진·개인 클릭 없이 약력 표시, Advisor 설명 21px(영문 20px)로 확대, 팀별 인원수 표시 삭제, 이규원 항공우주공학과 수정, 강경운 팀복 사진 반영.
-- Partners: “한국 모터스포츠의 시작점”을 상단 제목으로 이동. 소속·센터를 먼저 소개. Sponsorship Tiers와 기존 하단 기관 섹션 삭제. 하단에 BECOME A PARTNER, 이메일, 인스타그램 추가.
+- Partners: “한국 모터스포츠의 시작점”을 상단 제목으로 이동. 소속·센터를 먼저 소개하고 곽승엽 교수님의 센터장 직책 표시. “우리의 소속과 기반” 제목 삭제. Sponsorship Tiers와 기존 하단 기관 섹션 삭제. 하단에 BECOME A PARTNER, 이메일, 인스타그램 추가.
 - 후원 등급: Main Sponsor / **Platinum Sponsor**. AJIN Industrial, KOLON, YONGSAN, YOUNGONE이 Platinum Sponsor입니다.
 - 코오롱: [공식 영문 사이트](https://www.kolon.com/en/main)의 [영문 CI SVG](https://www.kolon.com/common/en/images/logo-kolon-color.svg)로 전체 위치 교체. 원본 SVG 크기에 의존하지 않고 표시 영역에 맞춰 확대합니다.
 - 기관 카드: 로고와 설명을 가로로 배치하고 내용에 따라 카드 높이를 정해 Renovatio 밑의 빈 공간 제거. 후원사 이름 18px, 후원 설명 14px, 연락처 18px로 확대.
-- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 사진 전체 표시, 사진 아래 제목. 제목 26–36px, 요약 19px로 확대하고 본문 간격 축소.
+- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 사진 전체 표시, 사진 아래 제목. 제목 26–36px, 페이지 소개·기사 설명·클릭 안내 문장 삭제.
 - Recruiting: 김민우님의 `e99632c3bcfcd25ae0e488a0342e85a43766a3fa`를 원격 `main`에서 가져와 합쳤습니다. 팀원 체계와 14개 모집 분야를 유지하고, 사용자 후속 지시에 따라 설명을 한글·영문 명사형 bullet로 바꿨습니다. 서체·캐시 키도 맞췄습니다.
 - Recruiting 배치: 데스크톱에서 팀원 체계 3열, 모집 분야 2열, 설명 20px. 모바일은 1열로 전환하며 글씨 크기를 유지. 고정된 큰 빈 영역 제거.
 - 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
 - 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-6`.
+공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-7`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
 
 - 7개 페이지: 데스크톱 1280px, 모바일 390px에서 한글·영문 표시와 글자 넘침 확인.
+- 20px 이하 글씨의 실제 서체를 7개 페이지의 한글·영문 데스크톱·모바일 화면에서 확인. Pretendard 적용, 큰 제목은 Michroma 유지.
+- News 카드의 설명 문장 0개, Partners의 불필요한 제목 삭제, About·Partners의 센터장 직책 표시 확인.
 - 작은 모바일 320px: Recruiting·News·Partners·Advisor의 한글·영문 글자 넘침 추가 확인. Partners 제목 크기 조정.
 - 발견한 About·Members·Vehicle 제목 넘침과 Recruiting 영문 메뉴 넘침 수정.
 - 기관 카드의 가로 배치와 불필요한 하단 여백 제거 확인.

@@ -20,9 +20,9 @@
 .recruiting-member-grid .recruiting-kicker { color: var(--muted); font-size: 13px; }
 .recruiting-member-grid .recruiting-points { margin-top: 6px; }
 .recruiting-team-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line); margin-bottom: 20px; }
-.recruiting-team-nav a { display: flex; gap: 14px; align-items: center; min-width: 0; padding: 16px 20px; font-size: 21px; font-weight: 650; }
+.recruiting-team-nav a { display: flex; gap: 14px; align-items: center; min-width: 0; padding: 16px 20px; font-family: var(--font-brand); font-size: 21px; font-weight: 650; }
 .recruiting-team-nav a + a { border-left: 1px solid var(--line); }
-.recruiting-team-nav a > span:first-child { font-size: 14px; color: var(--muted); }
+.recruiting-team-nav a > span:first-child { font-family: var(--font-site); font-size: 14px; color: var(--muted); }
 .recruiting-team-nav a > span:last-child { margin-left: auto; }
 .recruiting-team-nav a:hover { background: var(--paper); color: var(--recruit-accent); }
 .recruiting-team-heading { display: grid; grid-template-columns: 1fr auto; column-gap: 20px; align-items: center; margin-bottom: 16px; }
@@ -64,7 +64,7 @@
   .recruiting-commitment h2 { font-size: clamp(27px, 7vw, 45px); }
   .recruiting-hero-meta { font-size: 12px; }
   .recruiting-member-grid article { padding: 18px; }
-  .recruiting-team-nav a { padding: 14px 10px; gap: 6px; font-size: 18px; }
+  .recruiting-team-nav a { padding: 14px 10px; gap: 6px; font-family: var(--font-site); font-size: 18px; }
   .recruiting-team-nav a > span:first-child { display: none; }
   html[lang="en"] .recruiting-team-nav { grid-template-columns: 1fr; }
   html[lang="en"] .recruiting-team-nav a + a { border-left: 0; border-top: 1px solid var(--line); }
