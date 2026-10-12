@@ -31,7 +31,6 @@
 .recruiting-team-heading h3 { font-size: clamp(30px, 3vw, 42px); margin: 0; line-height: 1.25; }
 .recruiting-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; grid-column: 1 / -1; margin-top: 12px; }
 .recruiting-tools > span { padding: 5px 9px; border: 1px solid var(--line); background: var(--paper); font-size: 14px; line-height: 1.5; }
-.recruiting-tools > .recruiting-tools-label { padding-left: 0; border: 0; background: transparent; color: var(--recruit-accent); font-size: 12px; }
 .recruiting-team-count { font-size: 16px; color: var(--muted); }
 .recruiting-role-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
 .recruiting-role { display: grid; grid-template-columns: 26px minmax(0, 1fr); align-items: start; column-gap: 12px; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--deep); }
