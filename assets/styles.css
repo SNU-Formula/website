@@ -33,8 +33,9 @@
   --radius-md: 16px;
   --radius-lg: 28px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-site: "Pretendard Variable", sans-serif;
-  --font-brand: Michroma, "Pretendard Variable", sans-serif;
+  --font-site: Michroma, "Pretendard Variable", sans-serif;
+  --font-brand: var(--font-site);
+  --font-copy: "Pretendard Variable", sans-serif;
 }
 
 *,
@@ -52,6 +53,9 @@ html[lang="ko"] .lang-en,
 html[lang="en"] .lang-ko {
   display: none !important;
 }
+
+/* Korean copy, including embedded English abbreviations, uses one natural face. */
+.lang-ko.korean-copy { font-family: var(--font-copy); }
 
 body {
   margin: 0;
@@ -389,11 +393,11 @@ body.intro-active {
 .mobile-menu nav a {
   display: grid;
   padding: 16px 0;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: 32px 1fr;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   font-family: var(--font-brand);
-  font-size: clamp(28px, 8vw, 48px);
+  font-size: clamp(25px, 8vw, 48px);
   font-weight: 700;
 }
 
@@ -879,6 +883,8 @@ body.intro-active {
   color: rgba(255, 255, 255, 0.62);
   font-size: clamp(19px, 1.6vw, 22px);
 }
+
+body[data-page="team"] .page-hero-bottom p { max-width: none; }
 
 .partner-band {
   position: relative;
@@ -2995,7 +3001,9 @@ html[lang="ko"] .join-status-card h2 {
 .partner-contact-links a > span:first-child { grid-column: 1 / -1; font-size: 13px; color: var(--blue); }
 .partner-contact-links strong { font-size: 18px; color: var(--navy); overflow-wrap: anywhere; }
 .partner-contact-links a:focus-visible { outline: 3px solid var(--blue); outline-offset: 6px; }
-/* Keep the existing display face above 20px; smaller copy uses Pretendard. */
+.tier-placeholder { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.partner-slot { min-height: 100px; border: 1px dashed var(--line); background: var(--paper); }
+/* English uses Michroma at every size; mixed Korean copy is marked explicitly. */
 .section-head p,
 .page-hero-bottom p,
 .project-context p,
@@ -3012,27 +3020,6 @@ html[lang="en"] .advisor-card h3 { font-size: clamp(24px, 2vw, 30px); }
 
 @media (min-width: 761px) {
   .about-affiliation-grid { padding-right: 36px; }
-}
-
-@media (max-width: 1250px) {
-  .page-jump a { font-family: var(--font-site); }
-  .page-hero-bottom p { font-family: var(--font-site); }
-}
-
-@media (max-width: 1333px) {
-  .section-head p { font-family: var(--font-site); }
-}
-
-@media (max-width: 1200px) {
-  .about-affiliation p { font-family: var(--font-site); }
-}
-
-@media (max-width: 1212px) {
-  .team-tab-name { font-family: var(--font-site); }
-}
-
-@media (max-width: 1000px) {
-  .competition-gate h3 { font-family: var(--font-site); }
 }
 
 @media (min-width: 1101px) and (max-width: 1500px) {

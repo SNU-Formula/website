@@ -19,22 +19,22 @@ Home → About → Members → Partners → Vehicle → News → Recruiting.
 | Home | `/` | DESIGN. BUILD. RACE., 흰 팀 로고, 파트너 로고 띠, 뉴스 2건, 차량 공개 예정 |
 | About | `/about/` | 흰 배경의 Renovatio 소개, Formula Student와 FSG |
 | Members | `/team/` | Manager / Engineering / Business / Advisor |
-| Partners | `/partners/` | 소속·센터 소개, Main / Platinum Sponsor |
+| Partners | `/partners/` | 소속·센터 소개, Main / Platinum / Sponsor / Supporter |
 | Vehicle | `/vehicle/` | 공개 전 차량 티저 |
 | News | `/news/` | 페라리코리아·서울대 협약과 팀 창단 보도 |
-| Recruiting | `/join/` | Full commitment, 팀원 체계, 기계·전기·비즈니스 모집 분야 |
+| Recruiting | `/recruiting/` | FSG 2028까지 Full commitment, 팀원 체계, 모집 분야와 사용 도구 |
 
-Recruiting은 기존 `/join/` 경로를 유지합니다. 김민우님의 `e99632c`
+Recruiting의 주소는 `/recruiting/`이며 기존 `/join/`은 새 주소로 이동합니다. 김민우님의 `e99632c`
 (2026-10-12) 수정본을 가져와 합쳤으며 팀원 체계와 14개 모집 분야를 유지했습니다.
 사용자 후속 요청에 따라 설명을 명사형 bullet로 바꿨습니다.
 정회원 설명은 수습 부원의 성실하고 적극적인 활동 시 전환, 차량 설계·제작 직접 참여로 확정했습니다.
 데스크톱의 팀원 체계는 3열, 모집 분야는 2열이며 설명 글씨는 20px입니다.
-공용 파일의 충돌을 해소하고 서체와 캐시 키(`20261012-8`)를 맞췄습니다.
+공용 파일의 충돌을 해소하고 서체와 캐시 키(`20261012-9`)를 맞췄습니다.
 
 ## 서체와 기록
 
-큰 영문 제목·소개 문구는 Michroma Regular, 20px 이하의 영문·한글 글씨는
-Pretendard Variable입니다. 한글은 큰 제목에서도 Pretendard Variable로 표시합니다.
+모든 크기의 영문은 Michroma Regular, 한글은 Pretendard Variable입니다.
+한글 문장에 섞인 CFD 같은 영문도 Pretendard Variable로 표시합니다.
 두 서체를 자체 호스팅하며 라이선스 원문을 `assets/fonts/`에 포함합니다.
 공식 로고는 원래 이미지 형태를 유지합니다.
 
@@ -58,7 +58,7 @@ Pretendard Variable입니다. 한글은 큰 제목에서도 Pretendard Variable�
 
 - `acceptingApplications`: `false`이면 모집 중단, `true`이면 기간에 따라 상태 표시.
 - `opensAt`: 시작 시각 또는 `null`. 시작 전에는 모집 예정 상태.
-- `closesAt`: 종료 시각. 현재는 한국 시간 2026-10-21이 끝나면 자동 종료.
+- `closesAt`: 배타적 종료 시각. 현재는 `2026-10-31T00:00:00+09:00`으로, 한국 시간 10월 30일 하루 전체를 포함한 뒤 자동 종료.
 - `announcementUrl`: 센터 공고의 전체 `http(s)` URL. 빈 값이면 공고 등록 예정, URL이 있으면 공고 보기 링크 표시.
 
 기간을 바꿀 때는 한국 시간 오프셋 `+09:00`을 포함합니다. 브라우저가 열린 상태에서도

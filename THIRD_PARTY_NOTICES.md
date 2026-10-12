@@ -30,8 +30,8 @@ Its old asset and source notes are retained for reference.
 
 ## Fonts
 
-The website uses Michroma Regular for large Latin display text and Pretendard Variable
-for Korean glyphs and small Latin text. Both are licensed under SIL Open Font License 1.1. Montserrat files are
+The website uses Michroma Regular for English at all sizes and Pretendard Variable
+for Korean copy, including English mixed into Korean sentences. Both are licensed under SIL Open Font License 1.1. Montserrat files are
 retained but are no longer selected by CSS. Full notices and licenses accompany them:
 
 - `assets/fonts/Michroma-LICENSE.txt`

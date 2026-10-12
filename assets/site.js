@@ -1,7 +1,7 @@
 const root = "/";
 
 const bilingual = (ko, en, className = "") =>
-  `<span class="lang lang-ko ${className}">${ko}</span><span class="lang lang-en ${className}">${en}</span>`;
+  `<span class="lang lang-ko ${/[가-힣]/.test(ko) ? "korean-copy" : ""} ${className}">${ko}</span><span class="lang lang-en ${className}">${en}</span>`;
 
 const snuFormulaWordmark = (tone = "") =>
   `<span class="snu-formula-wordmark ${tone}" role="img" aria-label="SNU FORMULA"></span>`;
@@ -18,7 +18,7 @@ const headerMarkup = `
       <a href="${root}partners/" data-nav="partners">${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/" data-nav="news">${bilingual("NEWS", "NEWS")}</a>
-      <a href="${root}join/" data-nav="join">${bilingual("RECRUITING", "RECRUITING")}</a>
+      <a href="${root}recruiting/" data-nav="recruiting">${bilingual("RECRUITING", "RECRUITING")}</a>
     </nav>
     <div class="header-actions">
       <div class="language-switch" role="group" aria-label="Language">
@@ -40,7 +40,7 @@ const headerMarkup = `
       <a href="${root}partners/"><span>04</span>${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}vehicle/"><span>05</span>${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/"><span>06</span>${bilingual("NEWS", "NEWS")}</a>
-      <a href="${root}join/"><span>07</span>${bilingual("RECRUITING", "RECRUITING")}</a>
+      <a href="${root}recruiting/"><span>07</span>${bilingual("RECRUITING", "RECRUITING")}</a>
     </nav>
     <div class="mobile-menu-foot">
       <p>SEOUL NATIONAL UNIVERSITY</p>
@@ -60,7 +60,7 @@ const footerMarkup = `
         "한국을 넘어 세계 무대로 도전하는 SNU Formula Team",
         "SNU Formula Team — taking on the world beyond Korea."
       )}</p>
-      <a class="text-link light" href="${root}join/">${bilingual("함께 만들기", "BUILD WITH US")}<span>↗</span></a>
+      <a class="text-link light" href="${root}recruiting/">${bilingual("함께 만들기", "BUILD WITH US")}<span>↗</span></a>
     </div>
     <div class="footer-links">
       <div>
@@ -71,7 +71,7 @@ const footerMarkup = `
         <a href="${root}partners/">Partners</a>
         <a href="${root}vehicle/">Vehicle</a>
         <a href="${root}news/">News</a>
-        <a href="${root}join/">Recruiting</a>
+        <a href="${root}recruiting/">Recruiting</a>
       </div>
       <div>
         <span class="footer-label">CONNECT</span>

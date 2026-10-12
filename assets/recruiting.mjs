@@ -1,4 +1,4 @@
-import { recruitingConfig } from "./recruiting-config.mjs?v=20261012-8";
+import { recruitingConfig } from "./recruiting-config.mjs?v=20261012-9";
 
 export function getRecruitmentState(config, now = Date.now()) {
   if (!config.acceptingApplications) return "closed";
@@ -28,7 +28,7 @@ const statusLabels = {
 function setBilingualText(element, ko, en) {
   const spans = ["ko", "en"].map((language, index) => {
     const span = document.createElement("span");
-    span.className = `lang lang-${language}`;
+    span.className = `lang lang-${language}${language === "ko" && /[가-힣]/.test(ko) ? " korean-copy" : ""}`;
     span.textContent = [ko, en][index];
     return span;
   });
@@ -89,7 +89,7 @@ export function renderRecruitment(config = recruitingConfig, now = Date.now()) {
     element.hidden = Boolean(announcementUrl);
   });
 
-  if (document.body.dataset.page === "join") {
+  if (document.body.dataset.page === "recruiting") {
     document.body.dataset.descriptionKo = `SNU FORMULA 모집 안내. ${statusLabels[state][0]}. ${deadlineText[0]}`;
     document.body.dataset.descriptionEn = `SNU FORMULA recruitment. ${statusLabels[state][1]}. ${deadlineText[1]}`;
     const description = document.querySelector('meta[name="description"]');

@@ -5,15 +5,15 @@ import { getRecruitmentState, getAnnouncementUrl } from "../assets/recruiting.mj
 const campaign = {
   acceptingApplications: true,
   opensAt: "2026-10-01T00:00:00+09:00",
-  closesAt: "2026-10-22T00:00:00+09:00",
+  closesAt: "2026-10-31T00:00:00+09:00",
 };
 
 test("accepts applications through the last second of the deadline in Korea", () => {
-  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-21T23:59:59+09:00")), "open");
+  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-30T23:59:59+09:00")), "open");
 });
 test("closes at midnight after the deadline, including the equivalent UTC instant", () => {
-  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-22T00:00:00+09:00")), "closed");
-  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-21T15:00:00Z")), "closed");
+  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-31T00:00:00+09:00")), "closed");
+  assert.equal(getRecruitmentState(campaign, Date.parse("2026-10-30T15:00:00Z")), "closed");
 });
 test("announces a future campaign and opens at its start time", () => {
   assert.equal(getRecruitmentState(campaign, Date.parse("2026-09-30T23:59:59+09:00")), "upcoming");
