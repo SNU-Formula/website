@@ -73,7 +73,7 @@ Michroma와 Pretendard 모두 SIL Open Font License 1.1입니다. 웹 임베딩,
 
 ## 소속과 Advisor
 
-SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
+SNU FORMULA는 SNU Mobility Renovatio의 산하 모터스포트 팀이고, Renovatio의
 단장은 곽승엽 교수입니다. 이 관계는 사용자의 최종 지시에 따라 반영했습니다.
 
 센터 명칭: **서울대학교 산학협력 공학인재 지원센터**.
@@ -104,7 +104,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 
 - 메뉴: Home → About → Members → Partners → Vehicle → News → Recruiting.
 - Home: 흰 로고, DESIGN. BUILD. RACE. 표어, News를 Vehicle보다 위에 배치.
-- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. 두 문장을 별도 문단으로 나누고, 데스크톱에서는 각 문장이 한 줄이 되도록 설명 폭을 확대. 로고는 오른쪽에서 36px 왼쪽으로 이동. 설명 글씨는 1280px 화면에서 22px, 1760px 화면에서 24px. 곽승엽 교수님은 서울대학교 산학협력 공학인재 지원센터장으로 소개. Competition Structure 문장 삭제.
+- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. 두 문단으로 배치하고 새 소속 설명은 글씨 크기를 유지하며 자연스럽게 줄바꿈. 로고는 오른쪽에서 36px 왼쪽으로 이동. 설명 글씨는 1280px 화면에서 22px, 1760px 화면에서 24px. Competition Structure 문장 삭제.
 - Members: 소개 교체, Advisor 탭 추가, 사진·개인 클릭 없이 약력 표시, Advisor 설명 21px(영문 20px)로 확대, 팀별 인원수 표시 삭제, 이규원 항공우주공학과 수정, 강경운 팀복 사진 반영.
 - Partners: “한국 모터스포츠의 시작점”을 상단 제목으로 이동. 소속·센터를 먼저 소개하고 곽승엽 교수님의 센터장 직책 표시. “우리의 소속과 기반” 제목 삭제. Sponsorship Tiers와 기존 하단 기관 섹션 삭제. 하단에 BECOME A PARTNER, 이메일, 인스타그램 추가.
 - 후원 등급: Main Sponsor / **Platinum Sponsor** / Sponsor / Supporter. AJIN Industrial, KOLON, YONGSAN, YOUNGONE이 Platinum Sponsor입니다. Sponsor와 Supporter는 각 2개 빈 로고 칸을 표시합니다.
@@ -116,7 +116,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 - 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
 - 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS/JS·모집 모듈 캐시 키: `20261012-9`. Recruiting CSS: `20261012-10`.
+공용 CSS: `20261012-11`. 공용 JS·모집 모듈: `20261012-9`. Recruiting CSS: `20261012-10`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
@@ -127,7 +127,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 - 작은 모바일 320px: Recruiting·News·Partners·Advisor의 한글·영문 글자 넘침 추가 확인. Partners 제목 크기 조정.
 - 발견한 About·Members·Vehicle 제목 넘침과 Recruiting 영문 메뉴 넘침 수정.
 - 기관 카드의 가로 배치와 불필요한 하단 여백 제거 확인.
-- About의 두 문장과 공통 푸터 표어가 1280px·1760px 한글 화면에서 한 줄씩 표시됨을 확인.
+- 공통 푸터 표어가 1280px·1760px 한글 화면에서 한 줄로 표시됨을 확인. 새 About 설명은 화면 폭에 맞춰 자연스럽게 줄바꿈.
 - 홈·News 기사 제목의 동일 크기, 사진 아래 제목, 페라리 사진 전체 표시 및 뉴시스 사진 하단 크롭 확인.
 - HTML 태그·중복 ID·로컬 경로·CSS 자산 검사 통과.
 - JavaScript 구문 검사와 Git 충돌·공백 검사 통과.
@@ -152,7 +152,7 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 - Recruiting 주소는 `/recruiting/`. 모든 내부 링크를 갱신하고 `/join/`은 검색 인자와 해시를 보존해 새 주소로 이동.
 - Full Commitment는 **2028년 FSG 대회까지 활동** 조건을 한글·영문에 명시.
 - 세 팀 이름과 14개 소주제는 한글 화면에서도 영문으로 표시. 설명 bullet은 한글 유지, 영문 화면에서는 영문 설명 표시.
-- 기계팀: SolidWorks / CATIA / ANSYS. 전기팀: KiCad / ANSYS / MATLAB / 회로 자체 설계. 팀 제목 아래 키워드 박스만 표시. TOOLS·DEVELOPMENT 문구는 제거.
+- 기계팀: SolidWorks / CATIA / ANSYS. 전기팀: KiCad / ANSYS / MATLAB / circuit. 팀 제목 아래 키워드 박스만 표시. TOOLS·DEVELOPMENT 문구는 제거.
 - 전기팀에 토크 벡터링 시스템 자체 설계·제작 및 제어 알고리즘 구현 추가. 모집 업무 범위이며 완료된 성과를 뜻하지 않음.
 - 지원 기간은 **2026년 10월 30일 23:59까지(한국 시간)**. 설정의 배타적 종료 시각은 `2026-10-31T00:00:00+09:00`. 홈 배너와 모집 안내 모두 같은 설정 사용.
 - 양희원·송민규 교수님의 직책 표기: **서울대학교 산학협력중점 교수**.
@@ -162,3 +162,14 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 팀 제목·분야 수·도구 목록이 겹치지 않도록 수정했고, 모바일 메뉴의 Recruiting 글자 넘침도 수정했습니다.
 실제 CFD 설명과 영문 제목의 적용 서체, Advisor 약력 순서, `/join/`의 검색 인자·해시 보존 이동,
 10월 30일 마감 표시를 브라우저에서 확인했습니다. 모집 상태 6개 테스트 및 HTML·자산·JS 검사 통과.
+
+## About·Partners 소속 설명 최종 문구
+
+두 페이지의 기존 소속·단장 설명을 다음 두 문단으로 교체했습니다. 별표는 Renovatio 설명의 표시입니다. 영문도 같은 내용으로 변경했습니다.
+
+> SNU FORMULA는 *SNU Mobility Renovatio의 산하 모터스포트 팀입니다.
+
+> *SNU Mobility Renovatio는 서울대학교 산학협력공학인재지원센터(센터장: 재료공학부 곽승엽 교수)가 주관하는 실전형 모터 스포츠 모빌리티 인재 양성 프로젝트입니다.
+
+사용자가 제공한 사진의 첫 문단만 사용하고, 실전형과 모빌리티 사이에 요청한 모터 스포츠를 추가했습니다.
+두 페이지의 한글·영문을 1280px·390px·320px에서 확인했고, 문단 글자 넘침이 없었습니다.
