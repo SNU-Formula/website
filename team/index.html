@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#05082D">
-    <meta name="description" content="SNU FORMULA의 Manager, Engineering, Business 세 팀과 구성원">
+    <meta name="description" content="SNU FORMULA의 Manager, Engineering, Business, Advisor와 구성원">
     <script>
       try {
         document.documentElement.lang =
@@ -14,15 +14,15 @@
       }
     </script>
     <link rel="icon" href="/assets/logos/snu-formula-blue.png">
-    <link rel="stylesheet" href="/assets/styles.css?v=20261009-2">
-    <title>Team | SNU FORMULA</title>
+    <link rel="stylesheet" href="/assets/styles.css?v=20261012-5">
+    <title>Members | SNU FORMULA</title>
   </head>
   <body
     data-page="team"
-    data-title-ko="Team | SNU FORMULA"
-    data-title-en="Team | SNU FORMULA"
-    data-description-ko="SNU FORMULA의 Manager, Engineering, Business 세 팀과 구성원."
-    data-description-en="The Manager, Engineering, and Business teams of SNU FORMULA, and the people in them."
+    data-title-ko="Members | SNU FORMULA"
+    data-title-en="Members | SNU FORMULA"
+    data-description-ko="SNU FORMULA의 Manager, Engineering, Business, Advisor와 구성원."
+    data-description-en="The Manager, Engineering, Business, and Advisor groups of SNU FORMULA."
   >
     <a class="skip-link" href="#main">
       <span class="lang lang-ko">본문으로 이동</span>
@@ -39,16 +39,8 @@
           </h1>
           <div class="page-hero-bottom">
             <p>
-              <span class="lang lang-ko">
-                Manager, Engineering, Business 세 팀이 한 대의 Vehicle을 향해
-                움직입니다. 이미 차량 설계와 제작을 경험한 인원으로 구성되어,
-                첫 시즌부터 실차를 만들 준비가 되어 있습니다.
-              </span>
-              <span class="lang lang-en">
-                Three teams — Manager, Engineering, and Business — move toward
-                one vehicle. They come in with hands-on vehicle design and build
-                experience, ready to put a real car together from season one.
-              </span>
+              <span class="lang lang-ko">차량 설계와 제작을 경험해 본 학생들과, 현대자동차의 실무와 산학 협력을 통해 풍부한 경험을 쌓은 교수진으로 구성되었습니다.</span>
+              <span class="lang lang-en">Our team brings together students with vehicle design and build experience, and faculty with extensive experience at Hyundai Motor and in industry–university collaboration.</span>
             </p>
           </div>
         </div>
@@ -167,6 +159,11 @@
                 <span class="lang lang-ko">1명</span>
                 <span class="lang lang-en">1 MEMBER</span>
               </span>
+            </button>
+            <button class="team-tab" type="button" data-panel="advisor" id="tab-advisor" role="tab" aria-controls="panel-advisor" aria-selected="false" tabindex="-1">
+              <span class="team-tab-index">04</span>
+              <span class="team-tab-name">ADVISOR</span>
+              <span class="team-tab-count"><span class="lang lang-ko">3명</span><span class="lang lang-en">3 ADVISORS</span></span>
             </button>
           </div>
 
@@ -330,7 +327,7 @@
                 </article>
                 <article class="roster-card">
                   <figure class="roster-photo">
-                    <img src="/assets/img/team/members/kang-kyungwoon.jpg" alt="강경운 (KANG KYUNGWOON)" width="900" height="1200" loading="lazy">
+                    <img src="/assets/img/team/members/kang-kyungwoon-teamwear.png" alt="강경운 (KANG KYUNGWOON)" width="900" height="1200" loading="lazy">
                   </figure>
                   <div class="roster-card-body">
                     <span class="roster-role">CHASSIS</span>
@@ -369,7 +366,7 @@
                     </h3>
                     <ul class="roster-major">
                       <li><span class="lang lang-ko">세종과학예술고등학교</span><span class="lang lang-en">Sejong Science and Arts High School</span></li>
-                      <li><span class="lang lang-ko">서울대학교 항공우주공학부</span><span class="lang lang-en">Aerospace Engineering, SNU</span></li>
+                      <li><span class="lang lang-ko">서울대학교 항공우주공학과</span><span class="lang lang-en">Aerospace Engineering, SNU</span></li>
                     </ul>
                   </div>
                   <button
@@ -654,13 +651,45 @@
                 </div>
               </div>
             </article>
+            <!-- Advisor biographies are readable directly, with no portrait or detail button. -->
+            <article class="team-panel" data-panel-content="advisor" id="panel-advisor" role="tabpanel" aria-labelledby="tab-advisor" tabindex="-1" hidden>
+              <div class="advisor-grid">
+                <article class="advisor-card">
+                  <span class="advisor-role">FACULTY ADVISOR</span>
+                  <h3><span class="lang lang-ko">곽승엽</span><span class="lang lang-en">SEUNG YEOP KWAK</span></h3>
+                  <ul>
+                    <li><span class="lang lang-ko">서울대학교 재료공학부 교수</span><span class="lang lang-en">Professor, Department of Materials Science and Engineering, SNU</span></li>
+                    <li><span class="lang lang-ko">산학협력 공학인재 지원센터장</span><span class="lang lang-en">Director, University–Industry Liaison Center for Engineers</span></li>
+                    <li><span class="lang lang-ko">SNU Mobility Renovatio 지도교수</span><span class="lang lang-en">Faculty Advisor, SNU Mobility Renovatio</span></li>
+                  </ul>
+                </article>
+                <article class="advisor-card">
+                  <span class="advisor-role">ADVISOR</span>
+                  <h3><span class="lang lang-ko">양희원</span><span class="lang lang-en">HEUI WON YANG</span></h3>
+                  <ul>
+                    <li><span class="lang lang-ko">산학협력 공학인재 지원센터 명예교수</span><span class="lang lang-en">Honorary Professor, University–Industry Liaison Center for Engineers</span></li>
+                    <li><span class="lang lang-ko">(전) 현대자동차·기아 연구개발본부장</span><span class="lang lang-en">Former Head of R&amp;D, Hyundai Motor and Kia</span></li>
+                    <li><span class="lang lang-ko">(전) 남양연구소 연구개발 총괄</span><span class="lang lang-en">Former R&amp;D Lead, Namyang Research Center</span></li>
+                  </ul>
+                </article>
+                <article class="advisor-card">
+                  <span class="advisor-role">ADVISOR</span>
+                  <h3><span class="lang lang-ko">송민규</span><span class="lang lang-en">MIKE SONG</span></h3>
+                  <ul>
+                    <li><span class="lang lang-ko">산학협력 공학인재 지원센터 명예교수</span><span class="lang lang-en">Honorary Professor, University–Industry Liaison Center for Engineers</span></li>
+                    <li><span class="lang lang-ko">(전) 현대자동차 제네시스사업본부장</span><span class="lang lang-en">Former Head of the Genesis Business Division, Hyundai Motor</span></li>
+                    <li><span class="lang lang-ko">(전) 제네시스 최고운영책임자(COO)</span><span class="lang lang-en">Former Chief Operating Officer, Genesis</span></li>
+                  </ul>
+                </article>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <nav class="page-jump" aria-label="Continue exploring">
         <a href="/join/">
-          <span class="page-jump-label">JOIN</span>
+          <span class="page-jump-label">RECRUITING</span>
           <span aria-hidden="true">↗</span>
         </a>
         <a href="/vehicle/">
@@ -670,6 +699,6 @@
       </nav>
     </main>
 
-    <script src="/assets/site.js?v=20261012-recruiting-2" defer></script>
+    <script src="/assets/site.js?v=20261012-5" defer></script>
   </body>
 </html>

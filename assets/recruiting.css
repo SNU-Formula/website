@@ -5,9 +5,9 @@
 .recruiting-hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-top: 24px; }
 .recruiting-hero-bottom p { max-width: 620px; margin: 0; color: #c2c8e0; font-size: clamp(17px, 1.4vw, 21px); }
 .recruiting-hero-bottom .button { flex: none; gap: 26px; }
-.recruiting-hero-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 24px; padding-top: 14px; border-top: 1px solid #ffffff26; font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .1em; color: #b0bce8; }
+.recruiting-hero-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 24px; padding-top: 14px; border-top: 1px solid #ffffff26; font-family: var(--font-site); font-size: 10px; font-weight: 600; letter-spacing: .1em; color: #b0bce8; }
 .recruiting-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.recruiting-commitment h2 { margin: 26px 0 0; font-family: Montserrat, sans-serif; font-size: clamp(30px, 3.6vw, 58px); line-height: 1.12; letter-spacing: -.055em; }
+.recruiting-commitment h2 { margin: 26px 0 0; font-family: var(--font-site); font-size: clamp(30px, 3.6vw, 58px); line-height: 1.12; letter-spacing: -.055em; }
 .recruiting-commitment h2 > span { color: var(--recruit-accent); }
 .recruiting-intro-copy h3 { font-size: 27px; margin: 0 0 20px; line-height: 1.4; }
 .recruiting-intro-copy p { color: var(--muted); margin: 0 0 18px; }
@@ -17,14 +17,14 @@
 .recruiting-section-heading p { margin: 0; max-width: 370px; color: var(--muted); font-size: 16px; }
 .recruiting-member-grid { border-top: 2px solid var(--deep); }
 .recruiting-member-grid article { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr); column-gap: 32px; row-gap: 6px; padding: 24px 0; border-bottom: 1px solid var(--line); }
-.recruiting-kicker { display: block; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .09em; color: var(--recruit-accent); }
+.recruiting-kicker { display: block; font-family: var(--font-site); font-size: 11px; font-weight: 700; letter-spacing: .09em; color: var(--recruit-accent); }
 .recruiting-member-grid h3 { grid-column: 1; grid-row: 1; font-size: 22px; font-weight: 650; margin: 0; line-height: 1.4; }
 .recruiting-member-grid .recruiting-kicker { grid-column: 1; grid-row: 2; color: #788197; font-size: 10px; font-weight: 500; letter-spacing: .04em; }
 .recruiting-member-grid p { grid-column: 2; grid-row: 1 / 3; align-self: center; font-size: 15px; line-height: 1.75; margin: 0; color: #596273; }
 .recruiting-team-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 28px; }
 .recruiting-team-nav a { display: flex; gap: 16px; align-items: center; padding: 15px 20px; font-size: 17px; font-weight: 650; transition: background .2s, color .2s; }
 .recruiting-team-nav a + a { border-left: 1px solid var(--line); }
-.recruiting-team-nav a > span:first-child { font: 11px Montserrat, sans-serif; color: var(--muted); }
+.recruiting-team-nav a > span:first-child { font: 11px var(--font-site); color: var(--muted); }
 .recruiting-team-nav a > span:last-child { margin-left: auto; }
 .recruiting-team-nav a:hover { background: var(--paper); color: var(--recruit-accent); }
 .recruiting-team { display: block; }
@@ -37,7 +37,7 @@
 .recruiting-role-list { border-top: 2px solid var(--deep); }
 .recruiting-role { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: baseline; column-gap: 22px; padding: 23px 0; border-bottom: 1px solid var(--line); }
 .recruiting-role > div { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr); align-items: baseline; gap: 32px; }
-.recruiting-role-number { color: #788197; font: 11px Montserrat, sans-serif; font-variant-numeric: tabular-nums; }
+.recruiting-role-number { color: #788197; font: 11px var(--font-site); font-variant-numeric: tabular-nums; }
 .recruiting-role h4 { font-size: 20px; font-weight: 650; color: var(--ink); margin: 0; line-height: 1.5; letter-spacing: -.025em; }
 .recruiting-role p { font-size: 15px; color: #596273; margin: 0; line-height: 1.75; }
 .recruiting-contact .join-status-card { min-height: auto; gap: 30px; padding: clamp(24px, 3vw, 40px); }
@@ -62,6 +62,8 @@
   .recruiting-member-grid p { grid-column: 1; grid-row: 3; margin-top: 6px; }
   .recruiting-team-nav { margin-bottom: 24px; }
   .recruiting-team-nav a { padding: 17px 10px; gap: 7px; font-size: 12px; }
+  html[lang="en"] .recruiting-team-nav { grid-template-columns: 1fr; }
+  html[lang="en"] .recruiting-team-nav a + a { border-left: 0; border-top: 1px solid var(--line); }
   .recruiting-team-nav a > span:first-child { display: none; }
   .recruiting-team-heading p { margin-bottom: 15px; }
   .recruiting-team + .recruiting-team { margin-top: 28px; padding-top: 24px; }
@@ -72,4 +74,12 @@
 }
 
 .recruiting-contact .join-status-card h2 { margin-top: 20px; }
+.recruiting-points { margin: 0; padding-left: 18px; list-style: disc; color: #596273; font-size: 15px; line-height: 1.8; }
+.recruiting-points li + li { margin-top: 7px; }
+.recruiting-points li::marker { color: var(--recruit-accent); }
+.recruiting-member-grid .recruiting-points { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+.recruiting-section-heading > .recruiting-points { max-width: 370px; font-size: 16px; }
+@media (max-width: 700px) {
+  .recruiting-member-grid .recruiting-points { grid-column: 1; grid-row: 3; margin-top: 6px; }
+}
 @media (max-width: 700px) { .recruiting-team-heading { grid-template-columns: 1fr auto; gap: 8px 16px; } .recruiting-team-heading h3 { grid-column: 1; } .recruiting-team-heading p { grid-column: 1 / -1; margin: 0; } .recruiting-team-count { grid-column: 2; grid-row: 2; } }

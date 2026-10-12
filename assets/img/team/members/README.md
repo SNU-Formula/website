@@ -24,7 +24,7 @@
 kim-minkyu.jpg        김민규      Manager / PM
 you-minwoo.jpg        유민우      Manager / PM
 kim-minwoo.jpg        김민우      Engineering / Lead
-kang-kyungwoon.jpg    강경운      Engineering / Chassis
+kang-kyungwoon-teamwear.png    강경운      Engineering / Chassis
 lee-gyuwon.jpg        이규원      Engineering / Aerodynamics
 lee-jaejun.jpg        이재준      Engineering / Aerodynamics
 yun-jonghwan.jpg      윤종환      Engineering / Vehicle Dynamics
@@ -48,6 +48,11 @@ oh-songwoo.jpg        오송우      Business / Lead
 `alt`는 파일명이 아니라 실제 이름으로 적어주세요. 화면 낭독기 사용자가 듣는 값입니다.
 
 ## 동의
+
+강경운님의 현재 프로필은 사용자가 제공한 얼굴 사진을 기존 파란 팀복에 맞춰
+AI 편집한 PNG입니다. 1086 × 1448px로 3:4 비율을 유지하며, 기존 원본 JPG는
+보관합니다. 제작 도구와 프롬프트는 `docs/kang-kyungwoon-portrait-20261012.md`에
+기록했습니다.
 
 구성원 사진은 본인 동의를 받은 것만 올립니다. 팀을 떠난 구성원의 사진은
 해당 카드와 함께 파일도 삭제합니다.

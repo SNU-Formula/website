@@ -14,9 +14,9 @@ const headerMarkup = `
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="${root}" data-nav="home">${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/" data-nav="about">${bilingual("ABOUT", "ABOUT")}</a>
-      <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}team/" data-nav="team">${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/" data-nav="partners">${bilingual("PARTNERS", "PARTNERS")}</a>
+      <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/" data-nav="news">${bilingual("NEWS", "NEWS")}</a>
       <a href="${root}join/" data-nav="join">${bilingual("RECRUITING", "RECRUITING")}</a>
     </nav>
@@ -36,9 +36,9 @@ const headerMarkup = `
     <nav aria-label="Mobile navigation">
       <a href="${root}"><span>01</span>${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/"><span>02</span>${bilingual("ABOUT", "ABOUT")}</a>
-      <a href="${root}vehicle/"><span>03</span>${bilingual("VEHICLE", "VEHICLE")}</a>
-      <a href="${root}team/"><span>04</span>${bilingual("MEMBERS", "MEMBERS")}</a>
-      <a href="${root}partners/"><span>05</span>${bilingual("PARTNERS", "PARTNERS")}</a>
+      <a href="${root}team/"><span>03</span>${bilingual("MEMBERS", "MEMBERS")}</a>
+      <a href="${root}partners/"><span>04</span>${bilingual("PARTNERS", "PARTNERS")}</a>
+      <a href="${root}vehicle/"><span>05</span>${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/"><span>06</span>${bilingual("NEWS", "NEWS")}</a>
       <a href="${root}join/"><span>07</span>${bilingual("RECRUITING", "RECRUITING")}</a>
     </nav>
@@ -58,23 +58,25 @@ const footerMarkup = `
         ${snuFormulaWordmark()}
       </a>
       <p>${bilingual(
-        "서울대학교 학생들이 설계하고, 제작하고, 시험하고, 검증하는 Formula Student Team.",
-        "A Formula Student team at Seoul National University — designing, building, testing, and validating."
+        "한국을 넘어 세계 무대로 도전하는 SNU Formula Team",
+        "SNU Formula Team — taking on the world beyond Korea."
       )}</p>
       <a class="text-link light" href="${root}join/">${bilingual("함께 만들기", "BUILD WITH US")}<span>↗</span></a>
     </div>
     <div class="footer-links">
       <div>
         <span class="footer-label">EXPLORE</span>
+        <a href="${root}">Home</a>
         <a href="${root}about/">About</a>
-        <a href="${root}vehicle/">Vehicle</a>
         <a href="${root}team/">Members</a>
-        <a href="${root}news/">${bilingual("NEWS", "NEWS")}</a>
+        <a href="${root}partners/">Partners</a>
+        <a href="${root}vehicle/">Vehicle</a>
+        <a href="${root}news/">News</a>
+        <a href="${root}join/">Recruiting</a>
       </div>
       <div>
         <span class="footer-label">CONNECT</span>
-        <a href="${root}partners/">Partners</a>
-        <a href="${root}join/">Recruiting</a>
+        <a href="https://www.instagram.com/snu_formula_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
       </div>
       <div class="footer-principles">
         <span class="footer-label">TEAM PRINCIPLES</span>

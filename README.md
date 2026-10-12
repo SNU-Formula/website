@@ -1,76 +1,56 @@
 # SNU FORMULA Website
 
-Local-first bilingual website for SNU FORMULA.
+서울대학교 SNU FORMULA의 한글·영문 정적 홈페이지입니다.
 
-## Run locally
+## 로컬 실행
 
-From this directory:
+이 폴더에서 다음 명령을 실행한 뒤 <http://127.0.0.1:4173/>를 엽니다.
 
-```bash
-python3 -m http.server 4173
+```powershell
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-Then open [http://localhost:4173](http://localhost:4173).
+## 메뉴와 페이지
 
-## Pages
+Home → About → Members → Partners → Vehicle → News → Recruiting.
 
-- `/` — Hero, moving partner band, covered vehicle teaser
-- `/about/` — Formula SAE / Formula Student and the FSG 2028 target
-- `/vehicle/` — Covered vehicle teaser
-- `/team/` — Manager / Engineering / Business teams, switchable roster per team
-- `/partners/` — Partner tiers and institutional partners
-- `/news/` — Selected press coverage, linked directly to publisher articles
-- `/join/` — Recruitment status
+| 메뉴 | 경로 | 내용 |
+| --- | --- | --- |
+| Home | `/` | 흰 팀 로고, 파트너 로고 띠, 뉴스 2건, 차량 공개 예정 |
+| About | `/about/` | 흰 배경의 Renovatio 소개, Formula Student와 FSG |
+| Members | `/team/` | Manager / Engineering / Business / Advisor |
+| Partners | `/partners/` | 소속·센터 소개, Main / Platinum Sponsor |
+| Vehicle | `/vehicle/` | 공개 전 차량 티저 |
+| News | `/news/` | 페라리코리아·서울대 협약과 팀 창단 보도 |
+| Recruiting | `/join/` | Full commitment, 팀원 체계, 기계·전기·비즈니스 모집 분야 |
 
-Pages are deliberately short: one idea each, nothing that is not confirmed.
-News was restored for public deployment on 2026-10-12 after the user
-confirmed that permission had been obtained from all featured publishers.
-The page includes ZDNet Korea, NEWSIS, and The Chosun Ilbo, with the Ferrari
-story first. Homepage cards, desktop/mobile navigation, and footer links
-are restored. Credits are recorded in `assets/img/news/SOURCES.md`.
-Card copy distinguishes SNU FORMULA coverage from SNU industry collaboration
-and SNU Solar; article bodies are not reproduced.
+Recruiting은 기존 `/join/` 경로를 유지합니다. 김민우님의 `e99632c`
+(2026-10-12) 수정본을 가져와 합쳤으며 팀원 체계와 14개 모집 분야를 유지했습니다.
+사용자 후속 요청에 따라 설명을 명사형 bullet로 바꿨습니다.
+공용 파일의 충돌을 해소하고 서체와 캐시 키(`20261012-5`)를 맞췄습니다.
 
-## Sponsorship tiers
+## 서체와 기록
 
-The four tier names are Main Sponsor, Premium Sponsor, Sponsor, and Supporter
-in both website languages. Hyundai is the sole Main Sponsor. AJIN Industrial,
-Kolon, Yongsan, and Youngone are in the Premium Sponsor tier, as specified by
-the user. The public website displays names only; contribution criteria and
-detailed benefits are provided separately in the sponsor distribution guides.
+영문은 사용자가 지목한 `FORMULA STUDENT · FSG 2028 PROGRAM`의 서체인
+Michroma Regular, 한글은 Pretendard Variable로 통일했습니다.
+두 서체를 자체 호스팅하며 라이선스 원문을 `assets/fonts/`에 포함합니다.
+공식 로고는 원래 이미지 형태를 유지합니다.
 
-## Recruitment
+- [서체·라이선스·문구 후보·직책 출처](docs/typography-and-copy.md)
+- [강경운 팀복 사진의 AI 편집 기록](docs/kang-kyungwoon-portrait-20261012.md)
+- [외부 이미지와 폰트 출처](THIRD_PARTY_NOTICES.md)
 
-The 2026 recruitment is open through 2026-10-21. Notices will be shared on
-the official Instagram and Everytime. No application form or link is added;
-the existing Instagram and email contacts remain the contact channels.
+## 이미지
 
-## Opening animation
+- 뉴스는 2건을 표시하며 사진을 자르지 않고 제목을 사진 아래에 둡니다.
+- 기사 이용 허락은 2026-10-12 사용자의 기존 확인에 근거합니다.
+  매체·사진 출처는 `assets/img/news/SOURCES.md`에 기록되어 있습니다.
+- 코오롱은 공식 영문 SVG `assets/sponsors/kolon-en.svg`를 사용합니다.
+- 강경운 프로필은 사용자 제공 사진을 기존 파란 팀복에 맞춰 AI 편집한
+  `assets/img/team/members/kang-kyungwoon-teamwear.png`입니다.
+- 공개 전 차량은 사용자 CAD 실루엣을 참고한 생성 티저입니다.
 
-The SNU FORMULA wordmark plays over a full-screen veil on the first page view
-of a browser session (`sessionStorage`) and on an explicit reload. Navigation
-between pages in the same session does not replay it.
-It is injected by `assets/site.js`, so visitors without JavaScript and visitors
-with `prefers-reduced-motion: reduce` never see it.
+## 시작 애니메이션
 
-## Content and asset rules
-
-- Website imagery is SNU FORMULA-provided, purpose-generated, officially sourced,
-  or included with its applicable public license.
-- No competitor team photography or vehicle imagery is included.
-- The unreleased vehicle uses `vehicle-reveal-cover-v3.png`, a generated teaser
-  revised from the user's CAD silhouette with a blunt nose and both wings.
-  It represents an unreleased concept rather than a verified finished vehicle.
-- Unverified roster and vehicle decisions remain pending. Recruitment status
-  and its 2026-10-21 deadline were confirmed by the user.
-- Partner marks use the logo files supplied with the SNU FORMULA references.
-
-## Typography
-
-Pretendard Variable, Montserrat, and Michroma are self-hosted in `assets/fonts`,
-so Korean glyphs and brand typography remain stable without a font CDN.
-
-- Montserrat / Pretendard: the largest editorial headlines.
-- Michroma: SNU FORMULA identity text, section labels, medium display headings,
-  tabs, and technical markers.
-- Pretendard: Korean and English explanatory copy.
+첫 방문과 명시적 새로고침에 팀 로고가 재생됩니다. 같은 세션의 페이지 이동에서는
+반복하지 않으며 `prefers-reduced-motion: reduce`에서는 생략합니다.
