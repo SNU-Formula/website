@@ -48,6 +48,10 @@ Michroma와 Pretendard 모두 SIL Open Font License 1.1입니다. 웹 임베딩,
 영문: SNU Formula Team — taking on the world beyond Korea.
 
 기존 “서울대학교 학생들이 설계하고…” 문장을 공용 푸터에서 교체했습니다.
+푸터 표어는 22px로 표시하고 데스크톱에서 한 줄을 유지하도록 가로 공간을 확보했습니다.
+모바일에서는 글씨 크기를 유지하고 화면 폭에 따라 자연스럽게 줄바꿈합니다.
+
+홈 표어: **DESIGN. BUILD. RACE.** 한글·영문 화면에 동일하게 적용합니다.
 
 ## 대체 문장 후보
 
@@ -89,25 +93,29 @@ SNU FORMULA는 SNU Mobility Renovatio의 산하 프로젝트이고, Renovatio의
 ## 변경과 병합
 
 - 메뉴: Home → About → Members → Partners → Vehicle → News → Recruiting.
-- Home: 흰 로고, News를 Vehicle보다 위에 배치.
-- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. Competition Structure 문장 삭제.
-- Members: 소개 교체, Advisor 탭 추가, 사진·개인 클릭 없이 약력 표시, 이규원 항공우주공학과 수정, 강경운 팀복 사진 반영.
+- Home: 흰 로고, DESIGN. BUILD. RACE. 표어, News를 Vehicle보다 위에 배치.
+- About: Renovatio 설명과 로고를 제목 아래의 흰 배경으로 이동. 두 문장을 별도 문단으로 나누고, 데스크톱에서는 각 문장이 한 줄이 되도록 설명 폭을 확대하고 로고를 오른쪽에 배치. 설명 글씨는 1280px 화면에서 22px, 1760px 화면에서 24px. Competition Structure 문장 삭제.
+- Members: 소개 교체, Advisor 탭 추가, 사진·개인 클릭 없이 약력 표시, Advisor 설명 21px(영문 20px)로 확대, 팀별 인원수 표시 삭제, 이규원 항공우주공학과 수정, 강경운 팀복 사진 반영.
 - Partners: “한국 모터스포츠의 시작점”을 상단 제목으로 이동. 소속·센터를 먼저 소개. Sponsorship Tiers와 기존 하단 기관 섹션 삭제. 하단에 BECOME A PARTNER, 이메일, 인스타그램 추가.
 - 후원 등급: Main Sponsor / **Platinum Sponsor**. AJIN Industrial, KOLON, YONGSAN, YOUNGONE이 Platinum Sponsor입니다.
 - 코오롱: [공식 영문 사이트](https://www.kolon.com/en/main)의 [영문 CI SVG](https://www.kolon.com/common/en/images/logo-kolon-color.svg)로 전체 위치 교체. 원본 SVG 크기에 의존하지 않고 표시 영역에 맞춰 확대합니다.
-- 기관 카드: 로고 영역 높이·중앙 정렬·제목 시작점·카드 높이 통일.
-- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 사진 전체 표시, 사진 아래 제목.
+- 기관 카드: 로고와 설명을 가로로 배치하고 내용에 따라 카드 높이를 정해 Renovatio 밑의 빈 공간 제거. 후원사 이름 18px, 후원 설명 14px, 연락처 18px로 확대.
+- News: Solar 기사 제거, 2건 유지, 동일 제목 크기, 사진 전체 표시, 사진 아래 제목. 제목 26–36px, 요약 19px로 확대하고 본문 간격 축소.
 - Recruiting: 김민우님의 `e99632c3bcfcd25ae0e488a0342e85a43766a3fa`를 원격 `main`에서 가져와 합쳤습니다. 팀원 체계와 14개 모집 분야를 유지하고, 사용자 후속 지시에 따라 설명을 한글·영문 명사형 bullet로 바꿨습니다. 서체·캐시 키도 맞췄습니다.
+- Recruiting 배치: 데스크톱에서 팀원 체계 3열, 모집 분야 2열, 설명 20px. 모바일은 1열로 전환하며 글씨 크기를 유지. 고정된 큰 빈 영역 제거.
+- 정회원 설명: “수습 부원으로서 성실하고 적극적인 팀 활동 시 정회원으로 전환” / “차량 설계와 제작에 직접 참여” 두 bullet로 확정.
+- 공용 본문과 섹션: 본문 20px(모바일 19px), 섹션 간격 36–60px(모바일 32px). 상단 제목 영역의 고정 최소 높이 제거.
 
-공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-5`.
+공용 CSS/JS 및 Recruiting CSS 캐시 키: `20261012-6`.
 원격과 합치기 전 작업본은 Git stash `3c85eafb86d1551c7a9b7e1f5fbeac85408fab5a`에 보존했습니다.
 
 ## 검증
 
 - 7개 페이지: 데스크톱 1280px, 모바일 390px에서 한글·영문 표시와 글자 넘침 확인.
-- 작은 모바일 320px: Recruiting 영문 메뉴 추가 확인.
+- 작은 모바일 320px: Recruiting·News·Partners·Advisor의 한글·영문 글자 넘침 추가 확인. Partners 제목 크기 조정.
 - 발견한 About·Members·Vehicle 제목 넘침과 Recruiting 영문 메뉴 넘침 수정.
-- 기관 카드 높이·로고 영역·제목 시작점 동일 여부 확인.
+- 기관 카드의 가로 배치와 불필요한 하단 여백 제거 확인.
+- About의 두 문장과 공통 푸터 표어가 1280px·1760px 한글 화면에서 한 줄씩 표시됨을 확인.
 - 홈·News 기사 제목의 동일 크기, 사진 아래 제목 및 사진 전체 표시 확인.
 - HTML 태그·중복 ID·로컬 경로·CSS 자산 검사 통과.
 - JavaScript 구문 검사와 Git 충돌·공백 검사 통과.

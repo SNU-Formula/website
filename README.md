@@ -16,7 +16,7 @@ Home → About → Members → Partners → Vehicle → News → Recruiting.
 
 | 메뉴 | 경로 | 내용 |
 | --- | --- | --- |
-| Home | `/` | 흰 팀 로고, 파트너 로고 띠, 뉴스 2건, 차량 공개 예정 |
+| Home | `/` | DESIGN. BUILD. RACE., 흰 팀 로고, 파트너 로고 띠, 뉴스 2건, 차량 공개 예정 |
 | About | `/about/` | 흰 배경의 Renovatio 소개, Formula Student와 FSG |
 | Members | `/team/` | Manager / Engineering / Business / Advisor |
 | Partners | `/partners/` | 소속·센터 소개, Main / Platinum Sponsor |
@@ -27,7 +27,9 @@ Home → About → Members → Partners → Vehicle → News → Recruiting.
 Recruiting은 기존 `/join/` 경로를 유지합니다. 김민우님의 `e99632c`
 (2026-10-12) 수정본을 가져와 합쳤으며 팀원 체계와 14개 모집 분야를 유지했습니다.
 사용자 후속 요청에 따라 설명을 명사형 bullet로 바꿨습니다.
-공용 파일의 충돌을 해소하고 서체와 캐시 키(`20261012-5`)를 맞췄습니다.
+정회원 설명은 수습 부원의 성실하고 적극적인 활동 시 전환, 차량 설계·제작 직접 참여로 확정했습니다.
+데스크톱의 팀원 체계는 3열, 모집 분야는 2열이며 설명 글씨는 20px입니다.
+공용 파일의 충돌을 해소하고 서체와 캐시 키(`20261012-6`)를 맞췄습니다.
 
 ## 서체와 기록
 
