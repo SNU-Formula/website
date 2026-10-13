@@ -1,6 +1,6 @@
 # 팀원 증명사진
 
-`/team/` 페이지 ROSTER 섹션에 들어가는 구성원 사진을 이 폴더에 둡니다.
+`/members/` 페이지 ROSTER 섹션에 들어가는 구성원 사진을 이 폴더에 둡니다.
 
 ## 규격
 
@@ -36,7 +36,7 @@ oh-songwoo.jpg        오송우      Business / Lead
 
 ## 넣는 방법
 
-`/team/index.html`에서 같은 팀의 카드를 복사한 뒤 `<img>`의 `src`와 `alt`를
+`/members/index.html`에서 같은 팀의 카드를 복사한 뒤 `<img>`의 `src`와 `alt`를
 바꿉니다.
 
 ```html

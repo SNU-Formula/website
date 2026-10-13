@@ -35,7 +35,7 @@ const headerMarkup = `
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="${root}" data-nav="home">${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/" data-nav="about">${bilingual("ABOUT", "ABOUT")}</a>
-      <a href="${root}team/" data-nav="team" aria-label="Members">${bilingual("MEMBERS", "MEMBERS")}</a>
+      <a href="${root}members/" data-nav="team" aria-label="Members">${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/" data-nav="partners">${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}vehicle/" data-nav="vehicle">${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/" data-nav="news">${bilingual("NEWS", "NEWS")}</a>
@@ -57,7 +57,7 @@ const headerMarkup = `
     <nav aria-label="Mobile navigation">
       <a href="${root}"><span>01</span>${bilingual("HOME", "HOME")}</a>
       <a href="${root}about/"><span>02</span>${bilingual("ABOUT", "ABOUT")}</a>
-      <a href="${root}team/" aria-label="Members"><span>03</span>${bilingual("MEMBERS", "MEMBERS")}</a>
+      <a href="${root}members/" aria-label="Members"><span>03</span>${bilingual("MEMBERS", "MEMBERS")}</a>
       <a href="${root}partners/"><span>04</span>${bilingual("PARTNERS", "PARTNERS")}</a>
       <a href="${root}vehicle/"><span>05</span>${bilingual("VEHICLE", "VEHICLE")}</a>
       <a href="${root}news/"><span>06</span>${bilingual("NEWS", "NEWS")}</a>
@@ -88,7 +88,7 @@ const footerMarkup = `
         <span class="footer-label">EXPLORE</span>
         <a href="${root}">Home</a>
         <a href="${root}about/">About</a>
-        <a href="${root}team/" aria-label="Members">Members</a>
+        <a href="${root}members/" aria-label="Members">Members</a>
         <a href="${root}partners/">Partners</a>
         <a href="${root}vehicle/">Vehicle</a>
         <a href="${root}news/">News</a>
