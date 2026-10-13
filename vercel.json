@@ -1,7 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/team/:path*", "destination": "/members/", "permanent": true },
-    { "source": "/teams/:path*", "destination": "/members/", "permanent": true }
+    { "source": "/team", "destination": "/members/", "permanent": true },
+    { "source": "/team/", "destination": "/members/", "permanent": true },
+    { "source": "/team/index.html", "destination": "/members/", "permanent": true },
+    { "source": "/teams", "destination": "/members/", "permanent": true },
+    { "source": "/teams/", "destination": "/members/", "permanent": true },
+    { "source": "/teams/index.html", "destination": "/members/", "permanent": true }
   ]
 }
