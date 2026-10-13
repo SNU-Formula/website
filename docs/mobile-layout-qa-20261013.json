@@ -1,0 +1,1316 @@
+{
+  "baseline_commit": "39fdb5c14702fc0cca2779c1c85afa873176d1a2",
+  "pc": [
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2818,
+      "compared_elements": 147
+    },
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3024,
+      "compared_elements": 147
+    },
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3156,
+      "compared_elements": 147
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2868,
+      "compared_elements": 147
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3100,
+      "compared_elements": 147
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3180,
+      "compared_elements": 147
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2620,
+      "compared_elements": 95
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2731,
+      "compared_elements": 95
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2835,
+      "compared_elements": 95
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2896,
+      "compared_elements": 95
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3086,
+      "compared_elements": 95
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3066,
+      "compared_elements": 95
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1803,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1024,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2902,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1024,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1752,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1024,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2404,
+      "compared_elements": 100
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2003,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1440,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2590,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1440,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1947,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1440,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1803,
+      "compared_elements": 100
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2114,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1920,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2764,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1920,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2055,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 1920,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1852,
+      "compared_elements": 100
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1848,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1024,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2890,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1024,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1744,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1024,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2401,
+      "compared_elements": 100
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2102,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1440,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2688,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1440,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1989,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1440,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2016,
+      "compared_elements": 100
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2164,
+      "compared_elements": 90
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1920,
+      "mode": "engineering",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2750,
+      "compared_elements": 166
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1920,
+      "mode": "business",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2045,
+      "compared_elements": 74
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 1920,
+      "mode": "advisor",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2012,
+      "compared_elements": 100
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2858,
+      "compared_elements": 134
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3123,
+      "compared_elements": 134
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3206,
+      "compared_elements": 134
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 2983,
+      "compared_elements": 133
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3345,
+      "compared_elements": 133
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 3395,
+      "compared_elements": 133
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1136,
+      "compared_elements": 36
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1084,
+      "compared_elements": 36
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1084,
+      "compared_elements": 36
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1133,
+      "compared_elements": 36
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1133,
+      "compared_elements": 36
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1081,
+      "compared_elements": 36
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1545,
+      "compared_elements": 76
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1695,
+      "compared_elements": 76
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1753,
+      "compared_elements": 76
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1607,
+      "compared_elements": 76
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1788,
+      "compared_elements": 76
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 1795,
+      "compared_elements": 76
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 4679,
+      "compared_elements": 322
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 4492,
+      "compared_elements": 322
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 4510,
+      "compared_elements": 322
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 1024,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 5992,
+      "compared_elements": 322
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 1440,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 5277,
+      "compared_elements": 322
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 1920,
+      "mode": "default",
+      "identical_main_footer_layout_styles_images": true,
+      "height": 5009,
+      "compared_elements": 322
+    }
+  ],
+  "mobile": [
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 2891,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-ko-360-default.jpg"
+    },
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 2909,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-ko-390-default.jpg"
+    },
+    {
+      "page": "home",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 2944,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-ko-430-default.jpg"
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 2948,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-en-360-default.jpg"
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 2971,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-en-390-default.jpg"
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 2983,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-home-en-430-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 2659,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-ko-360-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 2632,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-ko-390-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 2559,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-ko-430-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 2844,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-en-360-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 2776,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-en-390-default.jpg"
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 2676,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-about-en-430-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 1380,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-360-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 360,
+      "mode": "engineering",
+      "height": 2276,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-360-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 360,
+      "mode": "business",
+      "height": 1203,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-360-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 360,
+      "mode": "advisor",
+      "height": 1970,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-360-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 360,
+      "mode": "profile",
+      "height": 2322,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-360-profile.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 1386,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-390-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 390,
+      "mode": "engineering",
+      "height": 2280,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-390-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 390,
+      "mode": "business",
+      "height": 1207,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-390-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 390,
+      "mode": "advisor",
+      "height": 1975,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-390-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 390,
+      "mode": "profile",
+      "height": 2304,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-390-profile.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 1366,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-430-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 430,
+      "mode": "engineering",
+      "height": 2260,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-430-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 430,
+      "mode": "business",
+      "height": 1187,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-430-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 430,
+      "mode": "advisor",
+      "height": 1955,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-430-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "width": 430,
+      "mode": "profile",
+      "height": 2236,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-ko-430-profile.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 1451,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-360-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 360,
+      "mode": "engineering",
+      "height": 2385,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-360-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 360,
+      "mode": "business",
+      "height": 1218,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-360-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 360,
+      "mode": "advisor",
+      "height": 2127,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-360-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 360,
+      "mode": "profile",
+      "height": 2519,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-360-profile.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 1418,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-390-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 390,
+      "mode": "engineering",
+      "height": 2214,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-390-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 390,
+      "mode": "business",
+      "height": 1202,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-390-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 390,
+      "mode": "advisor",
+      "height": 2047,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-390-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 390,
+      "mode": "profile",
+      "height": 2442,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-390-profile.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 1406,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-430-default.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 430,
+      "mode": "engineering",
+      "height": 2204,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-430-engineering.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 430,
+      "mode": "business",
+      "height": 1208,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-430-business.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 430,
+      "mode": "advisor",
+      "height": 2011,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-430-advisor.jpg"
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "width": 430,
+      "mode": "profile",
+      "height": 2347,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-members-en-430-profile.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 2558,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-ko-360-default.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 2522,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-ko-390-default.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 2483,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-ko-430-default.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 2623,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-en-360-default.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 2568,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-en-390-default.jpg"
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 2564,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-partners-en-430-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 1035,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-ko-360-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 1035,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-ko-390-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 1009,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-ko-430-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 1047,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-en-360-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 1026,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-en-390-default.jpg"
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 1026,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-vehicle-en-430-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 1812,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-ko-360-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 1852,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-ko-390-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 1879,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-ko-430-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 1847,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-en-360-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 1866,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-en-390-default.jpg"
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 1862,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-news-en-430-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 360,
+      "mode": "default",
+      "height": 5854,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-ko-360-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 390,
+      "mode": "default",
+      "height": 5692,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-ko-390-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "width": 430,
+      "mode": "default",
+      "height": 5518,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-ko-430-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 360,
+      "mode": "default",
+      "height": 6537,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-en-360-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 390,
+      "mode": "default",
+      "height": 6201,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-en-390-default.jpg"
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "width": 430,
+      "mode": "default",
+      "height": 5834,
+      "text_card_overflow": [],
+      "unloaded_images": [],
+      "screenshot": "after-recruiting-en-430-default.jpg"
+    }
+  ],
+  "height_comparison_390": [
+    {
+      "page": "home",
+      "language": "ko",
+      "before": 3869,
+      "after": 2909,
+      "reduction_percent": 24.8
+    },
+    {
+      "page": "home",
+      "language": "en",
+      "before": 4279,
+      "after": 2971,
+      "reduction_percent": 30.6
+    },
+    {
+      "page": "about",
+      "language": "ko",
+      "before": 3756,
+      "after": 2632,
+      "reduction_percent": 29.9
+    },
+    {
+      "page": "about",
+      "language": "en",
+      "before": 4375,
+      "after": 2776,
+      "reduction_percent": 36.5
+    },
+    {
+      "page": "members",
+      "language": "ko",
+      "before": 1858,
+      "after": 1386,
+      "reduction_percent": 25.4
+    },
+    {
+      "page": "members",
+      "language": "en",
+      "before": 2086,
+      "after": 1418,
+      "reduction_percent": 32.0
+    },
+    {
+      "page": "partners",
+      "language": "ko",
+      "before": 4027,
+      "after": 2522,
+      "reduction_percent": 37.4
+    },
+    {
+      "page": "partners",
+      "language": "en",
+      "before": 4311,
+      "after": 2568,
+      "reduction_percent": 40.4
+    },
+    {
+      "page": "vehicle",
+      "language": "ko",
+      "before": 1335,
+      "after": 1035,
+      "reduction_percent": 22.5
+    },
+    {
+      "page": "vehicle",
+      "language": "en",
+      "before": 1390,
+      "after": 1026,
+      "reduction_percent": 26.2
+    },
+    {
+      "page": "news",
+      "language": "ko",
+      "before": 2067,
+      "after": 1852,
+      "reduction_percent": 10.4
+    },
+    {
+      "page": "news",
+      "language": "en",
+      "before": 2404,
+      "after": 1866,
+      "reduction_percent": 22.4
+    },
+    {
+      "page": "recruiting",
+      "language": "ko",
+      "before": 8278,
+      "after": 5692,
+      "reduction_percent": 31.2
+    },
+    {
+      "page": "recruiting",
+      "language": "en",
+      "before": 11671,
+      "after": 6201,
+      "reduction_percent": 46.9
+    }
+  ],
+  "preservation": {
+    "html_only_adds_mobile_stylesheet": true,
+    "assets/styles.css": "829baf31f1f82edd42262f194cb5bf7dfbb883bf63be5687a1f485bb4d85c434",
+    "assets/recruiting.css": "d99cd148c367777c51471dce102202fe70717ffea8d322f6130b0c2abc3996e4",
+    "assets/site.js": "f90b9579dabab8b0ab3dbc653823aca99ec4b5093ca39b8cb3d0010137341e79",
+    "assets/recruiting.mjs": "df556766e08af7e7326e63730e7b4bd6781761a5d7d3c959d5a5d090f1e81f6e",
+    "assets/recruiting-config.mjs": "4d82333897d1b56342c646613ec0824368630dc15ae727ae2ec1104339ed41e6"
+  },
+  "comparison_note": "PC: main/footer computed styles, offsets, dimensions, visible text and images exactly match. Original header height transition and continuous hero/marquee animations have time-dependent pixels; screenshots are retained for visual comparison and are not claimed to be pixel-identical."
+}
