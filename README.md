@@ -73,6 +73,18 @@ Recruiting의 주소는 `/recruiting/`이며 기존 `/join/`은 새 주소로 �
 첫 방문과 명시적 새로고침에 팀 로고가 재생됩니다. 같은 세션의 페이지 이동에서는
 반복하지 않으며 `prefers-reduced-motion: reduce`에서는 생략합니다.
 
+## 방문 통계
+
+7개 주요 페이지에서 Vercel Web Analytics로 방문자 수, 페이지별 조회수, 유입 경로,
+국가와 기기 종류를 수집합니다. 공통 `assets/site.js`에서 HTTPS 페이지에만
+추적 스크립트를 연결하며 로컬 미리보기와 `/join/` 이동 페이지는 집계하지 않습니다.
+쿠키를 사용하지 않는 기본 통계이며 연동 이후 방문부터 집계됩니다.
+
+확인 위치: [Vercel 방문 통계](https://vercel.com/snu-formula/snuformula/analytics).
+현재 Hobby 요금제에서는 팀 전체 월 50,000개 이벤트까지 무료이며,
+한도 이후에는 추가 결제 없이 수집이 중단됩니다. 요금제를 바꾸거나 유료 기능을
+활성화하지 않습니다. [공식 요금 안내](https://vercel.com/docs/analytics/limits-and-pricing).
+
 ## 배포
 
 운영 주소: <https://snuformula.vercel.app>. GitHub `SNU-Formula/website`의 `main`에 연결된

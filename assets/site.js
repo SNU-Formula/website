@@ -1,3 +1,24 @@
+// Use Vercel's first-party tracker on hosted HTTPS pages only.
+// Local previews and the /join/ redirect do not produce page views.
+function initWebAnalytics() {
+  const { hostname, protocol } = window.location;
+  if (
+    protocol !== "https:" ||
+    ["localhost", "127.0.0.1", "[::1]"].includes(hostname) ||
+    document.querySelector('script[src="/_vercel/insights/script.js"]')
+  ) return;
+
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+  const script = document.createElement("script");
+  script.defer = true;
+  script.src = "/_vercel/insights/script.js";
+  document.head.appendChild(script);
+}
+
+initWebAnalytics();
+
 const root = "/";
 
 const bilingual = (ko, en, className = "") =>
