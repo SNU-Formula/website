@@ -13,7 +13,7 @@
 .recruiting-section-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 8px 0 18px; }
 .recruiting-section-heading h2 { margin: 0; font-size: clamp(32px, 3vw, 46px); line-height: 1.3; letter-spacing: -.035em; }
 .recruiting-section-heading > .recruiting-points { max-width: none; font-size: 20px; }
-.recruiting-member-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.recruiting-member-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
 .recruiting-member-grid article { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--deep); }
 .recruiting-kicker { display: block; font-size: 14px; line-height: 1.6; color: var(--recruit-accent); }
 .recruiting-member-grid h3 { order: -1; font-size: 30px; font-weight: 650; margin: 0; line-height: 1.35; overflow-wrap: anywhere; }
@@ -32,8 +32,8 @@
 .recruiting-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; grid-column: 1 / -1; margin-top: 12px; }
 .recruiting-tools > span { padding: 5px 9px; border: 1px solid var(--line); background: var(--paper); font-size: 14px; line-height: 1.5; }
 .recruiting-team-count { font-size: 16px; color: var(--muted); }
-.recruiting-role-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
-.recruiting-role { display: grid; grid-template-columns: 26px minmax(0, 1fr); align-items: start; column-gap: 12px; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--deep); }
+.recruiting-role-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.recruiting-role { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: start; column-gap: 12px; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--deep); }
 .recruiting-role > div { min-width: 0; }
 .recruiting-role-number { padding-top: 4px; color: var(--recruit-accent); font-size: 16px; font-variant-numeric: tabular-nums; }
 .recruiting-role h4 { font-size: 25px; font-weight: 650; color: var(--ink); margin: 0 0 14px; line-height: 1.4; letter-spacing: -.025em; overflow-wrap: anywhere; }
@@ -59,6 +59,22 @@ a.recruiting-notice:hover { background: #ffffff18; border-color: var(--gold); }
 @media (min-width: 901px) {
   .recruiting-role:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .recruiting-role:last-child:nth-child(odd) .recruiting-points { columns: 3; column-gap: 26px; }
+}
+
+/* Share intrinsic title/body tracks within each desktop row. Single-column
+   cards keep their natural height, without reserving empty mobile space. */
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 901px) {
+    .recruiting-member-grid article { display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 10px; }
+    .recruiting-member-grid h3 { grid-row: 1; }
+    .recruiting-member-grid .recruiting-kicker { grid-row: 2; }
+    .recruiting-member-grid .recruiting-points { grid-row: 3; align-self: start; }
+    .recruiting-role { grid-row: span 2; grid-template-rows: subgrid; row-gap: 14px; }
+    .recruiting-role-number { grid-column: 1; grid-row: 1; }
+    .recruiting-role > div { display: grid; grid-column: 2; grid-row: 1 / -1; grid-template-rows: subgrid; row-gap: 14px; }
+    .recruiting-role h4 { grid-row: 1; margin-bottom: 0; align-self: start; }
+    .recruiting-role .recruiting-points { grid-row: 2; align-self: start; }
+  }
 }
 
 @media (max-width: 1000px) {
