@@ -18,7 +18,7 @@ Home → About → Members → Partners → Vehicle → News → Recruiting.
 | --- | --- | --- |
 | Home | `/` | DESIGN. BUILD. RACE., 흰 팀 로고, 파트너 로고 띠, 뉴스 2건, 차량 공개 예정 |
 | About | `/about/` | 흰 배경의 Renovatio 소개, Formula Student와 FSG |
-| Members | `/team/` | Manager / Engineering / Business / Advisor |
+| Members | `/members/` | Manager / Engineering / Business / Advisor |
 | Partners | `/partners/` | 소속·센터 소개, Main / Platinum / Sponsor / Supporter |
 | Vehicle | `/vehicle/` | 공개 전 차량 티저 |
 | News | `/news/` | 페라리코리아·서울대 협약과 팀 창단 보도 |
@@ -60,6 +60,9 @@ Recruiting의 주소는 `/recruiting/`이며 기존 `/join/`은 새 주소로 �
 - `opensAt`: 시작 시각 또는 `null`. 시작 전에는 모집 예정 상태.
 - `closesAt`: 배타적 종료 시각. 현재는 `2026-10-31T00:00:00+09:00`으로, 한국 시간 10월 30일 하루 전체를 포함한 뒤 자동 종료.
 - `announcementUrl`: 센터 공고의 전체 `http(s)` URL. 빈 값이면 공고 등록 예정, URL이 있으면 공고 보기 링크 표시.
+
+2026-10-16 사용자 요청: 공고 제목은 `모집 공고` / `Recruitment notice`로 표시합니다.
+공고 링크와 등록 예정 상태에 같은 제목을 사용합니다.
 
 기간을 바꿀 때는 한국 시간 오프셋 `+09:00`을 포함합니다. 브라우저가 열린 상태에서도
 경계 시각에 상태가 갱신됩니다. 파일 변경 후 모듈의 캐시 키도 갱신합니다.
